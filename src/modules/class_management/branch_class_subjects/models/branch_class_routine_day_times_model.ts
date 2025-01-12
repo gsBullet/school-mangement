@@ -24,7 +24,7 @@ import {
 } from 'sequelize';
 
 // import {DataModel as Project} from "./project_model"
-const tableName = 'branch_class_Routine_day_times';
+const tableName = 'branch_class_routine_day_times';
 const modelName = 'BranchClassRoutineDayTimesModel';
 
 type Infer = InferAttributes<DataModel>;

@@ -37,6 +37,10 @@ module.exports = async function (fastify: FastifyInstance) {
             `${prefix}/class-wise-teacher`,
             controllerInstance.class_wise_teacher,
         )
+        .post(
+            `${prefix}/get-branch-class-routine`,
+            controllerInstance.get_branch_class_routine,
+        )
         .post(`${prefix}/store`, controllerInstance.store)
         .post(`${prefix}/update`, controllerInstance.update)
         .post(`${prefix}/soft-delete`, controllerInstance.soft_delete)

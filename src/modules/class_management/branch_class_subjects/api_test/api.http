@@ -1,4 +1,4 @@
-@hostname = http://127.0.0.1:5003/api/v1/branch-class-subjects
+@hostname = http://127.0.0.1:5002/api/v1/branch-class-subjects
 
 # all
 ###
@@ -31,6 +31,19 @@ GET {{hostname}}/teacher-assignment/1 HTTP/1.1
 # get
 ###
 GET {{hostname}}/subject-assignment/3 HTTP/1.1
+
+
+# get branch class routine 
+###
+POST {{hostname}}/get-branch-class-routine HTTP/1.1
+content-type: application/json
+
+{
+    "branch_id": 1,
+    "branch_class_id": 1,
+"branch_class_section_id": 1
+}
+
 
 # store
 ###
