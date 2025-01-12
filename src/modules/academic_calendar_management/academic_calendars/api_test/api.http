@@ -1,4 +1,4 @@
-@hostname = http://127.0.0.1:5003/api/v1/academic-calendars
+@hostname = http://127.0.0.1:5002/api/v1/academic-calendars
 @token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
 
 # all
@@ -12,6 +12,15 @@ GET {{hostname}}/events/3 HTTP/1.1
 # get
 ###
 GET {{hostname}}/1 HTTP/1.1
+# get get_academic_event_by_month
+###
+POST {{hostname}}/get-academic-event-by-month HTTP/1.1
+content-type: application/json
+
+{
+    "month": "feb-2025",
+    "branch_id": 1
+}
 
 # store
 ###
@@ -19,9 +28,15 @@ POST  {{hostname}}/store HTTP/1.1
 content-type: application/json
 
 {
-    "branch_id": 4,
-    "title": "cellphin",
-    "description": "This is sellfin accoutn"
+    "id": 10,
+    "branch_id": 5,
+    "event_type_id":1,
+    "days": 1,
+    "event_name": "govt leave",
+    "start_date": "2025-01-22T00:00:00.000Z",
+    "end_date": "2025-01-22T00:00:00.000Z",
+    "description": "govt leave",
+    "status": "active"
 }
 
 

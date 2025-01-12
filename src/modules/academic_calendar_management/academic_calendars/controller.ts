@@ -14,6 +14,7 @@ import restore from './services/restore';
 import destroy from './services/destroy';
 import data_import from './services/import';
 import calendar from './services/calendar';
+import get_academic_event_by_month from './services/get_academic_event_by_month';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -34,6 +35,16 @@ export default function (fastify: FastifyInstance) {
 
         store: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await store(fastify, req);
+            res.code(data.status).send(data);
+        },
+        get_academic_event_by_month: async function (
+            req: FastifyRequest,
+            res: FastifyReply,
+        ) {
+            let data: responseObject = await get_academic_event_by_month(
+                fastify,
+                req,
+            );
             res.code(data.status).send(data);
         },
 

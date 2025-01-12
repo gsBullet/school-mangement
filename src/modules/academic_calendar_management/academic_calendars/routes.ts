@@ -11,6 +11,10 @@ module.exports = async function (fastify: FastifyInstance) {
         .get(`${prefix}/:id`, controllerInstance.find)
         .get(`${prefix}/events/:id`, controllerInstance.calendar)
         .post(`${prefix}/store`, controllerInstance.store)
+        .post(
+            `${prefix}/get-academic-event-by-month`,
+            controllerInstance.get_academic_event_by_month,
+        )
         .post(`${prefix}/update`, controllerInstance.update)
         .post(`${prefix}/soft-delete`, controllerInstance.soft_delete)
         .post(`${prefix}/restore`, controllerInstance.restore)
