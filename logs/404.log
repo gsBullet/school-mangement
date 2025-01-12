@@ -182,3 +182,6 @@
 {"level":60,"time":1736659006231,"pid":104400,"hostname":"devops","error":"404","url":"/api/v1/user-students/basic-information/11"}
 {"level":60,"time":1736659450073,"pid":120960,"hostname":"devops","error":"404","url":"/api/v1/exam-routines/plan/1"}
 {"level":60,"time":1736659464352,"pid":120960,"hostname":"devops","error":"404","url":"/api/v1/exam-routines/plan/1"}
+{"level":60,"time":1736664303436,"pid":135945,"hostname":"devops","error":"404","url":"/api/v1/exam-routines/latest-exam-routine"}
+{"level":60,"time":1736666067685,"pid":174722,"hostname":"devops","error":"404","url":"/api/v1/student-attendances/1"}
+{"level":60,"time":1736666072543,"pid":174722,"hostname":"devops","error":"404","url":"/api/v1/student-attendances/1"}

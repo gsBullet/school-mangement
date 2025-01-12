@@ -1,4 +1,4 @@
-@hostname = http://127.0.0.1:5003/api/v1/student-attendances
+@hostname = http://127.0.0.1:5002/api/v1/student-attendances
 @token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
 
 # all
@@ -8,6 +8,20 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 # get
 ###
 GET {{hostname}}/1 HTTP/1.1
+
+# get
+###
+POSt {{hostname}}/get-30days-attendence HTTP/1.1
+content-type: application/json
+
+{
+    "month": "jan-2025",
+    "class_id": 1,
+    "subject_id": 1
+}
+
+    # "branch_student_id": 1,
+
 
 # get
 ###

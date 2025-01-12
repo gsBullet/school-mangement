@@ -45,3 +45,4 @@
 {"level":60,"time":1736656479280,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:39 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
 {"level":60,"time":1736656480097,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:40 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
 {"level":60,"time":1736656862600,"pid":87323,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:41:02 AM","message":"Unknown column 'subjects.subject_name' in 'field list'"}
+{"level":60,"time":1736667356452,"pid":185351,"hostname":"devops","file":"services/get_30_days_attendence.ts:122:19)","time":"1/12/2025 1:35:56 PM","message":"WHERE parameter \"subject_id\" has invalid \"undefined\" value"}

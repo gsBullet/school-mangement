@@ -15,6 +15,7 @@ import destroy from './services/destroy';
 import data_import from './services/import';
 import student_attendance from './services/student_attendance';
 import student_attendances from './services/student_attendances';
+import get_30_days_attendence from './services/get_30_days_attendence';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -45,6 +46,16 @@ export default function (fastify: FastifyInstance) {
 
         store: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await store(fastify, req);
+            res.code(data.status).send(data);
+        },
+        get_30days_attendence: async function (
+            req: FastifyRequest,
+            res: FastifyReply,
+        ) {
+            let data: responseObject = await get_30_days_attendence(
+                fastify,
+                req,
+            );
             res.code(data.status).send(data);
         },
 
