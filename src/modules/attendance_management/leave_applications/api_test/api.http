@@ -1,0 +1,95 @@
+@hostname = http://127.0.0.1:5003/api/v1/leave-applications
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/pending/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/staff/pending/2 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/rejected/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/teacher-approved/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "branch_id": 4,
+    "building_code": "21-A",
+    "building_name": "TS tower",
+    "attachment": "file.pdf",
+    "photo": "avatar.png",
+    "description": "somelsdjf"
+}
+
+# store
+###
+POST  {{hostname}}/student-store HTTP/1.1
+content-type: application/json
+
+{
+    "start_date": "2024-03-03",
+    "end_date": "2024-03-05",
+    "attachments": "file.pdf"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": 4,
+    "branch_id": "44",
+    "building_code": "abir",
+    "building_name": "logo.png",
+    "attachment": "dhaka",
+    "photo": "923840293",
+    "description": "abir@gmail.com"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    # "id": 1
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 4
+}

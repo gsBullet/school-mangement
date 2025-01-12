@@ -1,0 +1,211 @@
+// site_bar_area_start
+.site_bar_area {
+    border: $border;
+    width: 300px;
+    background-color: transparent;
+    margin-bottom: 80px;
+    @include xs{
+      margin: 30px 0px;
+      width: 100%;
+    }
+    @include sm{
+        margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+    @include md{
+    margin-bottom: 40px;
+    }
+    // search_area start
+    .search_area{
+        margin-bottom: 15px;
+        // padding: 25px 15px;
+        // border: 1px solid $master_color_2;
+        .search_area_content {
+            border: $border;
+            position: relative;
+            input {
+                border: $border;
+                width: 100%;
+                outline: 0;
+                background-color: #e5e5e5;
+                font-size: 16px;
+                padding: 8px 44px 8px 10px;
+                color: $master_color_2;
+            }
+            .seaech_icon {
+                border: $border;
+                position: absolute;
+                right: 0px;
+                padding: 8px 10px;
+                background-color: $master_color_2;
+                i {
+                    border: $border;
+                    font-size: 14px;
+                    color: $white;
+                }
+            }
+        }
+    }
+   
+    // search_area end
+
+    // item_area title start
+    .item_area {
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        .item_title {
+            border: $border;
+            margin: 0px 0px 20px 0px;
+            .title_text {
+                border: $border;
+                font-size: 22px;
+                font-family: $font_medium;
+            }
+        }
+    }
+    // item_area title end
+
+    // categories_area start
+    .categories_area {
+        border: $border;
+      
+        padding: 25px 15px;
+        border: 1px solid #144f6147;
+        .categories_items {
+            border: $border;
+            ul {
+                border: $border;
+                li {
+                    border: $border;
+                    margin-bottom: 6px;
+                   
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    .items_text {
+                        border: $border;
+                        font-size: 15px;
+                        font-family: $font_medium;
+                        color: $off_white;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            color: $master_color_2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // categories_area end
+    // latest_posts_area start
+    .latest_posts_area {
+        border: $border;
+       
+        padding: 25px 15px;
+        border: 1px solid #144f6147;
+        ul{
+            li{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+                .latest_post_item {
+                    border: $border;
+                    display: flex;
+                    &:hover{
+                        .post_date_and_title{
+                            .post_title_area{
+                                .post_text{
+                                    color: $master_color_2;
+                                }
+                            }
+                        }
+                    }
+                    .post_image {
+                        border: $border;
+                        width: 50px;
+                        height: 50px;
+                        img {
+                            border: $border;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .post_date_and_title {
+                        border: $border;
+                        margin-left: 10px;
+                        flex: 1;
+                        .date_area {
+                            border: $border;
+                            background-color: $master_color_2;
+                            display: inline-block;
+                            .date_text {
+                                border: $border;
+                                font-family: $font_medium;
+                                font-size: 14px;
+                                color: $white;
+                                padding: 0px 5px;
+                                margin-top: 1px;
+                            }
+                        }
+                        .post_title_area {
+                            border: $border;
+                            margin-top: 5px;
+                            .post_text {
+                                border: $border;
+                                font-family: $font_medium;
+                                font-size: 16px;
+                                color: $off_white;
+                                transition-duration: .4s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    // latest_posts_area end
+    // popular_tags_area start
+    .popular_tags_area {
+        border: $border;
+    
+        padding: 25px 15px;
+        border: 1px solid #144f6147;
+        .item_title {
+            border: $border;
+            .title_text {
+                border: $border;
+            }
+        }
+        .tag_item {
+            border: $border;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            li {
+                border: $border;
+                .tag_text {
+                    border: $border;
+                    font-size: 15px;
+                    font-family: $font_medium;
+                    background-color: $master_color_2;
+                    color: $white;
+                    transition-duration: 0.4s;
+                    padding: 4px 12px;
+                    border: 1px solid $master_color_2;
+                    &:hover {
+                        background-color: transparent;
+                        color: $master_color_2;
+                    }
+                }
+            }
+        }
+    }
+    // popular_tags_area end
+}
+// site_bar_area_end

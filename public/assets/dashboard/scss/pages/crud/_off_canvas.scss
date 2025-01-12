@@ -1,0 +1,57 @@
+.off_canvas {
+    position: fixed;
+    height: 100svh;
+    min-width: 300px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    border: 1px solid var(--brand_color2);
+
+    &.quick_view{
+       min-width: 500px; 
+    }
+
+    .off_canvas_body {
+        background-color: var(--brand_dark);
+        height: 100%;
+
+        .header {
+            min-height: 50px;
+            padding: 10px;
+            border-bottom: 1px solid var(--brand_color2);
+            line-height: 29px;
+            display: flex;
+            justify-content: space-between;
+
+            .heading_text {
+                font-size: 18px;
+            }
+
+            .close_button {
+                border: 0;
+                background-color: transparent;
+                color: red;
+                cursor: pointer;
+            }
+        }
+
+        .data_content {
+            height: calc(100svh - 52px);
+            padding: 10px;
+            overflow-y: auto;
+
+            .label {
+                margin-bottom: 15px;
+            }
+
+            .input_item {
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+.filter_item{
+    margin-bottom: 15px;
+}

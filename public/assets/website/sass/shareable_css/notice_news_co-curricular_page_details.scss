@@ -1,0 +1,59 @@
+// notice_news_co-curricular_page_details_page start
+.notice_news_co-curricular_page_details{
+    border: $border;
+    .notice_news_co-curricular_details_content{
+        border: $border;
+        .page_title_area {
+            border: $border;
+            .page_title {
+                border: $border;
+            }
+        }
+        // notice_date start
+        .notice_news_co-curricular_date{
+            background-color: $off_white;
+            display: inline-block;
+            padding: 5px 20px;
+            margin-bottom: 10px;
+            .date_text {
+                font-style: italic;
+                font-size: 20px;
+                font-family: $font_regular;
+                color: $master_color_2;
+            }
+        }
+        // notice_date end
+
+        // notice_title_and_details start
+        .notice_news_co-curricular_title_and_details {
+            border: $border;
+            margin-bottom: 100px;
+            @include xs {
+                margin-bottom: 0px;
+            }
+            .notice_news_co-curricular_title {
+                border: $border;
+                font-size: 30;
+                font-family: $font_medium;
+                color: $master_color_2;
+                margin-bottom: 35px;
+                .title_text {
+                    border: $border;
+                }
+            }
+            .notice_news_co-curricular_details {
+                border: $border;
+                gap: 25px;
+                display: grid;
+                .notice_text {
+                    border: $border;
+                    font-size: 20px;
+                    font-family: $font_medium;
+                    color: $master_color_2;
+                }
+            }
+        }
+        // notice_title_and_details end
+    }
+}
+// notice_news_co-curricular_page_details_page end

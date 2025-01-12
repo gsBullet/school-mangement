@@ -1,0 +1,20 @@
+.form_section_heading{
+    font-size: 24px;
+    margin-bottom: 40px;
+
+    h2, h4{
+        border-bottom: 1px solid rgb(174, 174, 211);
+        padding-bottom: 5px;
+        display: inline;
+    }
+}
+
+.full_width{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.admin_sidebar{
+    max-height: 450px;
+    // border: 2px solid red;
+    // overflow: scroll;
+}

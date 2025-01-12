@@ -1,0 +1,35 @@
+.admin_dashboard{
+    h1{
+        margin: 20px 0;
+        text-align: center;
+        font-size: 24px;
+    }
+    h2{
+        margin-top: 20px;
+        font-size: larger;
+    }
+    .dashboard_links {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    
+        li {
+            margin-bottom: 10px;
+    
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid gray;
+                padding: 15px 25px;
+                border-radius: 10px;
+    
+                &:hover {
+                    color: rgb(70, 236, 153);
+                }
+    
+            }
+        }
+    }
+}

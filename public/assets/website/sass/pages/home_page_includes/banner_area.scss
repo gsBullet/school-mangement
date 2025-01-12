@@ -1,0 +1,195 @@
+// banner_area start
+.banner_area {
+    border: $border;
+    // width: 100%;
+    // height: 535px;
+    background-color: #dcd7d7;
+    @include xs {
+        // height: 250px;
+    }
+
+    .banner_area_2 {
+        border: $border;
+        // background-color: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        // align-items: center;
+        // display: grid;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .banner_blur_area {
+            border: $border;
+            padding: 110px 0px;
+            // backdrop-filter: blur(1px);
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+                263deg,
+                rgba(255, 255, 255, 0.02573529411764708) 21%,
+                rgba(20, 79, 97, 0.5215336134453781) 100%
+            );
+            @include xs {
+                padding: 60px 0px;
+            }
+            .banner_area_content {
+                border: $border;
+
+                // banner_title_area start
+                .banner_title_area {
+                    border: $border;
+                    align-items: center;
+                    display: flex;
+                    height: 100%;
+                    .banner_title_area_content {
+                        border: $border;
+                        .banner_title {
+                            border: $border;
+                            .title_text {
+                                border: $border;
+                                font-family: $font_bold;
+                                font-size: 40px;
+                                color: $master_color_2;
+                                color: $white;
+                                text-shadow: 0px 0px 10px #144f61;
+                                // color: $orange;
+                                @include xs {
+                                    font-size: 16px;
+                                }
+                                @include sm {
+                                    font-size: 20px;
+                                }
+                                @include md {
+                                    font-size: 20px;
+                                }
+                                @include lg {
+                                    font-size: 28px;
+                                }
+                                @include xl {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                        .view_all_button_area {
+                            border: $border;
+                            text-align: left;
+                            .view_all_button {
+                                border: $border;
+                                transition-duration: 0.4s;
+                                padding: 13px 20px 10px 20px;
+                                font-size: 20px;
+                                &:hover {
+                                    background-color: $off_white;
+                                }
+                                @include xs {
+                                    padding: 8px 10px 8px 10px;
+                                    font-size: 14px;
+                                }
+                                @include sm {
+                                    padding: 8px 10px 5px 10px;
+                                    font-size: 16px;
+                                }
+                                @include md {
+                                    padding: 8px 12px 5px 12px;
+                                    font-size: 16px;
+                                }
+                                @include lg {
+                                    padding: 10px 15px 6px 15px;
+                                    font-size: 16px;
+                                }
+                                @include xl {
+                                    padding: 10px 15px 6px 15px;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // banner_title_area end
+
+                // importent_link_area start
+                .importent_link_area {
+                    border: $border;
+                    background-color: rgb(20 79 97 / 75%);
+                    width: 340px;
+                    margin-left: auto;
+                    @include xs {
+                        display: none;
+                    }
+                    @include sm {
+                        display: none;
+                    }
+                    // area_title start
+                    .area_title {
+                        border: $border;
+                        text-align: center;
+                        background-color: rgb(20 79 97 / 75%);
+                        padding: 15px 0px;
+                        margin: 0px;
+                        .area_title_text {
+                            border: $border;
+                            font-size: 20px;
+                            color: $white;
+                        }
+                    }
+                    // area_title end
+                    // all_link_item area start
+                    .all_link_item {
+                        border: $border;
+                        padding: 30px 25px 30px 25px;
+                        ul {
+                            gap: 12px;
+                            display: grid;
+                            // link_item start
+                            .link_item {
+                                border: $border;
+                                align-items: center;
+                                display: flex;
+                                .icon {
+                                    border: $border;
+                                    align-items: center;
+                                    display: flex;
+                                    margin-right: 8px;
+                                    i {
+                                        border: $border;
+                                        font-size: 16px;
+                                        color: $white;
+                                        @include xs {
+                                            font-size: 14px;
+                                        }
+                                        @include md {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                .link_name {
+                                    border: $border;
+                                    font-size: 16px;
+                                    font-family: $font_medium;
+                                    color: $white;
+                                    @include xs {
+                                        font-size: 14px;
+                                    }
+                                    @include md {
+                                        font-size: 14px;
+                                    }
+                                    &:hover {
+                                        color: $off_white;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            // link_item end
+                        }
+                    }
+                    // all_link_item area end
+                    // @include xs {
+                    //     width: 100%;
+                    //     margin-top: 30px;
+                    // }
+                }
+                // importent_link_area end
+            }
+        }
+    }
+}
+// banner_area end

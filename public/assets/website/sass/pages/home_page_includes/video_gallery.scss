@@ -1,0 +1,179 @@
+// image_gallery_area start
+.video_gallery_area {
+    border: $border;
+    margin-bottom: 80px;
+    @include xs{
+        margin-bottom: 30px;
+    }
+    @include sm{
+        margin-bottom: 30px;
+    }
+    @include md{
+        margin-bottom: 40px;
+    }
+    .video_gallery_area_content {
+        border: $border;
+        // area_title start
+        .area_title {
+            border: $border;
+            text-align: center;
+            .area_title_text {
+                border: $border;
+                color: $master_color_2;
+            }
+        }
+        // area_title end
+        // all_image start
+        .all_video {
+            border: $border;
+            ul {
+                border: $border;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: hidden;
+                gap: 30px;
+                li {
+                    border: $border;
+                    position: relative;
+                    overflow: hidden;
+                    .each_video {
+                        border: $border;
+                        width: 412px;
+                        height: 312px;
+                        @include xs{
+                            width: 280px;
+                            height: 190px;
+                        }
+                        @include md{
+                            width: 333px;
+                            height: 250px;
+                        }
+                        img {
+                            border: $border;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    // overlay-area start
+                    .video_overlay_area {
+                        border: $border;
+                        width: 413px;
+                        height: 312px;
+                        background-color: rgb(0 0 0 / 55%);
+                        top: 0px;
+                        left: 0px;
+                        position: absolute;
+                        transition-duration: 0.1s;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            background-color: rgb(0 0 0 / 80%);
+                        }
+                        @include xs{
+                            width: 280px;
+                            height: 190px;
+                        }
+                        @include md{
+                            width: 333px;
+                            height: 250px;
+                        }
+                        .date_area {
+                            border: $border;
+                            position: absolute;
+                            right: 0px;
+                            .date_text {
+                                border: $border;
+                                color: $off_white;
+                                font-size: 16px;
+                                line-height: 16px;
+                                font-family: $font_medium;
+                                padding: 10px;
+                                font-style: italic;
+                                display: inline-block;
+                            }
+                        }
+                        .video_title_text_and_button_area {
+                            border: $border;
+                            display: flex;
+                            align-items: end;
+                            height: 100%;
+                            justify-content: space-between;
+                            padding: 0px 35px 35px 35px;
+                            @include xs{
+                                padding: 0px 15px 15px 15px;
+                            }
+                            .text_area {
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    width: 90px;
+                                    height: 4px;
+                                    background-color: $orange;
+                                    position: absolute;
+                                    top: -18px;
+                                }
+                                .title_text {
+                                    border: $border;
+                                    font-size: 20px;
+                                    font-family: $font_medium;
+                                    color: $white;
+                                    margin-bottom: 7px;
+                                    @include xs{
+                                        font-size: 16px;
+                                    }
+                                }
+                                .decription_text {
+                                    border: $border;
+                                    font-size: 14px;
+                                    font-family: $font_regular;
+                                    color: $off_white;
+                                }
+                            }
+
+                            .button_area {
+                                border: $border;
+                                margin-left: 40px;
+                                .play_button {
+                                    border: $border;
+                                    width: 25px;
+                                    height: 25px;
+                                    background-color: $white;
+                                    border-radius: 50%;
+                                    transition-duration: 0.4s;
+                                    &:hover {
+                                        background-color: $orange;
+                                        i {
+                                            color: $white;
+                                        }
+                                    }
+                                    i {
+                                        border: $border;
+                                        font-size: 12px;
+                                        color: black;
+                                        transition-duration: 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // overlay-area end
+                }
+            }
+        }
+        // all_image end
+        // view_all_button_area start
+         .view_all_button_area{
+             .view_all_button{
+                 transition-duration: .4s;
+                 &:hover{
+                    background-color: $off_white;
+                 }
+                
+             }
+         }
+        // view_all_button_area end
+    }
+}
+// image_gallery_area end

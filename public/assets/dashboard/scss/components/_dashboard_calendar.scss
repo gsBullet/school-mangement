@@ -1,0 +1,48 @@
+.calendar_dashboard{
+    
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        list-style: none;
+    
+        li {
+            cursor: pointer;
+            display: flex;
+            width: 10rem;
+            height: 10rem;
+            margin: 0.25rem;
+            flex-flow: column;
+            border-radius: 0.2rem;
+            padding: 1rem;
+            font-weight: 300;
+            font-size: 0.8rem;
+            box-sizing: border-box;
+            background: rgb(57 57 57 / 25%);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+    
+            time {
+                font-size: 2rem;
+                margin: 0 0 1rem 0;
+                font-weight: 500;
+            }
+        }
+        .absent{
+            border: 1px solid rgb(221 31 31 / 48%);
+            background-color: rgb(221 31 31 / 7%);
+        }
+        .today {
+            time {
+                font-weight: 800;
+            }
+            border: 1px solid rgb(221, 193, 31);
+        }
+    }
+}
+.page-wrapper .page-body-wrapper .page-sidebar{
+    z-index: 99;
+}

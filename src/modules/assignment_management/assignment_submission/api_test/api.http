@@ -1,0 +1,85 @@
+@hostname = http://127.0.0.1:5003/api/v1/assignment-submissions
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJwOGV0OHh2cSIsImlhdCI6MTcxNTQxNDc3M30.4FlpO3egPNciB8uZxoenUGxRCyrYmQfb20VcYlqDgG8
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/sub-wise-assignment/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "branch_id": 1,
+    "assignment_categories_id": 1,
+    "class_id": 3,
+    "student_id": 1,
+    "assignment_id": 1,
+    "attachment":"attachment",
+    "text": "Math assignment submition",
+    "image":"image.png",
+    "comments": "Math assignment",
+    "marks": 60.50,
+    "submission_date": "10-10-3"    
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 2,
+    "branch_id": 2,
+    "assignment_categories_id": 2,
+    "class_id": 2,
+    "student_id": 2,
+    "assignment_id": 2,
+    "attachment":"attachment",
+    "text": "Math assignment submition",
+    "image":"image.png",
+    "comments": "Math assignment",
+    "marks": 60.00,
+    "submission_date": "10-10-3"   
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 3
+}

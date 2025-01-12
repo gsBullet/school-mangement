@@ -1,0 +1,65 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./core/typography";
+@import "./core/reset";
+@import "./core/root";
+@import "./vendors/grid";
+@import "./shareable_css/page_title.scss";
+@import "./shareable_css/area_title.scss";
+// @import "./shareable_css/notice_news_co-curricular_page_details.scss";
+// @import "./shareable_css/image-and-video_gallery_area.scss";
+@import "./shareable_css/dashbord_and_layout_menu.scss";
+@import "./shareable_css/bottom_to_upper_button.scss";
+@import "./shareable_css/view_all_button.scss";
+@import "./shareable_css/pagination.scss";
+@import "./shareable_css/comment_area.scss";
+//------------start
+@import "./layouts/header";
+@import "./layouts/navigation";
+@import "./layouts/sidebar";
+// update page start
+@import "./pages/index.scss";
+@import "./pages/contact.scss";
+@import "./pages/video_gallery_page.scss";
+@import "./pages/image_gallery_page.scss";
+@import "./pages/blog.scss";
+@import "./pages/news.scss";
+@import "./shareable_css/news_and_blog_details.scss";
+@import "./pages/notice.scss";
+@import "./pages/notice_details.scss";
+
+// update page end
+@import "./layouts/footer";
+
+
+//------------end
+
+// @import "./pages/notice_details.scss";
+// @import "./pages/notice.scss";
+@import "./pages/co-curricular_activities.scss";
+
+@import "./pages/dashbord_layout_page.scss";
+@import "./pages/login_page.scss";
+
+@import "./pages/co-curricular_activities_details.scss";
+// @import "./pages/news_details.scss";
+
+.header_area,
+.nav_area,
+.banner_edit,
+.result_statistics,
+.introduction_and_notice,
+.countdown_area,
+.principal_image_and_message_area,
+.all_index_area,
+.news_area,
+.blog_area,
+.youtube_video_area,
+.video_gallery_area,
+.image_gallery_area,
+.footer_area,
+.copyright_area,
+.bottom_to_upper_button_area
+ {
+    // display: none;
+}

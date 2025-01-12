@@ -1,0 +1,187 @@
+// blog_area start
+.blog_area {
+    border: $border;
+    background-color: $white;
+    padding: 80px 0px;
+   @include xs{
+    padding: 30px 0px;
+   }
+   @include sm{
+    padding: 30px 0px;
+   }
+   @include md{
+    padding: 40px 0px;
+   }
+    .blog_area_content {
+        border: $border;
+        // area_title start
+        .area_title {
+            border: $border;
+            text-align: center;
+            .area_title_text {
+                border: $border;
+                color: $master_color_2;
+            }
+        }
+        // area_title end
+        // blog_item_area start
+        .blog_item_area {
+            border: $border;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            // blog_item start
+            .blog_item {
+                border: $border;
+                width: 405px;
+                &:hover{
+                    .blog_image_and_details_button_area{
+                        .blog_image{
+                            // background-color: #0000001a;
+                            background-color: rgb(20 79 97 / 15%);
+                            img{
+                                scale: 0.9;
+                            }
+                        }
+                    }
+                }
+                @include md{
+                    width: 328px;
+                   }
+                // blog_image_and_details_button_area start
+                .blog_image_and_details_button_area {
+                    border: $border;
+                    position: relative;
+                    .blog_image {
+                        border: $border;
+                        width: 100%;
+                        height: 240px;
+                        transition-duration: .4s;
+                        @include xs{
+                            height: 190px;
+                           }
+                        img {
+                            border: $border;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition-duration: .4s;
+                        }
+                    }
+                    // details_button start
+                    .details_button {
+                        border: $border;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0px;
+                        bottom: -19px;
+                        .details_button_text {
+                            border: $border;
+                            font-size: 12px;
+                            // font-family: $font_medium;
+                            font-family: $font_semibold;
+                            background-color: $master_color_2;
+                            color: $white;
+                            padding: 8px 14px;
+                            font-style: italic;
+                            transition-duration: .4s;
+                            &:hover{
+                                background-color: $off_white;
+                            }
+                        }
+                    }
+                    // details_button end
+                }
+                // blog_image_and_details_button_area end
+
+                // blog_item end
+                .blog_title_and_date_comment_area {
+                    border: $border;
+                    padding: 35px 35px;
+                    border: 2px solid #144f611a;
+                    border-top: unset;
+                    @include xs{
+                        padding: 35px 15px;
+                       }
+                    .blog_title {
+                        border: $border;
+                        .title_text {
+                            border: $border;
+                            font-size: 20px;
+                            line-height: 30px;
+                            // font-family: $font_semibold;
+                            font-family: $font_medium;
+                            color: $master_color_2;
+                            @include xs{
+                                font-size: 16px;
+                            line-height: 26px;
+                               }
+                            @include sm{
+                                font-size: 16px;
+                            line-height: 26px;
+                               }
+                            @include md{
+                                font-size: 18px;
+                               }
+                        }
+                    }
+                    .date_and_comment_area {
+                        border: $border;
+                        display: flex;
+                        justify-content: space-between;
+                        border-top: 1px solid $off_white;
+                        margin-top: 22px;
+                        padding-top: 22px;
+                        .d_c_area {
+                            border: $border;
+                            .d_c_text {
+                                border: $border;
+                                font-size: 16px;
+                                font-family: $font_semibold;
+                                font-family: $font_medium;
+                                color: $master_color_2;
+                                @include xs{
+                                    font-size: 14px;
+                                   }
+                                @include sm{
+                                    font-size: 14px;
+                                   }
+                                @include md{
+                                    font-size: 15px;
+                                   }
+                                .text {
+                                    border: $border;
+                                    color: $off_white;
+                                    transition-duration: .4s;
+                                }
+                            }
+                        }
+                        .comment_area{
+                            &:hover{
+                                .date_text{
+                                    .text{
+                                        color: $master_color_2;
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // blog_item_area end
+
+        // view_all_button_area start
+        .view_all_button_area {
+            .view_all_button {
+                &:hover{
+                    background-color: $off_white;
+                }
+            }
+        }
+        // view_all_button_area end
+    }
+}
+// blog_area end

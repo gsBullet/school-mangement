@@ -1,0 +1,66 @@
+@hostname = http://127.0.0.1:5003/api/v1/task-variants
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJwOGV0OHh2cSIsImlhdCI6MTcxNTQxNDc3M30.4FlpO3egPNciB8uZxoenUGxRCyrYmQfb20VcYlqDgG8
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{    
+    "branch_id": 1,
+    "title": "management",
+    "color": "green",
+    "description": "Mozsammel do this variant model"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 2,
+    "branch_id": 2,
+    "title": "management",
+    "color": "green",
+    "description": "Mozsammel do this variant model"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": "65125d302cf8f9fc0f49cb86",
+}

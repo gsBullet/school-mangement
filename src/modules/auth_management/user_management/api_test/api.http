@@ -1,0 +1,61 @@
+@hostname = http://127.0.0.1:5003/api/v1/admin-users
+
+# all
+###
+GET {{hostname}} HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "name": "lll",
+    "preferred_name": "lll",
+    "status": 1
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id":"65125d782678f323a32fb2a8",
+    "title": "random User",
+    "serial": 11,
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1"
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": "6517befe584d780b51e04b2d",
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": "65125d302cf8f9fc0f49cb86",
+}

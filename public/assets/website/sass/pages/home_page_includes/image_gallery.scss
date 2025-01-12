@@ -1,0 +1,156 @@
+// image_gallery_area start
+.image_gallery_area {
+    border: $border;
+    margin-bottom: 80px;
+    @include xs{
+        margin-bottom: 30px;
+    }
+    @include sm{
+        margin-bottom: 30px;
+    }
+    @include md{
+        margin-bottom: 40px;
+    }
+   
+    .image_gallery_area_content {
+        border: $border;
+        // area_title start
+        .area_title {
+            border: $border;
+            text-align: center;
+            .area_title_text {
+                border: $border;
+                color: $master_color_2;
+            }
+        }
+        // area_title end
+        // all_image start
+        .all_image {
+            border: $border;
+            ul {
+                border: $border;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: hidden;
+
+                li {
+                    border: $border;
+                    position: relative;
+                    overflow: hidden;
+                    .each_image {
+                        border: $border;
+                        width: 381px;
+                        height: 381px;
+                        @include xs{
+                            width: 150px;
+                        height: 150px;
+                        }
+                        @include sm{
+                            width: 283px;
+                        height: 283px;
+                        }
+                        @include md{
+                            width: 379px;
+                        height: 379px;
+                        }
+                        img {
+                            border: $border;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &:hover {
+                        .overlay-area {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 0px;
+                        }
+                    }
+                    // overlay-area start
+                    .overlay-area {
+                        border: $border;
+                        width: 381px;
+                        height: 381px;
+                        background-color: rgb(0 0 0 / 65%);
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        visibility: hidden;
+                        opacity: 0;
+
+                        position: absolute;
+                        top: 450px;
+                        transition-duration: 0.1s;
+                        @include xs{
+                            width: 150px;
+                        height: 150px;
+                        }
+                        @include sm{
+                            width: 283px;
+                        height: 283px;
+                        }
+                        @include md{
+                            width: 379px;
+                        height: 379px;
+                        }
+                        .date_area {
+                            border: $border;
+                            position: absolute;
+                            right: 0px;
+                            .date_text {
+                                border: $border;
+                                color: $off_white;
+                                font-size: 16px;
+                                line-height: 16px;
+                                font-family: $font_medium;
+                                padding: 10px;
+                                font-style: italic;
+                                display: inline-block;
+                            }
+                        }
+                        .image_title_area {
+                            border: $border;
+                            height: 100%;
+                            align-items: center;
+                            display: grid;
+                            .title_text {
+                                border: $border;
+                                font-size: 20px;
+                                font-family: $font_medium;
+                                padding: 10px;
+                                color: $white;
+                                text-align: center;
+                                // margin-top: 80px;
+                                @include xs{
+                                    font-size: 16px;
+                                }
+                                @include sm{
+                                    font-size: 16px;
+                                }
+                                @include md{
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                    // overlay-area end
+                }
+            }
+        }
+        // all_image end
+        // view_all_button_area start
+        .view_all_button_area{
+            .view_all_button{
+                transition-duration: .4s;
+                &:hover{
+                   background-color: $off_white;
+                }
+               
+            }
+        }
+       // view_all_button_area end
+    }
+}
+// image_gallery_area end

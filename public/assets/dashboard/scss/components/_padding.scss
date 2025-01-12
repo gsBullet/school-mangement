@@ -1,0 +1,44 @@
+.px-auto {
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.py-auto {
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.p-auto {
+    padding: auto;
+}
+
+
+@for $i from 1 through 5 {
+    .p-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .px-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .py-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .pt-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .pr-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .pb-#{$i} {
+        padding: $i * 10px;
+    }
+
+    .pl-#{$i} {
+        padding: $i * 10px;
+    }
+}

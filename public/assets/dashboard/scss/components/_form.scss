@@ -1,0 +1,84 @@
+.form_error {
+    color: #FF5722;
+    padding: 7px 0px 0px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form_600 {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-horizontal {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+
+    label {
+        min-width: 200px;
+        display: block;
+    }
+
+    .form_elements {
+        flex: 1;
+
+        >* {
+            width: 100%;
+            display: block;
+        }
+
+        >input,
+        >select {
+            min-width: 214px;
+        }
+
+        >input[type="file"] {
+            max-width: 214px;
+        }
+
+        button {
+            width: unset;
+        }
+    }
+}
+
+.form-vertical {
+    label {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .form_elements {
+        >* {
+            width: 100%;
+            display: block;
+        }
+
+        >input,
+        >select {
+            min-width: 236px;
+        }
+
+        // >input[type="file"] {
+        //     max-width: 236px;
+        // }
+
+        button {
+            width: unset;
+        }
+    }
+}
+
+.multi_inputs {
+    .multi_input_group {
+        max-width: max-content;
+        &:nth-child(n+3) {
+            border-top: 1px solid gray;
+            padding-top: 40px;
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@hostname = http://127.0.0.1:5003/api/v1/branch-class-sections
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10   HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "name": "user4",
+    "email": "user4@gmail.com",
+    "phone_number": "35897593784",
+    "image": "avatar.png",
+    "password": "12345678"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": 11,
+    "name": "user6update",
+    "email": "user6update@gmail.com",
+    "phone_number": "35897593784",
+    "image": "avatar.png",
+    "password": "12345678"
+}
+
+# login
+###
+POST {{hostname}}/login HTTP/1.1 
+content-type: application/json
+# Authorization: {{token}}
+
+{
+    "email": "admin1@gmail.com",
+    "password": "12345678"
+}
+
+# logout
+###
+POST {{hostname}}/logout HTTP/1.1
+content-type: application/json
+
+{}
+
+# forget mail
+###
+POST {{hostname}}/forget HTTP/1.1
+content-type: application/json
+
+{}
+
+# soft delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+# block
+###
+POST  {{hostname}}/block HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 7
+}

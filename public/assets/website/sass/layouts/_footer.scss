@@ -1,0 +1,222 @@
+// footer_area start
+.footer_area {
+    border: $border;
+    background-color: $master_color_2;
+    padding: 50px 0px;
+    @include xs{
+        margin-top: 50px;
+    }
+    .footer_area_content {
+        border: $border;
+        // footer_logo_area start
+        .footer_logo_area {
+            border: $border;
+            justify-content: center;
+            display: flex;
+            a {
+                border: $border;
+                img {
+                    border: $border;
+                    display: block;
+                    margin: auto;
+                }
+                .logo_title {
+                    border: $border;
+                    display: block;
+                    font-size: 20px;
+                    font-family: $font_semibold;
+                    color: $off_white;
+                    color: $master_color_2;
+                    color: $white;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        // footer_social_media_area start
+        .footer_social_media_area {
+            border: $border;
+            margin-top: 40px;
+            justify-content: center;
+            display: flex;
+            ul {
+                border: $border;
+                display: flex;
+                gap: 10px;
+                li {
+                    border: $border;
+                    a {
+                        border: $border;
+                        width: 30px;
+                        height: 30px;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        // background-color: #269326;
+                        background-color: $off_white;
+                        border-radius: 2px;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            background-color: #051738;
+                            i{
+                                color: $white;
+                            }
+                        }
+                        i {
+                            border: $border;
+                            font-size: 16px;
+                            // color: $white;
+                            color: $master_color_2;
+                            transition-duration: .4s;
+                        }
+                    }
+                }
+            }
+        }
+        // footer_social_media_area end
+        // footer_logo_area end
+
+        // importent_link_area start
+        .area_title {
+            border: $border;
+            margin-bottom: 25px;
+            @include xs{
+                margin-top: 40px;
+            }
+            @include sm{
+                margin-top: 40px;
+            }
+            @include md{
+                margin-top: 40px;
+            }
+            .area_title_text{
+                border: $border;
+                color: $white;
+                font-size: 20px;
+            }
+        }
+        .importent_link_area {
+            border: $border;
+            ul {
+                border: $border;
+                gap: 20px;
+                display: grid;
+                li {
+                    border: $border;
+                    a {
+                        border: $border;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $off_white;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        // importent_link_area end
+
+        // contact area start
+        .contact_area {
+            border: $border;
+            // adddress_area start
+            .adddress_area {
+                border: $border;
+                .adddress_text {
+                    border: $border;
+                    font-size: 16px;
+                    font-family: $font_medium;
+                    color: $off_white;
+                }
+            }
+            // adddress_area end
+            // phone_title_and_number area start
+            .title_and_content {
+                border: $border;
+                display: flex;
+
+                .f_title_area {
+                    border: $border;
+                    .title_text {
+                        border: $border;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $white;
+                    }
+                }
+                .f_content_area {
+                    border: $border;
+                    .content_text {
+                        border: $border;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $off_white;
+                        margin-left: 12px;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                    .f_c_number {
+                        display: block;
+                    }
+                    .email_text {
+                    }
+                }
+                .phone_number {
+                    gap: 10px;
+                    display: grid;
+                }
+            }
+            .phone_title_and_number {
+                margin: 20px 0px;
+            }
+            // phone_title_and_number area end
+        }
+        // contact area end
+        // map area start
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+        // map area end
+    }
+}
+
+// copyright_area start
+.copyright_area {
+    border: $border;
+    background-color: #004357;
+    .copyright_area_content {
+        border: $border;
+        text-align: center;
+        padding: 15px 0px;
+        .copyright_text {
+            border: $border;
+            color: $white;
+            // font-size: 16px;
+            // font-family: $font_medium;
+            a {
+                border: $border;
+                color: $off_white;
+                // font-size: 16px;
+                // font-family: $font_medium;
+                transition-duration: 0.4s;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        .text{
+            font-size: 16px;
+            font-family: $font_medium;
+            @include xs{
+                font-size: 11px;
+            }
+        }
+    }
+}
+// copyright_area end
+// footer_area end

@@ -1,0 +1,158 @@
+// comment_all_area start
+.comment_all_area {
+    border: $border;
+    border-top: 1px solid black;
+    padding-top: 40px;
+    margin-top: 60px;
+    // comment_area start
+    .comment_area {
+        border: $border;
+        .user_img_and_comment_text {
+            border: $border;
+            display: flex;
+            .user_img {
+                border: $border;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 15px;
+                img {
+                    border: $border;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .comment_text {
+                border: $border;
+                flex: 1;
+                form {
+                    border: $border;
+                    input {
+                        border: $border;
+                        outline: 0;
+                        width: 100%;
+                        background-color: transparent;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $black;
+                        border-bottom: 1px solid $black;
+                        padding-bottom: 5px;
+                    }
+                    .cancel_and_submit_button_area {
+                        border: $border;
+                        margin-top: 10px;
+                        justify-content: end;
+                        display: flex;
+                        gap: 10px;
+                    
+                        .button_area {
+                            border: $border;
+                            font-size: 14px;
+                            line-height: 14px;
+                            font-family: $font_medium;
+                            background-color: $master_color_2;
+                            color: $white;
+                            padding: 5px 9px;
+                            border-radius: 3px;
+                            border: 1px solid $master_color_2;
+                            &:hover {
+                                background-color: transparent;
+                                color: $master_color_2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // comment_area start
+
+    // replay_area start
+    .replay_area {
+        border: $border;
+        margin: 30px 0px;
+        .user_img_and_user_name_and_comment_text {
+            border: $border;
+            display: flex;
+            .user_img {
+                border: $border;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 15px;
+                img {
+                    border: $border;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .user_name_and_comment_text {
+                border: $border;
+                flex: 1;
+                .user_name {
+                    border: $border;
+                    .user_name_text {
+                        border: $border;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $master_color_2;
+                    }
+                }
+                .comment_text_area {
+                    border: $border;
+                    margin: 7px 0px;
+                    .comment_text {
+                        border: $border;
+                        font-size: 16px;
+                        font-family: $font_medium;
+                        color: $black;
+                    }
+                }
+                .replay_button_area {
+                    border: $border;
+                    .replay_button {
+                        border: $border;
+                        font-size: 14px;
+                        line-height: 14px;
+                        font-family: $font_medium;
+                        background-color: $master_color_2;
+                        color: $white;
+                        padding: 5px 9px;
+                        border-radius: 3px;
+                        border: 1px solid $master_color_2;
+                        &:hover {
+                            background-color: transparent;
+                            color: $master_color_2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // replay_area end
+
+    // replay_comment_area start
+    .replay_comment_area {
+        border: $border;
+        justify-content: end;
+        display: flex;
+        .content_width {
+            width: calc(100% - 220px);
+            @include xs{
+                width:unset;
+            }
+            @include sm{
+                width:unset;
+            }
+            @include md{
+                width:unset;
+            }
+        }
+    }
+    // replay_comment_area end
+}
+// comment_all_area end

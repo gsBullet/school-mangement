@@ -1,0 +1,153 @@
+// countdown_area start
+.countdown_area {
+    border: $border;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+    @include xs {
+        margin-bottom: 30px;
+    }
+    @include sm {
+        margin-bottom: 30px;
+    }
+    @include md {
+        margin-bottom: 40px;
+    }
+    .countdown_area_bg_color {
+        border: $border;
+        background-color: rgba(20, 79, 97, 0.9098039216);
+        padding: 160px 0px;
+        @include xs {
+            padding: 70px 0px;
+        }
+        @include sm {
+            padding: 70px 0px;
+        }
+        .countdown_area_content {
+            border: $border;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            @include xs {
+                display: block;
+            }
+            @include sm {
+                display: block;
+            }
+            @include md {
+                gap: 50px;
+            }
+            // countdown_content start
+            .countdown_content {
+                border: $border;
+                display: flex;
+                gap: 20px;
+                position: relative;
+                @include xs {
+                    display: block;
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+                @include sm {
+                    display: block;
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+                &::after {
+                    content: "";
+                    width: 2px;
+                    height: 100px;
+                    background-color: $white;
+                    position: absolute;
+                    top: -7px;
+                    right: -50px;
+                    @include xs {
+                        display: none;
+                    }
+                    @include sm {
+                        display: none;
+                    }
+                    @include md {
+                        right: -25px;
+                        top: -22px;
+                    }
+                    @include lg {
+                        top: -16px;
+                    }
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                .countdown_number {
+                    border: $border;
+                    @include xs {
+                        text-align: center;
+                    }
+                    @include sm {
+                        text-align: center;
+                    }
+                    .number_text {
+                        border: $border;
+                        border-bottom: 3px solid #fdc800;
+                        color: $white;
+                        font-family: $font_medium;
+                        font-size: 70px;
+                        @include xs {
+                            font-size: 40px;
+                            display: inline-block;
+                            padding: 0px 15px;
+                        }
+                        @include sm {
+                            font-size: 50px;
+                            display: inline-block;
+                            padding: 0px 15px;
+                        }
+                        @include md {
+                            font-size: 40px;
+                        }
+                        @include lg {
+                            font-size: 50px;
+                        }
+                    }
+                }
+                .countdown_name {
+                    border: $border;
+                    align-items: center;
+                    display: flex;
+                    @include xs {
+                        margin-top: 10px;
+                    }
+                    @include sm {
+                        margin-top: 10px;
+                    }
+                    .name_text {
+                        border: $border;
+                        color: $white;
+                        font-family: $font_regular;
+                        font-size: 25px;
+                        @include xs {
+                            font-size: 20px;
+                            margin: auto;
+                        }
+                        @include sm {
+                            font-size: 20px;
+                            margin: auto;
+                        }
+                        @include md {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            // countdown_content end
+        }
+    }
+}
+// countdown_area end

@@ -1,0 +1,62 @@
+@hostname = http://127.0.0.1:5003/api/v1/account-log-attachments
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "branch_id": 4,
+    "title": "cellphin",
+    "description": "This is sellfin accoutn"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": 4,
+    "branch_id": "4",
+    "title": "sellfin",
+    "description": "This is sellfin account"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    # "id": 4
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 4
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 4
+}

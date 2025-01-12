@@ -1,0 +1,47 @@
+{"level":60,"time":1735634571100,"pid":11168,"hostname":"DESKTOP-9421701","file":"services\\all.ts:63:15)","time":"12/31/2024 2:42:51 PM","message":"Unknown column 'title' in 'field list'"}
+{"level":60,"time":1735639752015,"pid":10328,"hostname":"DESKTOP-9421701","file":"services\\month_wise_statement.ts:100:19)","time":"12/31/2024 4:09:12 PM","message":"No data found for the given period"}
+{"level":60,"time":1736079270882,"pid":271696,"hostname":"devops","file":"services/income_store.ts:91:46)","time":"1/5/2025 6:14:30 PM","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":60,"time":1736079283123,"pid":271696,"hostname":"devops","file":"services/income_store.ts:91:46)","time":"1/5/2025 6:14:43 PM","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":60,"time":1736079301259,"pid":271696,"hostname":"devops","file":"services/income_store.ts:91:46)","time":"1/5/2025 6:15:01 PM","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":60,"time":1736079541544,"pid":278845,"hostname":"devops","file":"","time":"1/5/2025 6:19:01 PM","message":"WHERE parameter \"user_staff_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736079756029,"pid":282154,"hostname":"devops","file":"","time":"1/5/2025 6:22:36 PM","message":"WHERE parameter \"user_staff_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736080320553,"pid":284963,"hostname":"devops","file":"services/expense_store.ts:91:46)","time":"1/5/2025 6:32:00 PM","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":60,"time":1736080610452,"pid":288491,"hostname":"devops","file":"","time":"1/5/2025 6:36:50 PM","message":"Data too long for column 'attachment_url' at row 1"}
+{"level":60,"time":1736135076917,"pid":17786,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/6/2025 9:44:36 AM","message":"data not found"}
+{"level":60,"time":1736135081996,"pid":17786,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/6/2025 9:44:41 AM","message":"data not found"}
+{"level":60,"time":1736135083270,"pid":17786,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/6/2025 9:44:43 AM","message":"data not found"}
+{"level":60,"time":1736137761027,"pid":41660,"hostname":"devops","file":"services/account_details.ts:39:19)","time":"1/6/2025 10:29:21 AM","message":"WHERE parameter \"account_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736137885187,"pid":43709,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:32:19)","time":"1/6/2025 10:31:25 AM","message":"WHERE parameter \"id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736138738259,"pid":59297,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:18:23)","time":"1/6/2025 10:45:38 AM","message":"Cannot read properties of undefined (reading 'month1')"}
+{"level":60,"time":1736139023065,"pid":67716,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:18:23)","time":"1/6/2025 10:50:23 AM","message":"Cannot read properties of undefined (reading 'month1')"}
+{"level":60,"time":1736139127018,"pid":69129,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:18:23)","time":"1/6/2025 10:52:07 AM","message":"Cannot read properties of undefined (reading 'month1')"}
+{"level":60,"time":1736140983463,"pid":87519,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:46:19)","time":"1/6/2025 11:23:03 AM","message":"No data found for the last 7 days"}
+{"level":60,"time":1736141021792,"pid":87519,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:46:19)","time":"1/6/2025 11:23:41 AM","message":"No data found for the last 7 days"}
+{"level":60,"time":1736141059521,"pid":87519,"hostname":"devops","file":"services/get_seven_days_inc_exp.ts:46:19)","time":"1/6/2025 11:24:19 AM","message":"No data found for the last 7 days"}
+{"level":60,"time":1736143071777,"pid":92101,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/6/2025 11:57:51 AM","message":"data not found"}
+{"level":60,"time":1736653951678,"pid":47569,"hostname":"devops","file":"","time":"1/12/2025 9:52:31 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736653960277,"pid":47569,"hostname":"devops","file":"","time":"1/12/2025 9:52:40 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736653961436,"pid":47569,"hostname":"devops","file":"","time":"1/12/2025 9:52:41 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736653962692,"pid":47569,"hostname":"devops","file":"","time":"1/12/2025 9:52:42 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736653963522,"pid":47569,"hostname":"devops","file":"","time":"1/12/2025 9:52:43 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736654061939,"pid":49693,"hostname":"devops","file":"","time":"1/12/2025 9:54:21 AM","message":"Unexpected token } in JSON at position 22"}
+{"level":60,"time":1736655705871,"pid":69114,"hostname":"devops","file":"services/latest_exam_routine.ts:32:19)","time":"1/12/2025 10:21:45 AM","message":"WHERE parameter \"branch_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736655830223,"pid":70155,"hostname":"devops","file":"services/latest_exam_routine.ts:32:19)","time":"1/12/2025 10:23:50 AM","message":"WHERE parameter \"branch_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1736656418790,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:38 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656421464,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:41 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656426606,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:46 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656427577,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:47 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656428136,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:48 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656428341,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:48 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656428602,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:48 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656428687,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:48 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656428937,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:48 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656429138,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:49 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656429347,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:49 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656429540,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:49 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656429690,"pid":83854,"hostname":"devops","file":"services/latest_exam_routine.ts:58:19)","time":"1/12/2025 10:33:49 AM","message":"ExamsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656476102,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:36 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656478259,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:38 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656479280,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:39 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656480097,"pid":85072,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:34:40 AM","message":"BranchBuildingRoomsModel is not associated to ExamRoutinesModel!"}
+{"level":60,"time":1736656862600,"pid":87323,"hostname":"devops","file":"services/latest_exam_routine.ts:53:19)","time":"1/12/2025 10:41:02 AM","message":"Unknown column 'subjects.subject_name' in 'field list'"}

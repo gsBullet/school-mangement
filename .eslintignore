@@ -1,0 +1,6 @@
+node_modules
+build
+logs
+/src/bootstrap
+.gitignore
+/public/management/central_branch/views/components/Rect

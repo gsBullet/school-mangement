@@ -1,0 +1,34 @@
+
+.agenda_btn{
+    color: rgb(66, 172, 66);
+}
+.assign_tasks{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 5px;
+    .assign_task_list{
+        display: flex;
+        gap: 24px;
+        /* border: 1px solid gray; */
+        padding: 10px;
+    }
+}
+.task_assign_submit_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.teacher_result{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    margin: 20px 0;
+    
+    .label{
+        color: white;
+        margin-bottom: 5px;
+
+    }
+}

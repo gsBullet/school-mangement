@@ -1,0 +1,147 @@
+// all_index_area start
+.all_index_area {
+    border: $border;
+    margin-bottom: 80px;
+    background-color: $white;
+    padding: 80px 0px;
+    @include xs{
+        padding: 30px 0px;
+        margin-bottom: 30px;
+    }
+    @include sm{
+        padding: 30px 0px;
+        margin-bottom: 30px;
+    }
+    @include md{
+        padding: 40px 0px;
+        margin-bottom: 40px;
+    }
+    .all_index_area_content {
+        border: $border;
+        ul {
+            border: $border;
+            gap: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            @include xs{
+                gap: 30px;
+            }
+            @include sm{
+                gap: 30px;
+            }
+            @include md{
+                gap: 40px;
+            }
+            li {
+                border: $border;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                // item_area start
+                .item_area {
+                    border: $border;
+                    display: flex;
+                    width: 398px;
+                    background-color: rgba(20, 79, 97, 0.9098039216);
+                    padding: 20px 10px;
+                    height: 100%;
+                    border-radius: 6px;
+                    position: relative;
+
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    @include xs{
+                      width: 290px;
+                    }
+                    // item_logo_and_title start
+                    .item_logo_and_title {
+                        border: $border;
+                        width: 120px;
+
+                        .item_logo {
+                            border: $border;
+                            justify-content: center;
+                            display: flex;
+
+                            width: 64px;
+                            height: 64px;
+                            margin: auto;
+
+                            // width: 100%;
+                            img {
+                                border: $border;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .item_title {
+                            border: $border;
+                            justify-content: center;
+                            display: flex;
+                            margin-top: 12px;
+                            .title_text {
+                                border: $border;
+                                font-size: 17px;
+                                // color: $master_color_2;
+                                color: $white;
+                                font-family: $font_semibold;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    // item_logo_and_title end
+                    // item_link_area start
+                    .item_link_area {
+                        border: $border;
+                        margin-left: 15px;
+                        // gap: 10px;
+                        // display: grid;
+                        // item_link start
+                        .item_link {
+                            border: $border;
+                            display: flex;
+                            margin-bottom: 10px;
+                            &:last-child{
+                                margin-bottom: 0px;
+                            }
+                            .icon {
+                                border: $border;
+                                padding-right: 10px;
+                                // color: $master_color_2;
+                                color: $white;
+                                font-size: 14px;
+                                align-items: center;
+                                display: flex;
+                            }
+                            .link_text {
+                                border: $border;
+                                // color: $master_color_2;
+                                // color: #969a9e;
+                                color: $white;
+                                font-size: 14px;
+                                align-items: center;
+                                display: flex;
+                                font-family: $font_medium;
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $off_white;
+                                }
+                                @include xs{
+                                    font-size: 11px;
+                                  }
+                            }
+                        }
+                        // item_link end
+                    }
+                    // item_link_area end
+                }
+                // item_area end
+            }
+        }
+    }
+}
+// all_index_area end

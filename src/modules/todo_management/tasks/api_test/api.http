@@ -1,0 +1,70 @@
+@hostname = http://127.0.0.1:5003/api/v1/tasks
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJrZ3Y1M2RrdyIsImlhdCI6MTcxNTQ5MjgwMX0.pyu8TNaBLK6sq2sGsY7gaDvaKWUxKcOnwVrWvIe9S28
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{
+
+    "branch_id": 5,
+    "title": "testing",
+    "description": "On sunday will be held on Teacher meatings",
+    "is_complete": "running",
+    "date": "2024-10-10",
+    "teacher_id": 5
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 2,
+    "branch_id": 2,
+    "title": "Parents meatings",
+    "description": "On sunday will be held on parents meatings",
+    "is_complete": "running",
+    "date": "12-10-2024"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": "65125d302cf8f9fc0f49cb86",
+}

@@ -1,0 +1,286 @@
+// news_area start
+.news_area {
+    border: $border;
+    margin-bottom: 80px;
+    @include xs {
+        margin-bottom: 30px;
+       }
+    @include sm {
+        margin-bottom: 30px;
+       }
+    @include md {
+        margin-bottom: 40px;
+       }
+    .news_content {
+        border: $border;
+        // area_title start
+        .area_title {
+            border: $border;
+            .area_title_text {
+                border: $border;
+                color: $master_color_2;
+                text-align: center;
+            }
+        }
+        // area_title end
+        // left_area start
+        .left_area {
+            border: $border;
+            // news_item start
+            @include xs {
+             margin-bottom: 50px;
+            }
+            @include sm {
+             margin-bottom: 50px;
+            }
+            .news_item {
+                border: $border;
+                // news_image start
+                .news_image {
+                    border: $border;
+                    height: 393px;
+                    @include xs {
+                        height: 180px;
+                    }
+                    @include sm {
+                        height: 320px;
+                    }
+                    @include md {
+                        height: 220px;
+                    }
+                    @include lg {
+                        height: 300px;
+                    }
+                    img {
+                        border: $border;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 4px;
+                    }
+                }
+                // news_image end
+                // date_and_comment_area start
+                .date_and_comment_area {
+                    border: $border;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 15px;
+                    border-bottom: 1px solid $off_white;
+                    padding-bottom: 15px;
+                    // date and comment area start
+                    .d_c_area {
+                        border: $border;
+                        .d_c_text {
+                            border: $border;
+                            font-size: 18px;
+                            font-family: $font_semibold;
+                            color: $master_color_2;
+                            @include xs {
+                                font-size: 14px;
+                            }
+                            @include sm {
+                                font-size: 14px;
+                            }
+                            @include md {
+                                font-size: 16px;
+                            }
+                            .text {
+                                border: $border;
+                                font-family: $font_regular;
+                                color: $off_white;
+                            }
+                        }
+                        .comment_text {
+                            &:hover {
+                                .comment_title {
+                                    color: $master_color_2;
+                                }
+                            }
+                            .comment_title {
+                                transition-duration: 0.4s;
+                            }
+                        }
+                    }
+                    //  date and comment area  end
+                }
+                // date_and_comment_area end
+
+                // news_title_area start
+                .news_title_area {
+                    border: $border;
+                    margin-top: 15px;
+                    .news_title_text {
+                        border: $border;
+                        font-size: 26px;
+                        line-height: 40px;
+                        font-family: $font_semibold;
+                        color: $master_color_2;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            color: $off_white;
+                        }
+                        @include xs {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                        @include sm {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                        @include md {
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+                        @include lg {
+                            font-size: 20px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+                // news_title_area end
+            }
+            // news_item end
+        }
+        // left_area end
+
+        // right_area start
+        .right_area {
+            border: $border;
+            // news_item_area start
+            .news_item_area {
+                border: $border;
+                gap: 30px;
+                display: grid;
+                @include xs {
+                    gap: 40px;
+                   }
+                @include md {
+                    gap: 40px;
+                   }
+                // news_item start
+                .news_item {
+                    border: $border;
+                    display: flex;
+                    .news_image {
+                        border: $border;
+                        width: 160px;
+                        height: 130px;
+                        @include xs {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        @include md {
+                            width: 80px;
+                            height: 65px;
+                        }
+                        img {
+                            border: $border;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+                    // news_title_and_date_comment_area start
+                    .news_title_and_date_comment_area {
+                        border: $border;
+                        flex: 1;
+                        margin-left: 20px;
+                        // news_title_area start
+                        .news_title_area {
+                            border: $border;
+                            .news_title_text {
+                                border: $border;
+                                font-size: 20px;
+                                line-height: 30px;
+                                font-family: $font_semibold;
+                                color: $master_color_2;
+                                margin-bottom: 7px;
+                                transition-duration: 0.4s;
+                                &:hover {
+                                    color: $off_white;
+                                }
+                                @include xs {
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                }
+                                @include sm {
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                }
+                                @include md {
+                                    font-size: 15px;
+                                    line-height: 28px;
+                                }
+                                @include lg {
+                                    font-size: 16px;
+                                    line-height: 28px;
+                                }
+                            }
+                        }
+                        // news_title_area end
+                        // date_and_comment_area start
+                        .date_and_comment_area {
+                            border: $border;
+                            display: flex;
+                            justify-content: space-between;
+                            border-top: 1px solid $off_white;
+                            padding-top: 7px;
+                            .d_c_area {
+                                border: $border;
+                                .d_c_text {
+                                    border: $border;
+                                    font-size: 16px;
+                                    font-family: $font_semibold;
+                                    color: $master_color_2;
+                                    @include xs {
+                                        font-size: 14px;
+                                    }
+                                    @include sm {
+                                        font-size: 14px;
+                                    }
+                                    @include md {
+                                        font-size: 15px;
+                                    }
+                                    .text {
+                                        border: $border;
+                                        font-family: $font_regular;
+                                        color: $off_white;
+                                    }
+                                }
+                                .comment_text {
+                                    &:hover {
+                                        .comment_title {
+                                            color: $master_color_2;
+                                        }
+                                    }
+                                    .comment_title {
+                                        transition-duration: 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        // date_and_comment_area end
+                    }
+                    // news_title_and_date_comment_area end
+                }
+                // news_item end
+            }
+            // news_item_area end
+            // button_area start
+            .view_all_button_area {
+                border: $border;
+                .view_all_button {
+                    border: $border;
+                    &:hover {
+                        background-color: $off_white;
+                    }
+                }
+            }
+            // button_area end
+        }
+        // right_area end
+    }
+}
+// news_area end

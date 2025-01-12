@@ -1,0 +1,128 @@
+// login_or_sign_up_area start
+.login_or_sign_up_area {
+    border: $border;
+
+    .login_or_sign_up_content {
+        border: $border;
+        margin: auto;
+        width: 357px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-color: $white;
+        padding: 40px 15px;
+        box-shadow: 0px 0px 5px #192f594f;
+        border-radius: 4px;
+
+        @include xs {
+            width: 272px;
+        }
+
+        form {
+            border: $border;
+            gap: 15px;
+            display: grid;
+
+            .input_area {
+                border: $border;
+                display: block;
+                outline: 0;
+                width: 100%;
+                font-size: 17px;
+                line-height: 17px;
+                font-family: $font_regular;
+                color: $master_color_2;
+                border: 1px solid #192f5957;
+                padding: 5px 10px;
+                border-radius: 4px;
+
+                @include xs {
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 10px 10px;
+                }
+            }
+
+            .login_in_area {
+                border: $border;
+                display: block;
+                margin: auto;
+                text-align: center;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: $font_medium;
+                // font-family: $font_semibold;
+                color: $white;
+                background-color: $master_color_2;
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                transition-duration: .4s;
+
+                &:hover {
+                    background-color: #192f591f;
+                    color: $master_color_2;
+                }
+            }
+
+            .forgotten_password_area {
+                border: $border;
+                display: block;
+                text-align: center;
+                font-size: 17px;
+                font-family: $font_regular;
+                border-bottom: 1px solid #0000001f;
+                padding-bottom: 20px;
+                margin-bottom: 5px;
+            }
+
+            .create_an_account_area {
+                border: $border;
+                display: block;
+                margin: auto;
+
+                font-size: 17px;
+                line-height: 17px;
+                font-family: $font_regular;
+                color: $white;
+                background-color: $master_color_2;
+                padding: 13px 18px;
+                border-radius: 4px;
+                transition-duration: .4s;
+
+                &:hover {
+                    background-color: #192f591f;
+                    color: $master_color_2;
+                }
+            }
+        }
+    }
+}
+
+.login_user_type{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.login_switch_button {
+    border: 1px solid $master_color_2;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: $font_medium;
+    color: $master_color_2;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: .4s;
+
+    &:has(input:checked),
+    &.active,
+    &:hover {
+        background-color: $master_color_2;
+        color: $white;
+    }
+
+}
+
+// login_or_sign_up_area end

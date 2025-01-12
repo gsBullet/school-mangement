@@ -1,0 +1,185 @@
+// notice_area start
+.inner_notice_area {
+    .notice_area_content {
+        // notice_site_bar_area start
+        .notice_site_bar_area {
+            display: flex;
+            @include xs{
+                display: block;
+            }
+            @include sm{
+                display: block;
+            }
+            .notice_area {
+                border: $border;
+                flex: 1;
+                margin-right: 70px;
+                @include xs{
+                    margin-right: 0px;
+                }
+                @include sm{
+                    margin-right: 0px;
+                }
+
+                // area_title start
+                .area_title {
+                    .area_title_text {
+                        color: $white;
+                    }
+                }
+                // area_title end
+
+                // notice_area_content start
+                .notice_area_content {
+                    border: $border;
+                    ul {
+                        border: $border;
+                        gap: 12px;
+                        display: grid;
+                        li {
+                            border: $border;
+                            .notice {
+                                border: $border;
+                                background-color: white;
+                                display: flex;
+                                padding: 15px;
+                                border-radius: 3px;
+                                @include xs{
+                                    display: block;
+                                }
+                                @include sm{
+                                    display: block;
+                                }
+                                // notice date_area start
+                                .date_area {
+                                    border: $border;
+                                    text-align: center;
+                                    width: 95px;
+                                    @include xs{
+                                        width: 100%;
+                                        margin-bottom: 16px;
+                                    }
+                                    @include sm{
+                                        width: 100%;
+                                        margin-bottom: 16px;
+                                    }
+                                    // padding: 18px;
+                                    .day_and_month_area {
+                                        border: $border;
+                                        background-color: #fdc800;
+                                        padding: 7px 0px;
+                                        position: relative;
+                                        &::before {
+                                            content: "";
+                                            width: 10px;
+                                            height: 10px;
+                                            background-color: $master_color_2;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 7px;
+                                            left: 10px;
+                                        }
+                                        &::after {
+                                            content: "";
+                                            width: 10px;
+                                            height: 10px;
+                                            background-color: $master_color_2;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 7px;
+                                            right: 10px;
+                                        }
+                                        .text_day {
+                                            border: $border;
+                                            font-size: 18px;
+                                            line-height: 18px;
+                                            font-family: $font_medium;
+                                        }
+                                        .text_month {
+                                            border: $border;
+                                            font-size: 14px;
+                                            line-height: 14px;
+                                            font-family: $font_regular;
+                                        }
+                                    }
+                                    .year_area {
+                                        border: $border;
+                                        background-color: $master_color_2;
+                                        padding: 7px 0px;
+                                        .text_year {
+                                            border: $border;
+                                            font-size: 14px;
+                                            line-height: 14px;
+                                            color: $white;
+                                            font-family: $font_regular;
+                                        }
+                                    }
+                                }
+                                // notice date_area end
+                                // notice_title_and_description_area start
+                                .notice_title_and_description_area {
+                                    border: $border;
+                                    flex: 1;
+                                    margin-left: 15px;
+                                    .notice_title {
+                                        border: $border;
+                                        margin-bottom: 10px;
+                                        .title_text {
+                                            border: $border;
+                                            font-size: 18px;
+                                            font-family: $font_semibold;
+                                            color: $master_color_2;
+                                            transition-duration: 0.4s;
+                                            &:hover {
+                                                color: $off_white;
+                                            }
+                                        }
+                                    }
+                                    .notice_description {
+                                        border: $border;
+                                        .description_text {
+                                            border: $border;
+                                            font-size: 14px;
+                                            font-family: $font_regular;
+                                            color: black;
+
+                                            .read_more_area {
+                                                border: $border;
+                                                font-size: 16px;
+                                                font-family: $font_medium;
+                                                color: $master_color_2;
+                                                margin-left: 5px;
+                                                transition-duration: 0.4s;
+                                                &:hover {
+                                                    color: $off_white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                // notice_title_and_description_area end
+                            }
+                        }
+                    }
+                }
+                // notice_area_content end
+
+                // view_all_button_area start
+                .view_all_button_area {
+                    .view_all_button {
+                        background-color: $white;
+                        color: $master_color_2;
+                        &:hover {
+                            background-color: $off_white;
+                            color: $white;
+                        }
+                    }
+                }
+                // view_all_button_area end
+            }
+        }
+        // notice_site_bar_area end
+    }
+}
+
+// notice_area end

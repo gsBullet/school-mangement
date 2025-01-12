@@ -1,0 +1,197 @@
+// class_schedule_area start
+$border: 0px solid rgba(255, 255, 255, 0.068);
+$Poppins_Medium: sans-serif;
+$Poppins_Regular: sans-serif;
+$solid_white: white;
+$navy: rgb(211, 211, 211);
+.class_schedule_area {
+    border: $border;
+    // background-color: $yellow;
+    padding-bottom: 50px;
+
+    // class_schedule_title start
+    .class_schedule_title {
+        border: $border;
+        padding: 50px 0px;
+        text-align: center;
+        h2 {
+            border: $border;
+            font-family: $Poppins_Medium;
+            font-size: 30px;
+            line-height: 30px;
+            color: $navy;
+            text-transform: capitalize;
+            // @include xs {
+            //     font-size: 23px;
+            //     line-height: 23px;
+            // }
+           
+        }
+    }
+
+    // class_schedule_title end
+
+    .class_schedule_content {
+        border: $border;
+        @include xs {
+            width: 260px;
+            height: 200px;
+            overflow: scroll;
+            margin: auto;
+        }
+        @include sm {
+            width: 500px;
+            height: 250px;
+            overflow: scroll;
+            margin: auto;
+        }
+        @include md {
+            width: 650px;
+            height: 300px;
+            overflow: scroll;
+            margin: auto;
+        }
+        @include lg {
+            width: 900px;
+            // height: 300px;
+            overflow: scroll;
+            margin: auto;
+        }
+       
+    }
+}
+
+// table_area start
+
+.table_area {
+    border: $border;
+    width: 100%;
+    // border: 1px solid $yellow;
+    border: 1px solid $navy;
+
+    thead {
+
+        // table_head area start
+        .table_head_area {
+            border: $border;
+            background-color: rgb(0, 0, 0);
+
+            th {
+                border: $border;
+                font-family: $Poppins_Regular;
+                font-size: 15px;
+                color: $solid_white;
+                text-transform: capitalize;
+                text-align: center;
+                border-right: 1px solid $solid_white;
+
+                &:last-child {
+                    border-right: 1px solid $navy;
+                }
+
+                padding: 15px 10px;
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:first-child {
+                    width: 100px;
+                }
+            }
+
+            .head_class_title {}
+
+            .head_batch_title {}
+
+            .head_subject_title {}
+
+            .head_day_time_room_title {
+                text-align: center;
+
+                .head_day_time_room {
+                    border: $border;
+                    display: block;
+                }
+
+                .head_day {}
+
+                .head_time_and_room {
+                    .head_time {
+                        border: $border;
+                    }
+
+                    .head_silash {
+                        border: $border;
+                    }
+
+                    .head_room {
+                        border: $border;
+                    }
+                }
+            }
+        }
+
+        // table_head area end
+    }
+
+    tbody {
+
+        // table_body area start
+        tr {
+            border: $border;
+        }
+
+        .table_body {
+            td {
+                border: $border;
+                text-align: center;
+                font-family: $Poppins_Medium;
+                font-size: 13px;
+                color: $navy;
+                // color: $yellow;
+                // color: $dark_light;
+                text-transform: capitalize;
+                // border: 1px solid $yellow;
+                border: 1px solid #dddddd;
+                padding: 15px 5px;
+
+                span {
+                    border: $border;
+                }
+            }
+
+            .class {}
+
+            .batch {}
+
+            .subject {}
+
+            .class_time_and_room_content {
+                text-align: center;
+
+                .class_time_and_room {
+                    .time_rooom {
+                        display: block;
+
+                        .room_title {
+                            // color: $yellow;
+                        }
+
+                        .dash_title {}
+
+                        .room_number {}
+                    }
+
+                    .class_time {}
+
+                    .class_room {}
+                }
+            }
+        }
+
+        // table_body area end
+    }
+
+}
+
+// table_area end
+// class_schedule_area end

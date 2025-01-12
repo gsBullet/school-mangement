@@ -1,0 +1,47 @@
+// Dashbord area start
+.dashbord_layout_page {
+    border: $border;
+    padding: 0px 30px;
+    // background-color: #00000038;
+    // background-color: #4d4b4b38;
+    background-color: $white;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    // user_informaton_area start
+    .user_informaton_area {
+        border: $border;
+        .content_area {
+            border: $border;
+            display: flex;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            .content_title {
+                border: $border;
+                margin-right: 15px;
+                .content_title_text {
+                    border: $border;
+                    color: $master_color_2;
+
+                    font-size: 20px;
+                    font-family: $font_regular;
+                }
+            }
+            .content {
+                border: $border;
+                .content_text {
+                    border: $border;
+                    color: $master_color_2;
+                    font-size: 20px;
+                    font-family: $font_regular;
+                }
+            }
+        }
+    }
+    // user_informaton_area end
+}
+// Dashbord area end

@@ -1,0 +1,30 @@
+// bottom_to_upper_button start
+.bottom_to_upper_button_area {
+    border: $border;
+    width: 45px;
+    height: 45px;
+    // background-color: #192f59ba;
+    background-color: #004357db;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    transition-duration: .4s;
+    z-index: 9999999;
+    &:hover{
+        background-color: $master_color_1;
+        i{
+            color: $master_color_2;
+        }
+    }
+    i {
+        border: $border;
+        font-size: 23px;
+        color: $white;
+        transition-duration: .4s;
+    }
+}
+// bottom_to_upper_button end

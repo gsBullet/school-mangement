@@ -1,0 +1,192 @@
+.notice {
+    border: $border;
+    background-color: white;
+    display: block;
+    padding: 15px;
+    border-radius: 3px;
+    // margin-bottom: 80px;
+    // notice date_area start
+    .inner_date_area {
+        border: $border;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        // padding: 18px;
+        .day_and_month_area {
+            border: $border;
+            background-color: #fdc800;
+            padding: 7px 0px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $master_color_2;
+                border-radius: 50%;
+                position: absolute;
+                top: 7px;
+                left: 10px;
+            }
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $master_color_2;
+                border-radius: 50%;
+                position: absolute;
+                top: 7px;
+                right: 10px;
+            }
+            .text_day {
+                border: $border;
+                font-size: 50px;
+                line-height: 50px;
+                font-family: $font_medium;
+                @include xs{
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                @include sm{
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+                @include md{
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+                @include lg{
+                    font-size: 26px;
+                    line-height: 26px;
+                }
+                @include xl{
+                    font-size: 28px;
+                    line-height: 28px;
+                }
+            }
+            .text_month {
+                border: $border;
+                font-size: 30px;
+                line-height: 30px;
+                font-family: $font_regular;
+                @include xs{
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+                @include sm{
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+                @include md{
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                @include lg{
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+                @include xl{
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .year_area {
+            border: $border;
+            background-color: $master_color_2;
+            padding: 7px 0px;
+            .text_year {
+                border: $border;
+                font-size: 30px;
+                line-height: 30px;
+                color: $white;
+                font-family: $font_regular;
+                @include xs{
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+                @include sm{
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+                @include md{
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                @include lg{
+                    font-size: 26px;
+                    line-height: 26px;
+                }
+                @include xl{
+                    font-size: 28px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    // notice date_area end
+    // notice_title_and_description_area start
+    .notice_title_and_description_area {
+        border: $border;
+        flex: 1;
+        margin-left: 15px;
+        .notice_title {
+            border: $border;
+            margin-bottom: 25px;
+            .title_text {
+                border: $border;
+                font-size: 26px;
+                line-height: 40px;
+                font-family: $font_semibold;
+                color: $master_color_2;
+                transition-duration: 0.4s;
+                @include xs{
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                @include sm{
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                @include md{
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                @include lg{
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                @include xl{
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+            }
+        }
+        .notice_description {
+            border: $border;
+            .inner_description_text {
+                border: $border;
+                font-size: 16px;
+                line-height: 28px;
+                font-family: $font_medium;
+                color: black;
+                margin-bottom: 25px;
+
+                .read_more_area {
+                    border: $border;
+                    font-size: 16px;
+                    font-family: $font_medium;
+                    color: $master_color_2;
+                    margin-left: 5px;
+                    transition-duration: 0.4s;
+                    &:hover {
+                        color: $off_white;
+                    }
+                }
+            }
+        }
+    }
+    // notice_title_and_description_area end
+}
+.notice_margin{
+    margin-bottom: 80px;
+}

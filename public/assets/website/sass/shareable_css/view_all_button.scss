@@ -1,0 +1,27 @@
+// view_all_button_area start
+.view_all_button_area{
+    border: $border;
+    text-align: center;
+    margin-top: 24px;
+    .view_all_button{
+        border: $border;
+        font-size: 16px;
+        font-family: $font_medium;
+        font-family: $font_semibold;
+        color: $white;
+        background-color: $master_color_2;
+        padding: 5px 18px;
+        border-radius: 4px;
+        transition-duration: .4s;
+       &:hover{
+           background-color: red;
+           color: $white;
+       }
+       @include xs {
+        padding: 8px 10px 8px 10px;
+        font-size: 14px;
+    }
+    }
+    
+}
+// view_all_button_area end

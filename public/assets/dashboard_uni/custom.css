@@ -1,0 +1,659 @@
+a:hover {
+    color: #ededed;
+}
+.page-wrapper .page-body-wrapper .page-body {
+    overflow: hidden;
+}
+
+.page_content {
+    position: relative;
+    animation: color_change .6s forwards;
+}
+
+@keyframes color_change {
+    from {
+        opacity: 0;
+        top: 30px;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        top: 0px;
+        transform: scale(1);
+    }
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    border-color: #515151;
+}
+
+.details_page_profile_image {
+    text-align: center;
+    padding: 20px 0px;
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        padding: 3px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.business-top-widget .media {
+    white-space: nowrap;
+}
+
+.notice_area_content {
+    border: 0px solid red;
+}
+
+@media screen and (max-width: 575.9px) {
+    .notice_area_content {
+        height: unset;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.9px) {
+    .notice_area_content {
+        height: unset;
+    }
+}
+
+.notice_area_content ul {
+    border: 0px solid red;
+    gap: 12px;
+    display: grid;
+}
+
+.notice_area_content ul li {
+    border: 0px solid red;
+}
+
+.notice_area_content ul li .notice {
+    border: 0px solid red;
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 575.9px) {
+    .notice_area_content ul li .notice {
+        display: block;
+    }
+}
+
+.notice_area_content ul li .notice .date_area {
+    border: 0px solid red;
+    text-align: center;
+    width: 95px;
+}
+
+@media screen and (max-width: 575.9px) {
+    .notice_area_content ul li .notice .date_area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.notice_area_content ul li .notice .date_area .day_and_month_area {
+    border: 0px solid red;
+    background-color: #fdc800;
+    padding: 7px 0px;
+    position: relative;
+}
+
+.notice_area_content ul li .notice .date_area .day_and_month_area::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #144f61;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.notice_area_content ul li .notice .date_area .day_and_month_area::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #144f61;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.notice_area_content ul li .notice .date_area .day_and_month_area .text_day {
+    border: 0px solid red;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Medium";
+    color: white;
+}
+
+.notice_area_content ul li .notice .date_area .day_and_month_area .text_month {
+    border: 0px solid red;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "Regular";
+    color: white;
+}
+
+.notice_area_content ul li .notice .date_area .year_area {
+    border: 0px solid red;
+    background-color: #144f61;
+    padding: 7px 0px;
+}
+
+.notice_area_content ul li .notice .date_area .year_area .text_year {
+    border: 0px solid red;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+    font-family: "Regular";
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area {
+    border: 0px solid red;
+    flex: 1;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 575.9px) {
+    .notice_area_content ul li .notice .notice_title_and_description_area {
+        margin-left: 0px;
+    }
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_title {
+    border: 0px solid red;
+    margin-bottom: 10px;
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_title .title_text {
+    border: 0px solid red;
+    font-size: 18px;
+    font-family: "SemiBold";
+    color: #144f61;
+    transition-duration: 0.4s;
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_title .title_text:hover {
+    color: #96a2b8;
+}
+
+@media screen and (max-width: 575.9px) {
+    .notice_area_content ul li .notice .notice_title_and_description_area .notice_title .title_text {
+        line-height: 26px;
+    }
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_description {
+    border: 0px solid red;
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_description .description_text {
+    border: 0px solid red;
+    font-size: 14px;
+    font-family: "Regular";
+    color: black;
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_description .description_text .read_more_area {
+    border: 0px solid red;
+    font-size: 16px;
+    font-family: "Medium";
+    color: #144f61;
+    margin-left: 5px;
+    transition-duration: 0.4s;
+}
+
+.notice_area_content ul li .notice .notice_title_and_description_area .notice_description .description_text .read_more_area:hover {
+    color: #96a2b8;
+}
+
+.view_all_button_area .view_all_button {
+    background-color: #ffffff;
+    color: #144f61;
+}
+
+.view_all_button_area .view_all_button:hover {
+    background-color: #96a2b8;
+    color: #ffffff;
+}
+.teacher_result{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    margin: 20px 0;
+}
+.result_details{
+    display: flex;
+    justify-content: space-between;
+}
+.assignment_image{
+    width: 200px;
+}
+.children_img{
+    width: 40px;
+    height: 40px;
+}
+.download_btn{
+    display: flex;
+    align-items: center;
+}
+.download_title{
+    margin-right: 10px;
+    font-weight: 700;
+}
+.payment_total{
+    text-align: right !important;
+    
+}
+.payment_btn{
+    text-align: center;
+    margin-top: 40px;
+}
+.accordion{
+    margin: 0 50px;
+}
+.accordion-button{
+    color:rgb(90, 164, 207) !important;
+}
+.hostel_super_student{
+    width: 50%;
+    color: white;
+    border: 2px solid rgb(110, 108, 108);
+    margin-bottom: 20px;
+}
+.empty_div{
+    margin-bottom: 30px;
+}
+.hostel_super_meal_submit_form{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    select{
+        height: 38px;
+    }
+    input{
+        height: 38px;
+    }
+    button{
+        height: 38px;
+    }
+    .checkbox_field{
+        margin-bottom: 1px;
+    }
+    .meal_report{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        gap: 20px;
+        button{
+            margin-bottom: 7px;
+        }
+    }
+}
+.librarian_product{
+    width: 40px;
+}
+.create_order{
+    /* border: 2px solid red; */
+    .create_order_customer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .divider{
+        border-bottom: 3px solid rgb(88, 88, 88);
+        margin: 0 40px;
+    }
+    .create_order_search{
+        margin: 20px 10%;
+    }
+    .data_list{
+        .order_delete_btn{
+            border: none;
+            color: rgb(255, 0, 0);
+            /* background-color: rgb(128, 126, 126); */
+            &:hover{
+                background-color: red;
+                border: none;
+                color: white;
+            }
+        }
+        .create_order_quantity_td{
+            width: 200px;
+            .create_order_quantity{
+                display: flex;
+                justify-content: center;
+                .minus{
+                    border: 1px solid gray;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .plus{
+                    border: 1px solid gray;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .product_quantity{
+                    /* width: 100px; */
+                    border: 1px solid gray;
+                    .product_quantity_input{
+                        width: 100px;
+                        height: 30px;
+                        border: none;
+                        text-align: center;
+                    }
+    
+                }
+            }
+        }
+    }
+    .total_price{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin: 0 10%;
+        margin-top: 20px;
+        .sub_total{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            h3{
+                font-size: 18px;
+            }
+            p{
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+        .grand_total{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            h3{
+                font-size: 18px;
+            }
+            p{
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+    }
+    .payment_part{
+        .payment{
+            /* border: 2px solid red; */
+            background-color: rgba(170, 170, 170, 0.233);
+            padding: 10px;
+            border-radius: 8px;
+            .payment_first{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                .payment_first_input{
+                    /* width: 100%; */
+                    .input_field{
+                        width: 350px;
+                        border-color: rgb(202, 202, 202);
+                        color: white;
+                        height: 35px;
+                    }
+                }
+            }
+            .payment_second{
+                textarea{
+                    border-color:rgb(202, 202, 202);
+                    color: white;
+                }
+            }
+        }
+    }
+    .save_btn{
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+.order_invoice{
+    margin: 0 15%;
+    .invoice_top{
+        display: flex;
+        justify-content: space-between;
+        .invoice_top_left{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            .invoice_photo{
+                img{
+                    width: 50px;
+                    border-radius: 8px;
+                }
+            }
+        }
+        .invoice_num_date{
+            /* border: 2px solid red; */
+            p{
+                padding: 0;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .invoice_top_right{
+            h3{
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                width: 280px;
+                font-size: 34px;
+                font-weight: 600;
+                background-color: rgba(148, 148, 148, 0.432);
+                padding: 0 10px 0 4px;
+                color: rgba(40, 40, 99, 0.521);
+            }
+            .horizon_line1{
+                border-left: 2px solid rgba(230, 230, 230, 0.979);
+            }
+            .horizon_line2{
+                border-right: 3px solid rgba(214, 214, 214, 0.979);
+                margin-right: 5px;
+            }
+        }
+    }
+    .invoice_horizontal_border{
+        border-bottom: 3px solid gray;
+        margin: 15px 0 20px 0;
+    }
+    .invoice_bill{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        h5{
+            font-size: 16px;
+        }
+        p{
+            margin: 5px 0;
+        }
+    }
+    .data_list{
+        .invoice_total{
+                display: flex;
+                    align-items: center;
+                    justify-content: end;
+            .total_price{
+                width: 30%;
+                display: flex;
+        flex-direction: column;
+            align-items: end;
+        margin: 20px 0;
+        margin-right: 40px;
+        /* .total_text{
+            text-align: start;
+            border: 1px solid blue;
+        } */
+        .sub_total{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* gap: 20px; */
+            width: 100%;
+            p{
+                font-size: 16px;
+                line-height: 80%;
+            }
+        }
+        .grand_total{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            /* border: 2px solid red; */
+            p{
+                font-size: 16px;
+                line-height: 80%;
+            }
+        }
+            }
+        }
+    }
+}
+.check_yes{
+    color: #09d6ffa8;
+    /* border: 2px solid rgb(32, 153, 2); */
+    border-radius: 50%;
+    font-size: 14px;
+}
+.check_cross{
+    color: rgb(199, 82, 23);
+    border: 2px solid rgb(173, 64, 10);;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.check_fri{
+    color: rgba(255, 255, 255, 0.637);
+    /* border: 2px solid rgb(32, 153, 2); */
+    border-radius: 50%;
+    font-size: 14px;
+}
+.table_responsive{
+    thead{
+        .atttendance_thead_tr{
+            th{
+                border: 1px solid rgba(24, 22, 22, 0.966);
+
+            }
+        }
+    }
+
+    .attendance_tr{
+        td{
+            padding: 10px ;
+            border: 1px solid rgba(24, 22, 22, 0.438);
+        }
+        .friday_td{
+            background-color: rgba(255, 0, 0, 0.089);
+        }
+    }
+    .staff_salary_report{
+        td{
+            white-space: no-wrap;
+        }
+    }
+}
+.table_responsive table tbody tr td:nth-child(1), .table_responsive table tbody tr td:nth-child(2), .staff_salary_report{
+    width: 100px;
+}
+.student_semister{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.semister_grade{
+    margin-top: 50px;
+}
+
+.student_details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.single_student_details{
+    h4{
+        /* text-decoration: underline; */
+        border-bottom: 2px solid rgb(126, 125, 125);
+        width: fit-content;
+        gap: 10px;
+    }
+    .student_table{
+        color: white;
+        font-size: 18px;
+    }
+    .basic_info{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgb(92, 92, 92);
+        width: 100%;
+    }
+    table{
+        tbody{
+            tr{
+                td:first-child{
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+.attendance_form_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.materials_td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .materials_btn{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    .download_title{
+        margin-right: 0px;
+        font-size: 18px;
+    }
+    }
+}

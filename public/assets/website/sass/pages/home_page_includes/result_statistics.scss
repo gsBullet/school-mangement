@@ -1,0 +1,171 @@
+// result_statistics area start
+.result_statistics {
+    border: $border;
+    margin-top: -40px;
+    position: relative;
+    z-index: 999;
+    @include xs {
+        margin-top: -34px;
+    }
+    @include sm {
+        margin-top: -34px;
+    }
+    // news-head-line_area start
+    .news-head-line_area {
+        border: $border;
+        // margin-top: 10px;
+        marquee {
+            border: $border;
+            // color: $master_color_2;
+            color: $white;
+            // color: $black;
+            // background-color: $white;
+            background-color: $master_color_2;
+            border-radius: 3px;
+            padding: 4px;
+            font-family: $font_medium;
+            font-size: 16px;
+            @include xs {
+                font-size: 12px;
+            }
+            @include sm {
+                font-size: 12px;
+            }
+        }
+    }
+    // news-head-line_area end
+    .result_statistics_content {
+        border: $border;
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        padding: 60px 0px;
+        background-color: $white;
+        box-shadow: 0px 0px 3px #e0e0e0;
+        border-radius: 4px;
+        @include xs {
+            display: block;
+            padding: 30px 10px;
+        }
+        @include sm {
+            display: block;
+            padding: 30px 10px;  
+        }
+        @include md {
+            display: block;
+            padding: 60px 10px;  
+        }
+        @include lg {
+            padding: 60px 10px;  
+            gap: 20px;
+        }
+        @include xl {
+            padding: 60px 10px;  
+            gap: 30px;
+        }
+        // result_statistics_area start
+        .result_statistics_area {
+            border: $border;
+            display: flex;
+            @include xs {
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            @include sm {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            @include md {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            .icon_area {
+                border: $border;
+                i {
+                    border: $border;
+                    font-size: 40px;
+                    color: $master_color_2;
+                    @include xs {
+                        font-size: 24px;
+                    }
+                    @include sm {
+                        font-size: 34px;
+                    }
+                    @include md {
+                        font-size: 35px;
+                    }
+                    @include lg {
+                        font-size: 32px;
+                    }
+                }
+            }
+            .result_statistics_text_area {
+                border: $border;
+                margin-left: 10px;
+                .title {
+                    border: $border;
+                    margin-bottom: 10px;
+                    @include xs {
+                        margin-bottom: 0px;
+                    }
+                    @include sm {
+                        margin-bottom: 5px;
+                    }
+                    @include md {
+                        margin-bottom: 5px;
+                    }
+                    @include lg {
+                        margin-bottom: 6px;
+                    }
+                    .title_text {
+                        border: $border;
+                        font-size: 18px;
+                        line-height: 18px;
+                        font-family: $font_semibold;
+                        color: $black;
+                        margin-bottom: 10px;
+                        @include xs {
+                            font-size: 14px;
+                            line-height: 18px;
+                            margin-bottom: 0px;
+                        }
+                        @include sm {
+                            margin-bottom: 5px;
+                        }
+                        @include md {
+                            margin-bottom: 5px;
+                        }
+                        @include lg {
+                           font-size: 16px;
+                           margin-bottom: 6px;
+                        }
+                    }
+                }
+                .content {
+                    border: $border;
+                    .content_text {
+                        border: $border;
+                        font-size: 16px;
+                        line-height: 16px;
+                        font-family: $font_semibold;
+                        color: $off_white;
+                        @include xs {
+                            font-size: 14px;
+                        }
+                        @include lg {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        // result_statistics_area end
+    }
+}
+// result_statistics area end

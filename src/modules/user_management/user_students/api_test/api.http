@@ -1,0 +1,146 @@
+@hostname = http://127.0.0.1:5003/api/v1/user-students
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiI2djYxdDltcCIsInVzZXJfYWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMwLjAuMC4wIFNhZmFyaS81MzcuMzYiLCJ1c2VyX3R5cGUiOiJzdGFmZiIsImlhdCI6MTczMDcxOTQyOH0.H5yiywi23bZh10TeRSGf7E0IDKoHO_Fj8j8ysJneV4o
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/children-details/38 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/full-details/5 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/single-student-details/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/class-wise-student/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/basic-information/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/fees-categories/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/student-class/CSE102 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/class-routine/1 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/profile HTTP/1.1
+
+# get
+###
+GET {{hostname}}/just-check/3 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/class-details/Six HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "name": "Yamin",
+    "email": "yamin@gamil.com",
+    "phone_number": "01779876546",
+    "image": "/assets/dashboard/images/avatar.png",
+    "password": "1234",
+    "parent_id":1
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 4,
+    "name": "Habib",
+    "email": "habib@gamil.com",
+    "phone_number": "01779876546",
+    "image": "/assets/dashboard/images/avatar.png"
+}
+
+
+# login
+###
+POST {{hostname}}/login HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "email": "student1@gmail.com",
+    "password": "12345678"
+}
+
+# logout
+###
+POST {{hostname}}/logout HTTP/1.1
+content-type: application/json
+
+{}
+
+# logout
+###
+POST {{hostname}}/change-password HTTP/1.1
+content-type: application/json
+
+{
+    "email": "student1@gmail.com",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "forget_code": "486164"
+}
+
+# forget mail
+###
+POST {{hostname}}/forget HTTP/1.1
+content-type: application/json
+
+{}
+
+# soft delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1"
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    # "id": 5
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 9
+}

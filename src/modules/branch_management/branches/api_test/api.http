@@ -1,0 +1,135 @@
+@hostname = http://127.0.0.1:5003/api/v1/branches
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/branches HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/admins HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/admins/2 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/staffs HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/staffs/3 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/staffs/3/informations HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/teachers HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/teachers/3 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/teachers/3/informations HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/students HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/students/3/educational-background HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/students/3/informations HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/parents HTTP/1.1
+
+# get
+###
+GET {{hostname}}/3/parents/3/informations HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/drivers HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1/drivers/2 HTTP/1.1
+
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "branch_code": "44",
+    "name": "abir",
+    "logo": "logo.png",
+    "address": "dhaka",
+    "primary_contact": "923840293",
+    "email": "abir@gmail.com",
+    "map": "map location",
+    "lat": "latitude",
+    "lng": "longitude"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": "4",
+    "branch_code": "44",
+    "name": "sadik",
+    "logo": "logo.png",
+    "address": "dhaka",
+    "primary_contact": "923840293",
+    "email": "sadik@gmail.com",
+    "map": "map location",
+    "lat": "latitude",
+    "lng": "longitude"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}

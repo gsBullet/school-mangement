@@ -1,0 +1,100 @@
+@hostname = http://127.0.0.1:5003/api/v1/user-parents
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiIzYXIyczFjZCIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQxODkzOH0.fp9Ar3jaNvQLo7C0lwV2JqtAILulCWUwNcSnBZfg2SY
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/4 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/childrens/20 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/full-details/8 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "name": "Yamin",
+    "email": "yamin@gamil.com",
+    "phone_number": "01779876546",
+    "image": "/assets/dashboard/images/avatar.png",
+    "password": "1234"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 4,
+    "name": "Kawser",
+    "email": "kawser@gamil.com",
+    "phone_number": "01779876546",
+    "image": "/assets/dashboard/images/avatar.png"
+}
+
+# login
+###
+POST {{hostname}}/login HTTP/1.1 
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "email": "parent1@gmail.com",
+    "password": "12345678"
+}
+
+# logout
+###
+POST {{hostname}}/logout HTTP/1.1
+content-type: application/json
+
+{}
+
+# forget mail
+###
+POST {{hostname}}/forget HTTP/1.1
+content-type: application/json
+
+{}
+
+# soft delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    # "id": 4
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": "6517befe584d780b51e04b2d",
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    # "id": 4
+}

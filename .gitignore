@@ -1,0 +1,6 @@
+.env
+node_modules
+.zip
+/**/*.zip
+/**/*.svg
+public/management_build/central_branch/central_branch.js.map
