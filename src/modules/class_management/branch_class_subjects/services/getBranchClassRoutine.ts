@@ -32,33 +32,61 @@ async function getBranchClassRoutine(
                 {
                     model: branchClassRoutinesModel,
                     as: 'subject_routine',
-                    attributes: [
-                        'branch_class_subject_id',
-                        'branch_class_section_id',
-                    ],
+                    // order: [['id', 'ASC']],
                     include: [
                         {
                             model: branchClassRoutineDayTimesModel,
                             as: 'day_time',
-                            attributes: [
-                                'branch_class_routine_id',
-                                'branch_teacher_id',
-                                'start_time',
-                                'end_time',
+
+                            include: [
+                                {
+                                    model: branchTeachersModel,
+                                    as: 'branch_teacher',
+                                    include: [
+                                        {
+                                            model: userTeachersModel,
+                                            as: 'user_teacher',
+                                            attributes: [
+                                                'name',
+                                                'email',
+                                                'image',
+                                            ],
+                                        },
+                                    ],
+                                    attributes: ['department'],
+                                },
+                                {
+                                    model: branchClassRoomsModel,
+                                    as: 'class_room',
+                                    include: [
+                                        {
+                                            model: branchBuildingRoomsModel,
+                                            as: 'building_room',
+                                            attributes: [
+                                                'room_code',
+                                                'room_name',
+                                                'attachment',
+                                                'description',
+                                                'total_seat',
+                                                'total_student',
+                                                'photo',
+                                            ],
+                                        },
+                                    ],
+                                    attributes: [
+                                        'branch_building_room_id',
+                                        'branch_class_section_id',
+                                    ],
+                                },
                             ],
+                            attributes: ['day', 'start_time', 'end_time'],
                         },
                     ],
-                },
-                {
-                    model: models.BranchClassSectionsModel,
-                    as: 'subject_section',
-                    attributes: ['id', 'title'],
-                },
-
-                {
-                    model: models.BranchClassesModel,
-                    as: 'subject_class',
-                    attributes: ['id', 'name'],
+                    attributes: [
+                        'branch_class_subject_id',
+                        'branch_teacher_id',
+                        'branch_class_id',
+                    ],
                 },
             ],
             attributes: ['id', 'level', 'name', 'code'],

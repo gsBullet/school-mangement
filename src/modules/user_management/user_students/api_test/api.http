@@ -1,4 +1,4 @@
-@hostname = http://127.0.0.1:5003/api/v1/user-students
+@hostname = http://127.0.0.1:5002/api/v1/user-students
 @token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiI2djYxdDltcCIsInVzZXJfYWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMwLjAuMC4wIFNhZmFyaS81MzcuMzYiLCJ1c2VyX3R5cGUiOiJzdGFmZiIsImlhdCI6MTczMDcxOTQyOH0.H5yiywi23bZh10TeRSGf7E0IDKoHO_Fj8j8ysJneV4o
 
 # all

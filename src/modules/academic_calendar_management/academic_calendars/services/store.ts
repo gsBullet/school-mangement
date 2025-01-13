@@ -60,7 +60,7 @@ async function store(
 
     /** initializations */
     let models = await db();
-    let body = req.body as anyObject;
+    let body = req.body as any;
     let data = new models.AcademicCalendarsModel();
 
     let user = (req as any).user;
@@ -71,7 +71,7 @@ async function store(
     });
 
     let inputs: InferCreationAttributes<typeof data> = {
-        branch_id: auth_user?.branch_id || 1,
+        branch_id: auth_user?.branch_id || body.branch_id || 1,
         event_type_id: body.event_type_id,
         event_name: body.event_name,
         start_date: body.start_date,

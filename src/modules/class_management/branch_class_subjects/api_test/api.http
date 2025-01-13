@@ -32,7 +32,6 @@ GET {{hostname}}/teacher-assignment/1 HTTP/1.1
 ###
 GET {{hostname}}/subject-assignment/3 HTTP/1.1
 
-
 # get branch class routine 
 ###
 POST {{hostname}}/get-branch-class-routine HTTP/1.1

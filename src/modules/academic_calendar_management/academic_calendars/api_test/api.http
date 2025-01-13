@@ -32,9 +32,9 @@ content-type: application/json
     "branch_id": 5,
     "event_type_id":1,
     "days": 1,
-    "event_name": "govt leave",
-    "start_date": "2025-01-22T00:00:00.000Z",
-    "end_date": "2025-01-22T00:00:00.000Z",
+    "event_name": "IMLD",
+    "start_date": "2025-02-21T00:00:00.000Z",
+    "end_date": "2025-02-21T00:00:00.000Z",
     "description": "govt leave",
     "status": "active"
 }

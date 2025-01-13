@@ -111,3 +111,5 @@
 {"level":60,"time":1736684707274,"pid":375489,"hostname":"devops","file":"services/get_academic_event_by_month.ts:55:19)","time":"1/12/2025 6:25:07 PM","message":"No data found for the specified month"}
 {"level":60,"time":1736684853313,"pid":378263,"hostname":"devops","file":"services/get_academic_event_by_month.ts:55:19)","time":"1/12/2025 6:27:33 PM","message":"No data found for the specified month"}
 {"level":60,"time":1736684860973,"pid":378263,"hostname":"devops","file":"services/get_academic_event_by_month.ts:55:19)","time":"1/12/2025 6:27:40 PM","message":"No data found for the specified month"}
+{"level":60,"time":1736746624619,"pid":49951,"hostname":"devops","file":"services/getBranchClassRoutine.ts:91:19)","time":"1/13/2025 11:37:04 AM","message":"Unknown column 'subject_routine->day_time.branch_class_id' in 'field list'"}
+{"level":60,"time":1736746630504,"pid":49951,"hostname":"devops","file":"services/getBranchClassRoutine.ts:91:19)","time":"1/13/2025 11:37:10 AM","message":"Unknown column 'subject_routine->day_time.branch_class_id' in 'field list'"}

@@ -185,3 +185,6 @@
 {"level":60,"time":1736664303436,"pid":135945,"hostname":"devops","error":"404","url":"/api/v1/exam-routines/latest-exam-routine"}
 {"level":60,"time":1736666067685,"pid":174722,"hostname":"devops","error":"404","url":"/api/v1/student-attendances/1"}
 {"level":60,"time":1736666072543,"pid":174722,"hostname":"devops","error":"404","url":"/api/v1/student-attendances/1"}
+{"level":60,"time":1736744313287,"pid":23301,"hostname":"devops","error":"404","url":"/api/v1/user-teachers/basic-information/1"}
+{"level":60,"time":1736744973238,"pid":23301,"hostname":"devops","error":"404","url":"/api/v1/branch-class-subjects/subject-assignment/3"}
+{"level":60,"time":1736745966799,"pid":23301,"hostname":"devops","error":"404","url":"/api/v1/branch-class-subjects/subject-assignment/3"}

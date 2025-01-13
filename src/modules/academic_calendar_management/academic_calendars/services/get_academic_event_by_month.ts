@@ -46,16 +46,16 @@ async function get_academic_event_by_month(
         // Generate all dates in the specified month
         const daysInMonth: {
             date: string;
-            event_name: string | null;
-            days: number | null; // Corrected property name
+            event_name: string;
+            days: number | 0; // Corrected property name
         }[] = [];
         let currentDay = moment(startDate);
 
         while (currentDay.isSameOrBefore(endDate)) {
             daysInMonth.push({
                 date: currentDay.format('YYYY-MM-DD'),
-                event_name: null,
-                days: null, // Corrected property name
+                event_name: '',
+                days: 0, // Corrected property name
             });
             currentDay.add(1, 'day');
         }
