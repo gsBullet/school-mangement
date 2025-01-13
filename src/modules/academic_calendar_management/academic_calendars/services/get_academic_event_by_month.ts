@@ -44,39 +44,46 @@ async function get_academic_event_by_month(
         });
 
         // Generate all dates in the specified month
+
         const daysInMonth: {
             date: string;
-            event_name: string;
-            days: number | 0; // Corrected property name
+            events: { event_name: string }[];
+            day: number; // Day of the week (1: Sunday, 2: Monday, etc.)
         }[] = [];
+
         let currentDay = moment(startDate);
 
         while (currentDay.isSameOrBefore(endDate)) {
             daysInMonth.push({
                 date: currentDay.format('YYYY-MM-DD'),
-                event_name: '',
-                days: 0, // Corrected property name
+                events: [], // Initialize as an empty array
+                day: currentDay.isoWeekday(), // Get day of the week (1 = Sunday, 2 = Monday, etc.)
             });
             currentDay.add(1, 'day');
         }
 
-        // Map events to their respective days with incrementing `days` values
+        // Map events to their respective days and assign day counts
         events.forEach((event: any) => {
             const eventStart = moment(event.start_date);
             const eventEnd = moment(event.end_date);
 
-            let dayCounter = 1; // Initialize day counter for each event
+            let eventDayCounter = 1; // Start event-specific day count at 1
 
             daysInMonth.forEach((day) => {
                 const dayMoment = moment(day.date);
 
                 if (dayMoment.isBetween(eventStart, eventEnd, 'day', '[]')) {
-                    day.event_name = event.event_name;
-                    day.days = dayCounter; // Corrected property name
-                    dayCounter++;
+                    // Add the event to the day's events list
+                    day.events.push({ event_name: event.event_name });
+
+                    // Update the overall day count for this day
+
+                    // Increment the counter for overlapping days
+                    eventDayCounter++;
                 }
             });
         });
+
         return response(
             200,
             'Data retrieved for the specified month',

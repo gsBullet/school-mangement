@@ -3,15 +3,12 @@ import { anyObject } from '../../common_types/object';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment/moment';
-import { log } from 'node:console';
 export interface Props {}
 
 const T1: React.FC<Props> = (props: Props) => {
     const [error, setError] = useState(null);
     const [data, setData] = useState();
     const [accdemicCalander, setAccademicCalander] = useState<any[]>([]);
-    console.log(accdemicCalander);
-
     const [selectedDate, setSelectedDate] = useState(
         moment().format('YYYY-MM-DD'),
     ); // Default to today's date
@@ -77,23 +74,6 @@ const T1: React.FC<Props> = (props: Props) => {
     useEffect(() => {
         fetchAccedemicCalenderData();
     }, [selectedDate]);
-
-    let array: any[][] = [];
-    let count = 0;
-
-    // Initialize the 2D array
-    for (let i = 0; i < 5; i++) {
-        array[i] = []; // Initialize each row
-
-        for (let j = 0; j < 7; j++) {
-            if (count < accdemicCalander.length) {
-                array[i][j] = accdemicCalander[count] || { date: '', day: '' };
-                count++;
-            } else {
-                continue;
-            }
-        }
-    }
 
     return (
         <div className="custom_scroll">
@@ -207,48 +187,43 @@ const T1: React.FC<Props> = (props: Props) => {
                         </h5>
                     </div>
                     <div className="card-body">
+                        {/* <div>
+                            <ul>
+                                {days.map((day, index) => (
+                                    <li
+                                        key={index}
+                                        className=" fs-4 event_title"
+                                    >
+                                        {day}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div> */}
                         <ul>
-                            {array.map((value, vIndex) =>
-                                value.map((element, eIndex) => (
-                                    <>
-                                        {
-                                            <li
-                                                key={`${vIndex}- ${eIndex}`}
-                                                className={`${element.day === 5 ? 'absent' : ''} || ${moment(element.date).isSame(moment(), 'day') ? 'today' : ''}`}
+                            {accdemicCalander?.map((day, index) => (
+                                <li key={index}>
+                                    <time dateTime={day.date}>
+                                        {moment(day.date).format('D')}{' '}
+                                        {/* Display day of the month */}
+                                    </time>
+                                    <div
+                                        className={`text-${day.events.length ? 'warning' : 'info'}`}
+                                    >
+                                        {day.events.map((event, eventIndex) => (
+                                            <div
+                                                key={eventIndex}
+                                                className="event"
                                             >
-                                                <time dateTime={element.date}>
-                                                    {moment(
-                                                        element.date,
-                                                    ).format('D')}{' '}
-                                                </time>
-                                                {/* {element.day} */}
-                                                {moment(element.date).format(
-                                                    'dddd',
-                                                )}
-                                                <div
-                                                    className={`text-${element.events?.length ? 'warning' : 'info'}`}
-                                                >
-                                                    {element.events?.map(
-                                                        (ev, i) => (
-                                                            <div
-                                                                key={i}
-                                                                className="event"
-                                                            >
-                                                                <i className="icon-check-box"></i>
-                                                                <span className="event_title">
-                                                                    {
-                                                                        ev.event_name
-                                                                    }
-                                                                </span>
-                                                            </div>
-                                                        ),
-                                                    )}
-                                                </div>
-                                            </li>
-                                        }
-                                    </>
-                                )),
-                            )}
+                                                <i className="icon-check-box"></i>
+                                                <span className="event_title">
+                                                    {event.event_name}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    {/* <div className="text-info">{day.day}</div> */}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -258,81 +233,3 @@ const T1: React.FC<Props> = (props: Props) => {
 };
 
 export default T1;
-
-{
-    /* <li>
-                                <time dateTime="2022-02-01">1</time>
-                                <div className="text-info">
-                                    <span className="event_title">
-                                        <i className="icon-check-box"></i>
-                                        Bangla Exam
-                                    </span>
-                                </div>
-                                <div className="text-info">
-                                    <i className="icon-check-box"></i>
-                                    <span className="event_title">
-                                        Class Present
-                                    </span>
-                                </div>
-                            </li>
-                            <li className="absent">
-                                <time dateTime="2022-02-02">2</time>
-                                <div className="text-warning">
-                                    <i className="icon-close"></i>
-                                    <span className="event_title">
-                                        Class Present
-                                    </span>
-                                </div>
-                            </li> */
-}
-
-{
-    /* {[
-                    {
-                        title: 'নোটিশ',
-                        value: 7,
-                    },
-                    {
-                        title: 'বাড়ির কাজ',
-                        value: 2,
-                    },
-                    {
-                        title: 'এই মাসের উপস্থিতি',
-                        value: '78 / 88',
-                    },
-                    {
-                        title: 'উপস্থিতি %',
-                        value: 89,
-                    },
-                    {
-                        title: 'লাইব্রেরী বই ইস্যু',
-                        value: 3,
-                    },
-                    {
-                        title: 'ফিস বকেয়া',
-                        value: 1780,
-                    },
-                ].map((i) => {
-                    return (
-                        <div
-                            className="card w-100 mb-0"
-                            data-intro="This is card"
-                        >
-                            <div className="business-top-widget card-body">
-                                <h5 className="mb-2">{i.title}</h5>
-                                <div className="media d-inline-flex">
-                                    <div className="media-body">
-                                        <h2 className="total-value m-0 counter">
-                                            {i.value}
-                                        </h2>
-                                    </div>
-                                    <i
-                                        style={{ opacity: '.4' }}
-                                        className="icon-bar-chart font-info align-self-center"
-                                    ></i>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })} */
-}

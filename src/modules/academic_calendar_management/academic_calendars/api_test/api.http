@@ -12,13 +12,15 @@ GET {{hostname}}/events/3 HTTP/1.1
 # get
 ###
 GET {{hostname}}/1 HTTP/1.1
+
+
 # get get_academic_event_by_month
 ###
 POST {{hostname}}/get-academic-event-by-month HTTP/1.1
 content-type: application/json
 
 {
-    "month": "feb-2025",
+    "month": "jan-2025",
     "branch_id": 1
 }
 
@@ -28,8 +30,8 @@ POST  {{hostname}}/store HTTP/1.1
 content-type: application/json
 
 {
-    "id": 10,
-    "branch_id": 5,
+    "id": 15,
+    "branch_id": 1,
     "event_type_id":1,
     "days": 1,
     "event_name": "IMLD",
