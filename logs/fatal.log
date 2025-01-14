@@ -113,3 +113,19 @@
 {"level":60,"time":1736684860973,"pid":378263,"hostname":"devops","file":"services/get_academic_event_by_month.ts:55:19)","time":"1/12/2025 6:27:40 PM","message":"No data found for the specified month"}
 {"level":60,"time":1736746624619,"pid":49951,"hostname":"devops","file":"services/getBranchClassRoutine.ts:91:19)","time":"1/13/2025 11:37:04 AM","message":"Unknown column 'subject_routine->day_time.branch_class_id' in 'field list'"}
 {"level":60,"time":1736746630504,"pid":49951,"hostname":"devops","file":"services/getBranchClassRoutine.ts:91:19)","time":"1/13/2025 11:37:10 AM","message":"Unknown column 'subject_routine->day_time.branch_class_id' in 'field list'"}
+{"level":60,"time":1736832067621,"pid":44595,"hostname":"devops","file":"","time":"1/14/2025 11:21:07 AM","message":"Unexpected token } in JSON at position 71"}
+{"level":60,"time":1736832069347,"pid":44595,"hostname":"devops","file":"","time":"1/14/2025 11:21:09 AM","message":"Unexpected token } in JSON at position 71"}
+{"level":60,"time":1736832214489,"pid":46455,"hostname":"devops","file":"","time":"1/14/2025 11:23:34 AM","message":"Unexpected token } in JSON at position 67"}
+{"level":60,"time":1736837003961,"pid":88810,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:43:23 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837024635,"pid":88810,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:43:44 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837025525,"pid":88810,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:43:45 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837026315,"pid":88810,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:43:46 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837027020,"pid":88810,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:43:47 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837312534,"pid":91522,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:48:32 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837313862,"pid":91522,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:48:33 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837315014,"pid":91522,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:48:35 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736837315626,"pid":91522,"hostname":"devops","file":"services/get_full_year_attendence.ts:156:19)","time":"1/14/2025 12:48:35 PM","message":"Cannot read properties of undefined (reading 'find')"}
+{"level":60,"time":1736841665098,"pid":93535,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/14/2025 2:01:05 PM","message":"data not found"}
+{"level":60,"time":1736849633320,"pid":29479,"hostname":"devops","file":"services/get_full_year_attendence.ts:64:19)","time":"1/14/2025 4:13:53 PM","message":"data not found"}
+{"level":60,"time":1736849635875,"pid":29479,"hostname":"devops","file":"services/get_full_year_attendence.ts:64:19)","time":"1/14/2025 4:13:55 PM","message":"data not found"}
+{"level":60,"time":1736850541298,"pid":78354,"hostname":"devops","file":"services/get_full_year_attendence.ts:172:19)","time":"1/14/2025 4:29:01 PM","message":"Unknown column 'StudentAttendancesModel.DESC' in 'order clause'"}

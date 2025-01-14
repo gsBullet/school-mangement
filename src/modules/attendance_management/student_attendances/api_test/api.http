@@ -9,7 +9,7 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 ###
 GET {{hostname}}/1 HTTP/1.1
 
-# get
+# get 30 day all class student attendence
 ###
 POSt {{hostname}}/get-30days-attendence HTTP/1.1
 content-type: application/json
@@ -17,10 +17,22 @@ content-type: application/json
 {
     "month": "jan-2025",
     "class_id": 1,
-    "subject_id": 1
+    "subject_id": 1,
+    "branch_id": 1
 }
 
-    # "branch_student_id": 1,
+ # get full year student attendence
+###
+POSt {{hostname}}/get-full-year-attendence HTTP/1.1
+content-type: application/json
+
+{
+    "currentYear":2025,
+    "class_id": 1,
+    "branch_student_id":1
+}
+
+ 
 
 
 # get

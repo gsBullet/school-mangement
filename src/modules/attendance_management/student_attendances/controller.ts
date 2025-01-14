@@ -16,6 +16,7 @@ import data_import from './services/import';
 import student_attendance from './services/student_attendance';
 import student_attendances from './services/student_attendances';
 import get_30_days_attendence from './services/get_30_days_attendence';
+import get_full_year_attendence from './services/get_full_year_attendence';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -53,6 +54,16 @@ export default function (fastify: FastifyInstance) {
             res: FastifyReply,
         ) {
             let data: responseObject = await get_30_days_attendence(
+                fastify,
+                req,
+            );
+            res.code(data.status).send(data);
+        },
+        get_full_year_attendence: async function (
+            req: FastifyRequest,
+            res: FastifyReply,
+        ) {
+            let data: responseObject = await get_full_year_attendence(
                 fastify,
                 req,
             );

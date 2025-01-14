@@ -22,6 +22,10 @@ module.exports = async function (fastify: FastifyInstance) {
             `${prefix}/get-30days-attendence`,
             controllerInstance.get_30days_attendence,
         )
+        .post(
+            `${prefix}/get-full-year-attendence`,
+            controllerInstance.get_full_year_attendence,
+        )
         .post(`${prefix}/update`, controllerInstance.update)
         .post(`${prefix}/soft-delete`, controllerInstance.soft_delete)
         .post(`${prefix}/restore`, controllerInstance.restore)

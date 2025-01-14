@@ -13,8 +13,9 @@ async function get_30_days_attendence(
 ): Promise<responseObject> {
     let models = await db();
     let body = (await req.body) as any;
+    console.log(body);
 
-    let { month, class_id, subject_id } = body;
+    let { month, class_id, subject_id, branch_id } = body;
 
     // Calculate start and end dates of the month as moment objects
     const startDate = moment(month, 'MMM-YYYY').startOf('month');
@@ -39,6 +40,7 @@ async function get_30_days_attendence(
             where: {
                 subject_id: subject_id,
                 class_id: class_id,
+                branch_id: branch_id,
                 status: 'active',
                 date: {
                     [Op.between]: [
