@@ -141,13 +141,19 @@ async function store(
 
     // Conditionally add properties based on question_type
     if (body.question_type === 'written') {
-        inputs.right_answer = body.right_answer;
+        inputs.right_answer = body.right_answer.trim().toLowerCase(); // Normalize right answer
         inputs.user_answer = Array.isArray(body.user_answer)
-            ? body.user_answer.join(',')
-            : body.user_answer;
-        inputs.marks = body.marks;
+            ? body.user_answer.join(',').trim().toLowerCase() // Handle array case
+            : body.user_answer.trim().toLowerCase(); // Normalize user answer
+
         inputs.is_pass = body.is_pass;
         inputs.comment = body.comment;
+
+        // Determine if the answer is correct
+        const isCorrect = inputs.user_answer === inputs.right_answer;
+        inputs.marks = isCorrect ? body.marks : 0;
+
+        // console.log(isCorrect ? 'Correct' : 'Incorrect');
     }
 
     if (body.question_type === 'quiz') {
@@ -160,46 +166,36 @@ async function store(
         inputs.is_right_option_3 = body.is_right_option_3;
         inputs.is_right_option_4 = body.is_right_option_4;
 
-        // Assuming user_answer can be a string (single option) or an array (multiple options)
-        if (Array.isArray(body.user_answer)) {
-            // Multiple options selected
-            inputs.user_answer = Array.isArray(body.user_answer)
-                ? body.user_answer.join(',')
-                : body.user_answer;
-        } else {
-            // Single option selected
-            inputs.user_answer = body.user_answer;
-        }
-
         // Now you can check if the answer is correct or not
-        let correctAnswers = [];
+        inputs.user_answer = body.user_answer;
 
+        // Construct correct answers array
+        let correctAnswers = [];
         if (inputs.is_right_option_1) correctAnswers.push(1);
         if (inputs.is_right_option_2) correctAnswers.push(2);
         if (inputs.is_right_option_3) correctAnswers.push(3);
         if (inputs.is_right_option_4) correctAnswers.push(4);
 
         // Check if the user answer matches the correct answer(s)
+        let isCorrect = false;
 
         if (Array.isArray(inputs.user_answer)) {
-            const isCorrect = inputs.user_answer.every((answer) =>
-                correctAnswers.includes(answer),
-            );
-            console.log(isCorrect ? 'Correct' : 'Incorrect array');
-        }
-
-        if (Number(inputs.user_answer)) {
-            const isCorrect = correctAnswers.includes(
-                Number(inputs.user_answer),
-            );
-            // console.log(Number(inputs.user_answer));
-            console.log(isCorrect ? 'Correct' : 'Incorrect');
+            // Handle multiple option answers
+            isCorrect =
+                inputs.user_answer.length === correctAnswers.length &&
+                inputs.user_answer.every((answer) =>
+                    correctAnswers.includes(Number(answer)),
+                );
+        } else {
+            // Handle single option answer
+            isCorrect = correctAnswers.includes(Number(inputs.user_answer));
         }
         // console.log(correctAnswers);
+        console.log(isCorrect ? 'Correct' : 'Incorrect');
 
         inputs.right_answer = body.right_answer;
-        inputs.marks = body.marks;
-        inputs.is_pass = body.is_pass;
+        inputs.marks = isCorrect ? body.marks : 0;
+        inputs.is_pass = isCorrect ? body.is_pass : 0;
         inputs.given_admission_date = body.given_admission_date;
         inputs.comment = body.comment;
     }
@@ -208,7 +204,7 @@ async function store(
     // (fastify_instance as any).print(inputs);
 
     /** store data into database */
-    return response(200, 'data created', inputs);
+    // return response(200, 'data created', inputs);
     try {
         await data.update(inputs);
         return response(200, 'data created', data);
