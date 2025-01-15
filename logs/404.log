@@ -260,3 +260,15 @@
 {"level":60,"time":1736839579562,"pid":93535,"hostname":"devops","error":"404","url":"/management_build/student/student.js"}
 {"level":60,"time":1736848089102,"pid":29479,"hostname":"devops","error":"404","url":"/management_build/student/student.js"}
 {"level":60,"time":1736848093492,"pid":29479,"hostname":"devops","error":"404","url":"/management_build/student/student.js"}
+{"level":60,"time":1736913113763,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/aadmision-test/1"}
+{"level":60,"time":1736913121047,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/aadmision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913121909,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/aadmision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913131107,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/admision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913136402,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/admision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913137238,"pid":18474,"hostname":"devops","error":"404","url":"/api/v1/admision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913180205,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admision-test/1"}
+{"level":60,"time":1736913185723,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admision-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913245956,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913247054,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913248680,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736913249723,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
