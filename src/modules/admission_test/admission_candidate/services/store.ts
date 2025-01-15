@@ -12,26 +12,26 @@ import custom_error from '../helpers/custom_error';
 import error_trace from '../helpers/error_trace';
 
 async function validate(req: Request) {
-    await body('branch_id')
+    await body('user_id')
         .not()
         .isEmpty()
-        .withMessage('the branch_id field is required')
+        .withMessage('the user id  field is required')
         .run(req);
-    await body('asset_audit_id')
+    await body('exam_id')
         .not()
         .isEmpty()
-        .withMessage('the asset_audit_id field is required')
+        .withMessage('the exam id field is required')
         .run(req);
-    await body('asset_id')
+    await body('registration_date')
         .not()
         .isEmpty()
-        .withMessage('the asset_id field is required')
+        .withMessage('the registration_date field is required')
         .run(req);
-    await body('feedback')
-        .not()
-        .isEmpty()
-        .withMessage('the feedback field is required')
-        .run(req);
+    // await body('feedback')
+    //     .not()
+    //     .isEmpty()
+    //     .withMessage('the feedback field is required')
+    //     .run(req);
 
     let result = await validationResult(req);
 
@@ -54,10 +54,10 @@ async function store(
     let data = new models.AssetAuditItemsModel();
 
     let inputs: InferCreationAttributes<typeof data> = {
-        branch_id: body.branch_id,
-        asset_audit_id: body.asset_audit_id,
-        asset_id: body.asset_id,
-        feedback: body.feedback,
+        user_id: body.user_id,
+        exam_id: body.exam_id,
+        registration_date: body.registration_date,
+        // feedback: body.feedback,
     };
 
     /** print request data into console */
@@ -66,7 +66,7 @@ async function store(
 
     /** store data into database */
     try {
-        (await data.update(inputs)).save();
+        await data.update(inputs);
         return response(200, 'data created', data);
     } catch (error: any) {
         let uid = await error_trace(models, error, req.url, req.body);

@@ -23,8 +23,8 @@ import {
     // ForeignKey,
 } from 'sequelize';
 
-const tableName = 'asset_audit_items';
-const modelName = 'AssetAuditItemsModel';
+const tableName = 'admission_candidate';
+const modelName = 'AdmissionCandidateModel';
 
 type Infer = InferAttributes<DataModel>;
 type InferCreation = InferCreationAttributes<DataModel>;
@@ -34,10 +34,11 @@ type status = 'active' | 'deactive';
 class DataModel extends Model<Infer, InferCreation> {
     declare id?: CreationOptional<number>;
 
-    declare branch_id: number;
-    declare asset_audit_id: number;
-    declare asset_id: number;
-    declare feedback: feedback;
+    declare user_id: number;
+    declare exam_id: number;
+    declare registration_date: string;
+
+    // declare feedback: feedback;
 
     declare status?: status;
     declare creator?: number;
@@ -54,22 +55,22 @@ function init(sequelize: Sequelize) {
                 autoIncrement: true,
                 primaryKey: true,
             },
-            branch_id: {
+            user_id: {
                 type: new DataTypes.BIGINT().UNSIGNED,
                 allowNull: true,
             },
-            asset_audit_id: {
+            exam_id: {
                 type: new DataTypes.BIGINT().UNSIGNED,
                 allowNull: true,
             },
-            asset_id: {
-                type: new DataTypes.BIGINT().UNSIGNED,
+            registration_date: {
+                type: new DataTypes.STRING(255),
                 allowNull: true,
             },
-            feedback: {
-                type: DataTypes.ENUM('available', 'lost', 'waste', 'date over'),
-                allowNull: true,
-            },
+            // feedback: {
+            //     type: DataTypes.ENUM('available', 'lost', 'waste', 'date over'),
+            //     allowNull: true,
+            // },
 
             status: {
                 type: new DataTypes.ENUM('active', 'deactive'),

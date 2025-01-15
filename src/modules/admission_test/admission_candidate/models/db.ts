@@ -2,7 +2,7 @@ import {
     // Model,
     Sequelize,
 } from 'sequelize';
-import * as asset_audit_items_model from './asset_audit_items_model';
+import * as asset_audit_items_model from './admission_candidate';
 // import * as project_model from '../../user_admin copy/models/project_model';
 require('dotenv').config();
 

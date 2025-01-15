@@ -272,3 +272,4 @@
 {"level":60,"time":1736913247054,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
 {"level":60,"time":1736913248680,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
 {"level":60,"time":1736913249723,"pid":25588,"hostname":"devops","error":"404","url":"/api/v1/admission-test?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10"}
+{"level":60,"time":1736924593245,"pid":194688,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate/store"}
