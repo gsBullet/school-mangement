@@ -136,3 +136,6 @@
 {"level":60,"time":1736922216752,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:23:36 PM","message":"Unexpected token } in JSON at position 65"}
 {"level":60,"time":1736922249484,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:24:09 PM","message":"Unexpected token } in JSON at position 97"}
 {"level":60,"time":1736922540493,"pid":162811,"hostname":"devops","file":"","time":"1/15/2025 12:29:00 PM","message":"Unexpected token } in JSON at position 331"}
+{"level":60,"time":1736922866573,"pid":162811,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/15/2025 12:34:26 PM","message":"data not found"}
+{"level":60,"time":1736922879042,"pid":162811,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/15/2025 12:34:39 PM","message":"data not found"}
+{"level":60,"time":1736922925769,"pid":162811,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/15/2025 12:35:25 PM","message":"data not found"}
