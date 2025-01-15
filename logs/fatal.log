@@ -131,3 +131,8 @@
 {"level":60,"time":1736850541298,"pid":78354,"hostname":"devops","file":"services/get_full_year_attendence.ts:172:19)","time":"1/14/2025 4:29:01 PM","message":"Unknown column 'StudentAttendancesModel.DESC' in 'order clause'"}
 {"level":60,"time":1736915669607,"pid":79355,"hostname":"devops","file":"services/restore.ts:50:19)","time":"1/15/2025 10:34:29 AM","message":"operation not possible"}
 {"level":60,"time":1736915672507,"pid":79355,"hostname":"devops","file":"services/restore.ts:50:19)","time":"1/15/2025 10:34:32 AM","message":"operation not possible"}
+{"level":60,"time":1736922059788,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:20:59 PM","message":"Unexpected token } in JSON at position 355"}
+{"level":60,"time":1736922157604,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:22:37 PM","message":"Unexpected token } in JSON at position 331"}
+{"level":60,"time":1736922216752,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:23:36 PM","message":"Unexpected token } in JSON at position 65"}
+{"level":60,"time":1736922249484,"pid":159085,"hostname":"devops","file":"","time":"1/15/2025 12:24:09 PM","message":"Unexpected token } in JSON at position 97"}
+{"level":60,"time":1736922540493,"pid":162811,"hostname":"devops","file":"","time":"1/15/2025 12:29:00 PM","message":"Unexpected token } in JSON at position 331"}

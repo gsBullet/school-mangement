@@ -18,32 +18,65 @@ async function validate(req: Request) {
         .withMessage('the question_title field is required')
         .run(req);
     await body('question_type')
-        .not()
-        .isEmpty()
-        .withMessage('the question_type field is required')
-        .run(req);
-    await body('question_written')
-        .if(body('question_type').equals('written'))
-        .not()
-        .isEmpty()
-        .withMessage('the question_written field is required')
-        .run(req);
-    await body('question_options')
-        .if(body('question_type').equals('quiz'))
-        .not()
-        .isEmpty()
-        .withMessage('the question_options field is required')
+        .notEmpty()
+        .withMessage('The question_type field is required')
+        .isIn(['quiz', 'written'])
+        .withMessage('The question_type must be either "quiz" or "written"')
         .run(req);
 
-    await body('is_right_option')
-        .not()
-        .isEmpty()
-        .withMessage('the is_right_option field is required')
+    await body('options1')
+        .if(body('question_type').equals('quiz'))
+        .notEmpty()
+        .withMessage('The options1 field is required')
         .run(req);
+
+    await body('options2')
+        .if(body('question_type').equals('quiz'))
+        .notEmpty()
+        .withMessage('The options2 field is required')
+        .run(req);
+
+    await body('options3')
+        .if(body('question_type').equals('quiz'))
+        .notEmpty()
+        .withMessage('The options3 field is required')
+        .run(req);
+
+    await body('options4')
+        .if(body('question_type').equals('quiz'))
+        .notEmpty()
+        .withMessage('The options4 field is required')
+        .run(req);
+    await body('is_right_option_1')
+        .if(body('question_type').equals('quiz'))
+        .isBoolean()
+        .withMessage('The is_right_option_1 field must be a boolean (0 or 1)')
+        .run(req);
+
+    await body('is_right_option_2')
+        .if(body('question_type').equals('quiz'))
+        .isBoolean()
+        .withMessage('The is_right_option_2 field must be a boolean (0 or 1)')
+        .run(req);
+
+    await body('is_right_option_3')
+        .if(body('question_type').equals('quiz'))
+        .isBoolean()
+        .withMessage('The is_right_option_3 field must be a boolean (0 or 1)')
+        .run(req);
+
+    await body('is_right_option_4')
+        .if(body('question_type').equals('quiz'))
+        .isBoolean()
+        .withMessage('The is_right_option_4 field must be a boolean (0 or 1)')
+        .run(req);
+
     await body('right_answer')
-        .not()
-        .isEmpty()
-        .withMessage('the right_answer field is required')
+        .if(body('question_type').equals('written')) // Check only for "written" type
+        .notEmpty() // Ensures the field is required for "written"
+        .withMessage('The right_answer field is required for written questions')
+        .isString()
+        .withMessage('The right_answer field must be a string')
         .run(req);
     // await body('feedback')
     //     .not()
@@ -82,13 +115,15 @@ async function update(
     }
 
     if (body.question_type === 'quiz') {
-        inputs.question_options = body.question_options;
-        inputs.is_right_option = body.is_right_option;
-    }
-
-    // Add any optional fields, ensuring they're only included if defined
-    if (body.right_answer !== undefined) {
-        inputs.right_answer = body.right_answer;
+        inputs.options1 = body.options1;
+        inputs.options2 = body.options2;
+        inputs.options3 = body.options3;
+        inputs.options4 = body.options4;
+        inputs.is_right_option_1 = body.is_right_option_1;
+        inputs.is_right_option_2 = body.is_right_option_2;
+        inputs.is_right_option_3 = body.is_right_option_3;
+        inputs.is_right_option_4 = body.is_right_option_4;
+        inputs.question_written = body.question_written;
     }
 
     /** store data into database */

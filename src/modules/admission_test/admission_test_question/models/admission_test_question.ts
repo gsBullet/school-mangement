@@ -35,12 +35,17 @@ class DataModel extends Model<Infer, InferCreation> {
     declare id?: CreationOptional<number>;
 
     declare question_title: string;
-    declare question_type: string;
-    declare question_written: string;
-    declare question_options: string;
-    declare is_right_option: boolean;
-    declare right_answer: boolean;
-
+    declare question_type: 'quiz' | 'written';
+    declare question_written?: string | null; // Nullable
+    declare options1: string;
+    declare options2: string;
+    declare options3: string;
+    declare options4: string;
+    declare is_right_option_1?: boolean;
+    declare is_right_option_2?: boolean;
+    declare is_right_option_3?: boolean;
+    declare is_right_option_4?: boolean;
+    declare right_answer?: string;
     // declare feedback: feedback;
 
     declare status?: status;
@@ -70,16 +75,40 @@ function init(sequelize: Sequelize) {
                 type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            question_options: {
-                type: new DataTypes.TEXT(),
+            options1: {
+                type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            is_right_option: {
+            options2: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+            options3: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+            options4: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+            is_right_option_1: {
+                type: DataTypes.BOOLEAN,
+                allowNull: true,
+            },
+            is_right_option_2: {
+                type: DataTypes.BOOLEAN,
+                allowNull: true,
+            },
+            is_right_option_3: {
+                type: DataTypes.BOOLEAN,
+                allowNull: true,
+            },
+            is_right_option_4: {
                 type: DataTypes.BOOLEAN,
                 allowNull: true,
             },
             right_answer: {
-                type: DataTypes.BOOLEAN,
+                type: new DataTypes.STRING(255),
                 allowNull: true,
             },
 
