@@ -3,6 +3,7 @@ import Fastify, {
     FastifyReply,
     FastifyRequest,
 } from 'fastify';
+import fastifyCors from '@fastify/cors';
 import path from 'path';
 import view from '@fastify/view';
 import { sequelize } from './bootstrap/db.sql';
@@ -10,7 +11,7 @@ import custom_error from './modules/user_management/user_admin/helpers/custom_er
 import type { FastifyCookieOptions } from '@fastify/cookie';
 import { app_config } from './configs/app.config';
 
-const AutoLoad = require('@fastify/autoload');
+import AutoLoad = require('@fastify/autoload');
 const underPressure = require('@fastify/under-pressure');
 let sequelize_instance: any;
 let appDir: string = path.resolve(path.dirname(__dirname));
@@ -68,13 +69,29 @@ async function boot() {
         return part;
     }
 
-    fastify.register(require('@fastify/multipart'), {
-        attachFieldsToBody: 'keyValues',
-        onFile,
+    // async function onFile(part: any) {
+    //     if (part.file && part.filename) {
+    //         const buffer = await part.toBuffer();
+    //         part.value = {
+    //             data: buffer,
+    //             name: part.filename,
+    //             ext: path.extname(part.filename),
+    //         };
+    //     }
+    // }
+    await fastify.register(fastifyCors, {
+        origin: ['http://localhost:3000'], // Add your frontend's URL
+        methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+        credentials: true, // Allow cookies and authentication headers
+    });
+    await fastify.register(require('@fastify/multipart'), {
+        attachFieldsToBody: true, // Use 'true' instead of 'keyValues'
+        onFile, // Custom handler for file processing
         limits: {
-            fileSize: 6000000 * 10,
+            fileSize: 6000000 * 10, // Limit file size to 60 MB
         },
     });
+
     /** find all module routes */
 
     async function findAllRoutesFiles(dir: any) {
@@ -120,9 +137,9 @@ async function boot() {
     /** register all dependencies */
     console.log('\nsetup plugins \n');
     fastify
-        .register(AutoLoad, {
-            dir: path.join(__dirname, 'plugins'),
-        })
+        // .register(AutoLoad, {
+        //     dir: path.join(__dirname, 'plugins'),
+        // })
         .register(AutoLoad, {
             dir: path.join(__dirname, 'routes'),
         })

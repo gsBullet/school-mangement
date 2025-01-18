@@ -1,0 +1,83 @@
+@hostname = http://127.0.0.1:5002/api/v1/admission-test-registration
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJxNm85anE4ZiIsInVzZXJfYWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCIsImlhdCI6MTcxNTQ5MzE0NH0.XAq9b9sahDzxrjSeuF1OS5WPFTjbhg_28ozJpx6odC4
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+
+# login with email and password
+###
+POST {{hostname}}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "yaminhosen@gmail.com",
+    "password": "12345678"
+}
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "full_name": "yamin hosen",
+    "branch_id": "1",
+    "class": "1",
+    "section": "1",
+    "email": "yaminhosen@gmail.com",
+    "password": "12345678",
+    "registration_date": "2025-01-16 07:03:15"
+
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+   "id": 2,
+    "full_name": "yamin hosen",
+    "branch_id": "1",
+    "class": "1",
+    "section": "1",
+    "email": "yaminhosen@gmail.com",
+    "password": "12345678",
+    "registration_date": "2025-01-18 07:03:15"
+}
+
+# delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 4
+}
