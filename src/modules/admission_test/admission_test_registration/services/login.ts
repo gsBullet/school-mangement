@@ -11,18 +11,25 @@ async function login(
 ): Promise<responseObject> {
     let models = await db();
     let params = req.params as any;
+    let body = req.body as any;
+
+    console.log(body);
 
     try {
         let data = await models.AssetAuditItemsModel.findOne({
             where: {
-                id: params.id,
+                email: body.email,
             },
         });
 
         if (data) {
-            return response(200, 'data created', data);
+            if (body.password && body.password === data.password) {
+                return response(200, 'data created', data);
+            } else {
+                return response(201, 'password does not match', data);
+            }
         } else {
-            throw new custom_error('not found', 404, 'data not found');
+            return response(201, 'user does not exist', { data: body });
         }
     } catch (error: any) {
         let uid = await error_trace(models, error, req.url, req.params);
