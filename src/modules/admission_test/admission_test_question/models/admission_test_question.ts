@@ -34,6 +34,10 @@ type status = 'active' | 'deactive';
 class DataModel extends Model<Infer, InferCreation> {
     declare id?: CreationOptional<number>;
 
+    declare admission_test_id?: number;
+    declare branch_id?: number;
+    declare class?: string;
+
     declare question_title: string;
     declare question_type: 'quiz' | 'written';
     declare question_written?: string | null; // Nullable
@@ -46,6 +50,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare is_right_option_3?: boolean;
     declare is_right_option_4?: boolean;
     declare right_answer?: string;
+    declare mark?: number;
     // declare feedback: feedback;
 
     declare status?: status;
@@ -63,6 +68,19 @@ function init(sequelize: Sequelize) {
                 autoIncrement: true,
                 primaryKey: true,
             },
+            admission_test_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: true,
+            },
+            branch_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: true,
+            },
+            class: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+
             question_title: {
                 type: new DataTypes.STRING(255),
                 allowNull: true,
@@ -109,6 +127,10 @@ function init(sequelize: Sequelize) {
             },
             right_answer: {
                 type: new DataTypes.STRING(255),
+                allowNull: true,
+            },
+            mark: {
+                type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: true,
             },
 

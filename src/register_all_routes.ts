@@ -6,9 +6,9 @@ let appDir: string = path.resolve(path.dirname(__dirname));
 export let active_routes: string[] = [
     'src/modules/admission_test/admission_candidate_test_submission/routes.ts',
     'src/modules/admission_test/admission_test_registration/routes.ts',
-    // 'src/modules/admission_test/admission/routes.ts',
-    // 'src/modules/adminssion_test/admission_test_question/routes.ts',
-    // 'src/modules/admission_test/admission_candidate/routes.ts',
+    'src/modules/admission_test/admission/routes.ts',
+    'src/modules/adminssion_test/admission_test_question/routes.ts',
+    'src/modules/admission_test/admission_candidate/routes.ts',
     // 'src/modules/auth_management/authetication/routes.ts',
     // 'src/modules/academic_calendar_management/academic_calendars/routes.ts',
     // 'src/modules/academic_calendar_management/academic_calendar_event_types/routes.ts',

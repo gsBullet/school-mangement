@@ -20,7 +20,7 @@ function ensureDirectoryExistence(filePath: String[] = []) {
     }, '');
 }
 
-module.exports = fp(async function (
+module.exports = fp(function (
     fastify: FastifyInstance,
     opts: FastifyPluginOptions,
     done: () => void,

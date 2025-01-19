@@ -23,8 +23,8 @@ import {
     // ForeignKey,
 } from 'sequelize';
 
-const tableName = 'admission_candidate_submission';
-const modelName = 'AdmissionCandidateSubmissionModel';
+const tableName = 'admission_test_question';
+const modelName = 'AdmissionTestQuestionModel';
 
 type Infer = InferAttributes<DataModel>;
 type InferCreation = InferCreationAttributes<DataModel>;
@@ -34,7 +34,10 @@ type status = 'active' | 'deactive';
 class DataModel extends Model<Infer, InferCreation> {
     declare id?: CreationOptional<number>;
 
-    declare question_id: number;
+    declare admission_test_id?: number;
+    declare branch_id?: number;
+    declare class?: string;
+
     declare question_title: string;
     declare question_type: 'quiz' | 'written';
     declare question_written?: string | null; // Nullable
@@ -47,13 +50,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare is_right_option_3?: boolean;
     declare is_right_option_4?: boolean;
     declare right_answer?: string;
-
-    declare user_answer?: string;
-    declare marks: number;
-    declare is_pass?: boolean;
-    declare given_admission_date: string;
-    declare comment: string;
-
+    declare mark?: number;
     // declare feedback: feedback;
 
     declare status?: status;
@@ -71,10 +68,19 @@ function init(sequelize: Sequelize) {
                 autoIncrement: true,
                 primaryKey: true,
             },
-            question_id: {
+            admission_test_id: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: true,
             },
+            branch_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: true,
+            },
+            class: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+
             question_title: {
                 type: new DataTypes.STRING(255),
                 allowNull: true,
@@ -123,27 +129,10 @@ function init(sequelize: Sequelize) {
                 type: new DataTypes.STRING(255),
                 allowNull: true,
             },
-            user_answer: {
-                type: DataTypes.STRING(255),
+            mark: {
+                type: DataTypes.DECIMAL(10, 2),
                 allowNull: true,
             },
-            marks: {
-                type: DataTypes.NUMBER,
-                allowNull: true,
-            },
-            is_pass: {
-                type: DataTypes.BOOLEAN,
-                allowNull: true,
-            },
-            given_admission_date: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            comment: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            // user_id: {
 
             // feedback: {
             //     type: DataTypes.ENUM('available', 'lost', 'waste', 'date over'),

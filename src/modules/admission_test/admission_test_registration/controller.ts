@@ -14,6 +14,7 @@ import restore from './services/restore';
 import destroy from './services/destroy';
 import data_import from './services/import';
 import login from './services/login';
+// import auth_check from './services/auth_check';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -30,6 +31,10 @@ export default function (fastify: FastifyInstance) {
             let data = await login(fastify, req);
             res.code(data.status).send(data);
         },
+        // auth_check: async function (req: FastifyRequest, res: FastifyReply) {
+        //     let data = await auth_check(fastify, req);
+        //     res.code(data.status).send(data);
+        // },
 
         store: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await store(fastify, req);

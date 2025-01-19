@@ -1,0 +1,46 @@
+{"level":60,"time":1737203163459,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:03 PM","message":"data not found"}
+{"level":60,"time":1737203189470,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:29 PM","message":"data not found"}
+{"level":60,"time":1737203195381,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:35 PM","message":"data not found"}
+{"level":60,"time":1737203195418,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:35 PM","message":"data not found"}
+{"level":60,"time":1737203211384,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:51 PM","message":"data not found"}
+{"level":60,"time":1737203212381,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:26:52 PM","message":"data not found"}
+{"level":60,"time":1737203220400,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:00 PM","message":"data not found"}
+{"level":60,"time":1737203222379,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:02 PM","message":"data not found"}
+{"level":60,"time":1737203224363,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:04 PM","message":"data not found"}
+{"level":60,"time":1737203227430,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:07 PM","message":"data not found"}
+{"level":60,"time":1737203241382,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:21 PM","message":"data not found"}
+{"level":60,"time":1737203249373,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:29 PM","message":"data not found"}
+{"level":60,"time":1737203257396,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:37 PM","message":"data not found"}
+{"level":60,"time":1737203259422,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:39 PM","message":"data not found"}
+{"level":60,"time":1737203265423,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:45 PM","message":"data not found"}
+{"level":60,"time":1737203267372,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:27:47 PM","message":"data not found"}
+{"level":60,"time":1737203287390,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:07 PM","message":"data not found"}
+{"level":60,"time":1737203293373,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:13 PM","message":"data not found"}
+{"level":60,"time":1737203312373,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:32 PM","message":"data not found"}
+{"level":60,"time":1737203316359,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:36 PM","message":"data not found"}
+{"level":60,"time":1737203327380,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:47 PM","message":"data not found"}
+{"level":60,"time":1737203334376,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:54 PM","message":"data not found"}
+{"level":60,"time":1737203339482,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:28:59 PM","message":"data not found"}
+{"level":60,"time":1737203442175,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:30:42 PM","message":"data not found"}
+{"level":60,"time":1737203442195,"pid":284602,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/18/2025 6:30:42 PM","message":"data not found"}
+{"level":60,"time":1737268635067,"pid":141384,"hostname":"devops","file":"","time":"1/19/2025 12:37:15 PM","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"}
+{"level":60,"time":1737268773348,"pid":147789,"hostname":"devops","file":"","time":"1/19/2025 12:39:33 PM","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"}
+{"level":60,"time":1737269052982,"pid":147789,"hostname":"devops","file":"","time":"1/19/2025 12:44:12 PM","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"}
+{"level":60,"time":1737269154203,"pid":147789,"hostname":"devops","file":"","time":"1/19/2025 12:45:54 PM","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"}
+{"level":60,"time":1737270209656,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:03:29 PM","message":"data not found"}
+{"level":60,"time":1737270209663,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:03:29 PM","message":"data not found"}
+{"level":60,"time":1737270212280,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:03:32 PM","message":"data not found"}
+{"level":60,"time":1737270212439,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:03:32 PM","message":"data not found"}
+{"level":60,"time":1737270290825,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:04:50 PM","message":"data not found"}
+{"level":60,"time":1737270290856,"pid":156905,"hostname":"devops","file":"services/details.ts:25:19)","time":"1/19/2025 1:04:50 PM","message":"data not found"}
+{"level":60,"time":1737279210065,"pid":242276,"hostname":"devops","file":"","time":"1/19/2025 3:33:30 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737279608187,"pid":243348,"hostname":"devops","file":"","time":"1/19/2025 3:40:08 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737279721011,"pid":246334,"hostname":"devops","file":"","time":"1/19/2025 3:42:01 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737279920589,"pid":247322,"hostname":"devops","file":"","time":"1/19/2025 3:45:20 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280238639,"pid":248554,"hostname":"devops","file":"","time":"1/19/2025 3:50:38 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280391477,"pid":249351,"hostname":"devops","file":"","time":"1/19/2025 3:53:11 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280641343,"pid":250306,"hostname":"devops","file":"","time":"1/19/2025 3:57:21 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280749674,"pid":250749,"hostname":"devops","file":"","time":"1/19/2025 3:59:09 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280762985,"pid":250749,"hostname":"devops","file":"","time":"1/19/2025 3:59:22 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737280907423,"pid":252036,"hostname":"devops","file":"","time":"1/19/2025 4:01:47 PM","message":"Unknown column 'question_id' in 'field list'"}
+{"level":60,"time":1737282063443,"pid":13325,"hostname":"devops","file":"","time":"1/19/2025 4:21:03 PM","message":"Unknown column 'question_id' in 'field list'"}

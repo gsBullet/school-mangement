@@ -3,29 +3,52 @@
 
 # all
 ###
-GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+GET {{hostname}} HTTP/1.1
 
-# get
+# get 
 ###
-GET {{hostname}}/5 HTTP/1.1
+GET {{hostname}}/1 HTTP/1.1
 
 # store
 ###
 POST  {{hostname}}/store HTTP/1.1
 content-type: application/json
 
+# {
+#     "id": 1,
+#     "admission_test_id": 1,
+#     "branch_id": 1,
+#     "class": "4",
+#     "question_title": "what is the capital city of bangladesh? class 4",
+#     "question_type": "quiz",
+#     "options1": "Dhaka",
+#     "options2": "CTG",
+#     "options3": "Rangpur",
+#     "options4": "Sylhet",
+#     "is_right_option_1": 1,
+#     "is_right_option_2": 0 ,
+#     "is_right_option_3": 0,
+#     "is_right_option_4": 0,
+#     "right_answer": "1"
+# }
+
 {
     "id": 1,
-    "question_title": "what is the capital city of bangladesh",
+    "admission_test_id": 1,
+    "branch_id": 1,
+    "class": "4",
+    "question_title": "what is the our national fruits class 4",
     "question_type": "quiz",
-    "options1": "Dhaka",
-    "options2": "Chittagoan",
-    "options3": "rajshahi",
-    "options4": "rangpur",
-    "is_right_option_1": 1,
+    "options1": "Mango",
+    "options2": "apple",
+    "options3": "banana",
+    "options4": "Jackfruit",
+    "is_right_option_1": 0,
     "is_right_option_2": 0 ,
     "is_right_option_3": 0,
-    "is_right_option_4": 0
+    "is_right_option_4": 1,
+    "right_answer": "4",
+    "mark": 3
 }
 
 

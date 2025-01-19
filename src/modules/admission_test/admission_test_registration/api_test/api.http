@@ -9,6 +9,13 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 ###
 GET {{hostname}}/1 HTTP/1.1
 
+# get check auth
+###
+GET {{hostname}}/auth-check HTTP/1.1
+Authorization: {{token}}
+content-type: application/json
+
+
 
 # login with email and password
 ###
@@ -31,6 +38,7 @@ content-type: application/json
     "branch_id": "1",
     "class": "1",
     "section": "1",
+    
     "email": "yaminhosen@gmail.com",
     "password": "12345678",
     "registration_date": "2025-01-16 07:03:15"

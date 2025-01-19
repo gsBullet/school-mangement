@@ -18,6 +18,7 @@ let appDir: string = path.resolve(path.dirname(__dirname));
 let public_dir: string = path.resolve(appDir, 'public');
 const fsp = require('fs').promises;
 import { active_routes } from './register_all_routes';
+const fp = require('fastify-plugin');
 
 async function boot() {
     const fastify = Fastify({
@@ -137,9 +138,9 @@ async function boot() {
     /** register all dependencies */
     console.log('\nsetup plugins \n');
     fastify
-        // .register(AutoLoad, {
-        //     dir: path.join(__dirname, 'plugins'),
-        // })
+        .register(AutoLoad, {
+            dir: path.join(__dirname, 'plugins'),
+        })
         .register(AutoLoad, {
             dir: path.join(__dirname, 'routes'),
         })

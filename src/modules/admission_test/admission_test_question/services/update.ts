@@ -12,6 +12,21 @@ import custom_error from '../helpers/custom_error';
 import error_trace from '../helpers/error_trace';
 
 async function validate(req: Request) {
+    await body('admission_test_id')
+        .not()
+        .isEmpty()
+        .withMessage('the admission_test_id field is required')
+        .run(req);
+    await body('branch_id')
+        .not()
+        .isEmpty()
+        .withMessage('the branch_id field is required')
+        .run(req);
+    await body('class')
+        .not()
+        .isEmpty()
+        .withMessage('the class field is required')
+        .run(req);
     await body('question_title')
         .not()
         .isEmpty()
@@ -78,11 +93,6 @@ async function validate(req: Request) {
         .isString()
         .withMessage('The right_answer field must be a string')
         .run(req);
-    // await body('feedback')
-    //     .not()
-    //     .isEmpty()
-    //     .withMessage('the feedback field is required')
-    //     .run(req);
 
     let result = await validationResult(req);
 
@@ -107,6 +117,9 @@ async function update(
     let inputs: Partial<InferCreationAttributes<typeof model>> = {
         question_title: body.question_title,
         question_type: body.question_type,
+        admission_test_id: body.admission_test_id,
+        branch_id: body.branch_id,
+        class: body.class,
     };
 
     // Conditionally add properties based on question_type
