@@ -1,47 +1,35 @@
 import {
-    // Association,
     DataTypes,
-    // HasManyAddAssociationMixin,
-    // HasManyCountAssociationsMixin,
-    // HasManyCreateAssociationMixin,
-    // HasManyGetAssociationsMixin,
-    // HasManyHasAssociationMixin,
-    // HasManySetAssociationsMixin,
-    // HasManyAddAssociationsMixin,
-    // HasManyHasAssociationsMixin,
-    // HasManyRemoveAssociationMixin,
-    // HasManyRemoveAssociationsMixin,
     Model,
-    // ModelDefined,
-    // Optional,
     Sequelize,
     InferAttributes,
     InferCreationAttributes,
     CreationOptional,
-    DefaultSetOptions,
-    // NonAttribute,
-    // ForeignKey,
 } from 'sequelize';
 
 const tableName = 'admission_candidate_submission';
 const modelName = 'AdmissionCandidateSubmissionModel';
 
-type Infer = InferAttributes<DataModel>;
-type InferCreation = InferCreationAttributes<DataModel>;
-type feedback = 'available' | 'lost' | 'waste' | 'date over';
 type status = 'active' | 'deactive';
 
-class DataModel extends Model<Infer, InferCreation> {
-    declare id?: CreationOptional<number>;
+class DataModel extends Model<
+    InferAttributes<DataModel>,
+    InferCreationAttributes<DataModel>
+> {
+    declare id: CreationOptional<number>;
+
+    declare branch_id?: number;
+    declare student_id?: number;
+    declare class?: string;
 
     declare question_id: number;
     declare question_title: string;
     declare question_type: 'quiz' | 'written';
-    declare question_written?: string | null; // Nullable
-    declare options1: string;
-    declare options2: string;
-    declare options3: string;
-    declare options4: string;
+    declare question_written?: string | null;
+    declare options1?: string;
+    declare options2?: string;
+    declare options3?: string;
+    declare options4?: string;
     declare is_right_option_1?: boolean;
     declare is_right_option_2?: boolean;
     declare is_right_option_3?: boolean;
@@ -49,18 +37,16 @@ class DataModel extends Model<Infer, InferCreation> {
     declare right_answer?: string;
 
     declare user_answer?: string;
-    declare marks: number;
+    declare marks?: number;
     declare is_pass?: boolean;
-    declare given_admission_date: string;
-    declare comment: string;
-
-    // declare feedback: feedback;
+    declare given_admission_date?: string;
+    declare comment?: string;
 
     declare status?: status;
     declare creator?: number;
 
-    declare created_at?: CreationOptional<Date>;
-    declare updated_at?: CreationOptional<Date>;
+    declare created_at: CreationOptional<Date>;
+    declare updated_at: CreationOptional<Date>;
 }
 
 function init(sequelize: Sequelize) {
@@ -71,17 +57,29 @@ function init(sequelize: Sequelize) {
                 autoIncrement: true,
                 primaryKey: true,
             },
-            question_id: {
+            branch_id: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: true,
             },
-            question_title: {
-                type: new DataTypes.STRING(255),
+            student_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: true,
             },
-            question_type: {
-                type: new DataTypes.ENUM('quiz', 'written'),
+            class: {
+                type: DataTypes.STRING(255),
                 allowNull: true,
+            },
+            question_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: false,
+            },
+            question_title: {
+                type: DataTypes.STRING(255),
+                allowNull: false,
+            },
+            question_type: {
+                type: DataTypes.ENUM('quiz', 'written'),
+                allowNull: false,
             },
             question_written: {
                 type: DataTypes.STRING(255),
@@ -120,7 +118,7 @@ function init(sequelize: Sequelize) {
                 allowNull: true,
             },
             right_answer: {
-                type: new DataTypes.STRING(255),
+                type: DataTypes.STRING(255),
                 allowNull: true,
             },
             user_answer: {
@@ -128,7 +126,7 @@ function init(sequelize: Sequelize) {
                 allowNull: true,
             },
             marks: {
-                type: DataTypes.NUMBER,
+                type: DataTypes.INTEGER,
                 allowNull: true,
             },
             is_pass: {
@@ -143,30 +141,31 @@ function init(sequelize: Sequelize) {
                 type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            // user_id: {
-
-            // feedback: {
-            //     type: DataTypes.ENUM('available', 'lost', 'waste', 'date over'),
-            //     allowNull: true,
-            // },
-
             status: {
-                type: new DataTypes.ENUM('active', 'deactive'),
+                type: DataTypes.ENUM('active', 'deactive'),
                 defaultValue: 'active',
             },
             creator: {
-                type: new DataTypes.TINYINT(),
+                type: DataTypes.TINYINT,
                 allowNull: true,
-                defaultValue: null,
             },
-            created_at: DataTypes.DATE,
-            updated_at: DataTypes.DATE,
+            created_at: {
+                type: DataTypes.DATE,
+                allowNull: false,
+                defaultValue: DataTypes.NOW,
+            },
+            updated_at: {
+                type: DataTypes.DATE,
+                allowNull: false,
+                defaultValue: DataTypes.NOW,
+            },
         },
         {
             tableName: tableName,
             modelName: modelName,
-            sequelize, // passing the `sequelize` instance is required
+            sequelize,
             underscored: true,
+            timestamps: true, // Ensures created_at and updated_at are managed automatically
         },
     );
 

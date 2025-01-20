@@ -51,6 +51,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare is_right_option_4?: boolean;
     declare right_answer?: string;
     declare mark?: number;
+
     // declare feedback: feedback;
 
     declare status?: status;

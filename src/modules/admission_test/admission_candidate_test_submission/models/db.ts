@@ -2,9 +2,10 @@ import {
     // Model,
     Sequelize,
 } from 'sequelize';
-import * as asset_audit_items_model from './admission_candidate_submission';
+import * as admission_candidate_submission from './admission_candidate_submission';
 // import * as project_model from '../../user_admin copy/models/project_model';
 import * as admission_test_questions_model from './admission_test_question';
+import * as admission_test_registration_student_model from './admission_test_registration';
 require('dotenv').config();
 
 let host = process?.env.DB_HOST || '';
@@ -21,16 +22,20 @@ const sequelize = new Sequelize(
 );
 
 interface models {
-    AssetAuditItemsModel: typeof asset_audit_items_model.DataModel;
+    AssetAuditItemsModel: typeof admission_candidate_submission.DataModel;
     // Project: typeof project_model.DataModel;
     AdmissionTestQuestionsModel: typeof admission_test_questions_model.DataModel;
+    AdmissionTestRegistrationStudentModel: typeof admission_test_registration_student_model.DataModel;
     sequelize: Sequelize;
 }
 const db = async function (): Promise<models> {
-    const AssetAuditItemsModel = asset_audit_items_model.init(sequelize);
+    const AssetAuditItemsModel = admission_candidate_submission.init(sequelize);
     // const Project = project_model.init(sequelize);
     const AdmissionTestQuestionsModel =
         admission_test_questions_model.init(sequelize);
+
+    const AdmissionTestRegistrationStudentModel =
+        admission_test_registration_student_model.init(sequelize);
 
     await sequelize.sync();
 
@@ -39,11 +44,16 @@ const db = async function (): Promise<models> {
     //     as: 'admissionTestQuestions',
     // });
 
-    // User.hasMany(Project, {
-    //     sourceKey: 'user_id',
-    //     foreignKey: 'id',
-    //     as: 'user',
-    // });
+    AssetAuditItemsModel.hasMany(AdmissionTestRegistrationStudentModel, {
+        sourceKey: 'student_id',
+        foreignKey: 'id',
+        as: 'student',
+    });
+    AssetAuditItemsModel.hasMany(AdmissionTestQuestionsModel, {
+        sourceKey: 'question_id',
+        foreignKey: 'id',
+        as: 'question_mark',
+    });
 
     // User.hasMany(Project, {
     //     sourceKey: 'id',
@@ -93,6 +103,7 @@ const db = async function (): Promise<models> {
         AssetAuditItemsModel,
         // Project,
         AdmissionTestQuestionsModel,
+        AdmissionTestRegistrationStudentModel,
         sequelize,
     };
     return models;

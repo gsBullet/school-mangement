@@ -8,6 +8,16 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 # get
 ###
 GET {{hostname}}/1 HTTP/1.1
+# get
+###
+POST {{hostname}}/result HTTP/1.1
+content-type: application/json
+
+{
+#    "class": 4,
+#    "student_id": 1,
+   "branch_id": 1
+}
 
 # store
 ###

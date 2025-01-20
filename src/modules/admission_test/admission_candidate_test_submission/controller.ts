@@ -13,6 +13,8 @@ import update from './services/update';
 import restore from './services/restore';
 import destroy from './services/destroy';
 import data_import from './services/import';
+import { resourceLimits } from 'worker_threads';
+import result from './services/result';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -33,6 +35,10 @@ export default function (fastify: FastifyInstance) {
 
         update: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await update(fastify, req);
+            res.code(data.status).send(data);
+        },
+        result: async function (req: FastifyRequest, res: FastifyReply) {
+            let data: responseObject = await result(fastify, req);
             res.code(data.status).send(data);
         },
 

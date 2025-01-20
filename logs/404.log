@@ -1,2 +1,5 @@
 {"level":60,"time":1737277917344,"pid":227008,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
 {"level":60,"time":1737277917357,"pid":227008,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737364159910,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
+{"level":60,"time":1737364164740,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
+{"level":60,"time":1737364166109,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
