@@ -10,10 +10,13 @@ module.exports = async function (fastify: FastifyInstance) {
         .get(`${prefix}`, controllerInstance.all)
         .get(`${prefix}/:id`, controllerInstance.find)
         .post(`${prefix}/store`, controllerInstance.store)
-        .post(`${prefix}/update`, controllerInstance.update)
+        .post(`${prefix}/written`, controllerInstance.written)
+
+        // .post(`${prefix}/update`, controllerInstance.update)
         .post(`${prefix}/result`, controllerInstance.result)
         .post(`${prefix}/soft-delete`, controllerInstance.soft_delete)
         .post(`${prefix}/restore`, controllerInstance.restore)
         .post(`${prefix}/destroy`, controllerInstance.destroy)
-        .post(`${prefix}/import`, controllerInstance.import);
+        .post(`${prefix}/import`, controllerInstance.import)
+        .post(`${prefix}/file-upload`, controllerInstance.file_upload);
 };

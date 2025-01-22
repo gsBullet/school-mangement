@@ -11,7 +11,7 @@ async function data_import(
     let params = req.params as any;
 
     try {
-        let data = await models.AssetAuditItemsModel.findOne({
+        let data = await models.AdmissionCandidateSubmissionModel.findOne({
             where: {
                 id: params.id,
             },

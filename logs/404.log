@@ -3,3 +3,12 @@
 {"level":60,"time":1737364159910,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
 {"level":60,"time":1737364164740,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
 {"level":60,"time":1737364166109,"pid":167484,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/result"}
+{"level":60,"time":1737442479168,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442480901,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442504899,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442517901,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442532901,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442535893,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442661901,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737442667901,"pid":155894,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737517994451,"pid":25486,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}

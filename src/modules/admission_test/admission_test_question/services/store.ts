@@ -87,7 +87,7 @@ async function validate(req: Request) {
         .run(req);
 
     await body('right_answer')
-        .if(body('question_type').equals('written')) // Check only for "written" type
+        .if(body('question_type').equals('quiz')) // Check only for "written" type
         .notEmpty() // Ensures the field is required for "written"
         .withMessage('The right_answer field is required for written questions')
         .isString()
@@ -128,11 +128,6 @@ async function store(
         class: body.class,
     };
 
-    // Conditionally add properties based on question_type
-    if (body.question_type === 'written') {
-        inputs.right_answer = body.right_answer;
-    }
-
     if (body.question_type === 'quiz') {
         inputs.options1 = body.options1;
         inputs.options2 = body.options2;
@@ -144,11 +139,6 @@ async function store(
         inputs.is_right_option_4 = body.is_right_option_4;
         inputs.right_answer = body.right_answer;
     }
-
-    // Uncomment if feedback is needed and exists in `body`
-    // if (body.feedback !== undefined) {
-    //     inputs.feedback = body.feedback;
-    // }
 
     /** store data into database */
     try {

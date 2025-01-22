@@ -38,6 +38,10 @@ export default function (fastify: FastifyInstance) {
             let data: responseObject = await store(fastify, req);
             res.code(data.status).send(data);
         },
+        // written: async function (req: FastifyRequest, res: FastifyReply) {
+        //     let data: responseObject = await written(fastify, req);
+        //     res.code(data.status).send(data);
+        // },
 
         update: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await update(fastify, req);

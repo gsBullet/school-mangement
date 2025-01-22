@@ -10,6 +10,7 @@ import response from '../helpers/response';
 import { InferCreationAttributes } from 'sequelize';
 import custom_error from '../helpers/custom_error';
 import error_trace from '../helpers/error_trace';
+import moment from 'moment';
 
 async function validate(req: Request) {
     // await body('question_id')
@@ -130,8 +131,9 @@ async function store(
     /** initializations */
     let models = await db();
     let body = req.body as anyObject;
-    let data = new models.AssetAuditItemsModel();
-    console.log(body);
+    let data = new models.AdmissionCandidateSubmissionModel();
+    let written_file = '';
+    // console.log(body);
 
     let result = await Promise.all(
         body?.user_answer.map(async (element: any) => {
@@ -217,11 +219,7 @@ async function store(
                 // Use create to insert a new record
                 await data.update(inputs);
 
-                return {
-                    question_id: question.id,
-                    status: 'success',
-                    is_correct: inputs.is_pass,
-                };
+                return response(200, 'success', inputs);
             } catch (error) {
                 // Log the error for debugging
                 console.error(

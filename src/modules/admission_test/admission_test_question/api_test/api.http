@@ -36,19 +36,11 @@ content-type: application/json
     "id": 1,
     "admission_test_id": 1,
     "branch_id": 1,
-    "class": "4",
-    "question_title": "what is the our national fruits class 4",
-    "question_type": "quiz",
-    "options1": "Mango",
-    "options2": "apple",
-    "options3": "banana",
-    "options4": "Jackfruit",
-    "is_right_option_1": 0,
-    "is_right_option_2": 0 ,
-    "is_right_option_3": 0,
-    "is_right_option_4": 1,
-    "right_answer": "4",
-    "mark": 3
+    "class": "3",
+    "question_title": "Writing About Bangladesh",
+    "question_type": "written",
+    "right_answer": "",
+    "mark": 6
 }
 
 

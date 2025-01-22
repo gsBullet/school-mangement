@@ -9,12 +9,14 @@ import details from './services/details';
 import soft_delete from './services/soft_delete';
 import store from './services/store';
 import { responseObject } from '../../common_types/object';
-import update from './services/update';
+// import update from './services/update';
 import restore from './services/restore';
 import destroy from './services/destroy';
 import data_import from './services/import';
 import { resourceLimits } from 'worker_threads';
 import result from './services/result';
+import written from './services/written';
+import file_upload from './services/file_upload';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -32,11 +34,19 @@ export default function (fastify: FastifyInstance) {
             let data: responseObject = await store(fastify, req);
             res.code(data.status).send(data);
         },
-
-        update: async function (req: FastifyRequest, res: FastifyReply) {
-            let data: responseObject = await update(fastify, req);
+        written: async function (req: FastifyRequest, res: FastifyReply) {
+            let data: responseObject = await written(fastify, req);
             res.code(data.status).send(data);
         },
+        file_upload: async function (req: FastifyRequest, res: FastifyReply) {
+            let data: responseObject = await file_upload(fastify, req);
+            res.code(data.status).send(data);
+        },
+
+        // update: async function (req: FastifyRequest, res: FastifyReply) {
+        //     let data: responseObject = await update(fastify, req);
+        //     res.code(data.status).send(data);
+        // },
         result: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await result(fastify, req);
             res.code(data.status).send(data);

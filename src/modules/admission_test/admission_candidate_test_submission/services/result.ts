@@ -14,7 +14,7 @@ async function result(
     let body = req.body as any;
 
     try {
-        let data = await models.AssetAuditItemsModel.findAll({
+        let data = await models.AdmissionCandidateSubmissionModel.findAll({
             where: {
                 // class: body.class,
                 branch_id: body.branch_id,

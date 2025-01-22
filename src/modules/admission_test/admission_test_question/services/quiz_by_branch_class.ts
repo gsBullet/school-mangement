@@ -19,6 +19,7 @@ async function quiz_by_branch_class(
             where: {
                 class: body.class,
                 branch_id: body.branch_id,
+                question_type: body.question_type,
             },
         });
 

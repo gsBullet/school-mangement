@@ -7,8 +7,8 @@ import {
     CreationOptional,
 } from 'sequelize';
 
-const tableName = 'admission_candidate_submission';
-const modelName = 'AdmissionCandidateSubmissionModel';
+const tableName = 'admission_test_file_submission';
+const modelName = 'AdmissionTestFileSubmissionModel';
 
 type status = 'active' | 'deactive';
 type question_types = 'quiz' | 'written';
@@ -23,21 +23,11 @@ class DataModel extends Model<
     declare student_id?: number;
     declare class?: string;
 
-    declare question_id: number;
-    declare question_title: string;
-    declare question_type: question_types;
-    declare question_written?: string | null;
-    declare options1?: string;
-    declare options2?: string;
-    declare options3?: string;
-    declare options4?: string;
-    declare is_right_option_1?: boolean;
-    declare is_right_option_2?: boolean;
-    declare is_right_option_3?: boolean;
-    declare is_right_option_4?: boolean;
-    declare right_answer?: string;
+    declare question_id?: number;
+    declare question_title?: string;
+    declare question_type?: question_types;
 
-    declare user_answer?: string;
+    declare user_answer_file?: string;
     declare marks?: number;
     declare is_pass?: boolean;
     declare given_admission_date?: string;
@@ -72,58 +62,18 @@ function init(sequelize: Sequelize) {
             },
             question_id: {
                 type: DataTypes.INTEGER.UNSIGNED,
-                allowNull: false,
+                allowNull: true,
             },
             question_title: {
                 type: DataTypes.STRING(255),
-                allowNull: false,
+                allowNull: true,
             },
             question_type: {
                 type: DataTypes.ENUM('quiz', 'written'),
-                allowNull: false,
-            },
-            question_written: {
-                type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            options1: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            options2: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            options3: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            options4: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            is_right_option_1: {
-                type: DataTypes.BOOLEAN,
-                allowNull: true,
-            },
-            is_right_option_2: {
-                type: DataTypes.BOOLEAN,
-                allowNull: true,
-            },
-            is_right_option_3: {
-                type: DataTypes.BOOLEAN,
-                allowNull: true,
-            },
-            is_right_option_4: {
-                type: DataTypes.BOOLEAN,
-                allowNull: true,
-            },
-            right_answer: {
-                type: DataTypes.STRING(255),
-                allowNull: true,
-            },
-            user_answer: {
-                type: DataTypes.STRING(255),
+            user_answer_file: {
+                type: new DataTypes.STRING(255), // Supports storing arrays of objects
                 allowNull: true,
             },
             marks: {
@@ -152,12 +102,12 @@ function init(sequelize: Sequelize) {
             },
             created_at: {
                 type: DataTypes.DATE,
-                allowNull: false,
+                allowNull: true,
                 defaultValue: DataTypes.NOW,
             },
             updated_at: {
                 type: DataTypes.DATE,
-                allowNull: false,
+                allowNull: true,
                 defaultValue: DataTypes.NOW,
             },
         },

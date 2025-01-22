@@ -45,7 +45,31 @@ content-type: application/json
     "comment": ""
 
 
+
 }
+
+# {
+#    "id": 1,
+#    "question_id": 2,
+#    "question_title": "what is the capital city of bangladesh",
+#     "question_type": "quiz",
+#     "options1": "Dhaka",
+#     "options2": "Chittagoan",
+#     "options3": "rajshahi",
+#     "options4": "rangpur",
+#     "is_right_option_1": 0,
+#     "is_right_option_2": 1,
+#     "is_right_option_3": 0,
+#     "is_right_option_4": 0,
+#     "user_answer": 2,
+#     "marks": "3",
+#     "is_pass": 1,
+#     "right_answer": "",
+#     "given_addmission_date": "2025-01-15 07:03:51",
+#     "comment": ""
+
+
+# }
 
 # {
 #    "id": 1,
