@@ -135,62 +135,70 @@ async function written(
     // console.log('body', body);
 
     const bodyArray = Object.values(body);
+    console.log('bodyArray', bodyArray);
 
     let user_file = '';
     const uploadedFiles: string[] = [];
-    for (let index = 0; index < bodyArray.length - 1; index++) {
-        if (bodyArray[index]?.value?.ext) {
-            user_file =
-                'uploads/written/' +
-                moment().format('YYYYMMDDHHmmss') +
-                bodyArray[index]?.value?.name;
+    for (const fileArray of bodyArray) {
+        // Check if fileArray is an array
+        if (Array.isArray(fileArray)) {
+            for (const file of fileArray) {
+                if (file?.value?.ext) {
+                    // Generate a unique file name
+                    const user_file =
+                        'uploads/written/' +
+                        moment().format('YYYYMMDDHHmmss') +
+                        file?.value?.name;
 
-            // Upload the file
-            await (fastify_instance as any).upload(
-                bodyArray[index]?.value,
-                user_file,
-            );
+                    // Upload the file
+                    await (fastify_instance as any).upload(
+                        file?.value,
+                        user_file,
+                    );
 
-            // Fetch question details
-            let question = await models.AdmissionTestQuestionsModel.findOne({
-                where: {
-                    id: Number(bodyArray[index]?.fieldname),
-                },
-                attributes: [
-                    'id',
-                    'admission_test_id',
-                    'question_title',
-                    'question_type',
-                    'branch_id',
-                    'class',
-                    'mark',
-                ],
-            });
+                    // Fetch question details
+                    const question =
+                        await models.AdmissionTestQuestionsModel.findOne({
+                            where: {
+                                id: Number(file?.fieldname),
+                            },
+                            attributes: [
+                                'id',
+                                'admission_test_id',
+                                'question_title',
+                                'question_type',
+                                'branch_id',
+                                'class',
+                                'mark',
+                            ],
+                        });
 
-            if (question) {
-                // console.log(`question`, question);
-                // let inputs: Partial<InferCreationAttributes<typeof data>> = {};
+                    if (question) {
+                        // Save the new record
+                        const saveData =
+                            await models.AdmissionTestFileSubmissionModel.create(
+                                {
+                                    branch_id: question.branch_id,
+                                    class: question.class,
+                                    student_id: body.student_id.value,
+                                    question_id: question.id,
+                                    question_title: question.question_title,
+                                    question_type: question.question_type,
+                                    marks: question.mark,
+                                    user_answer_file: user_file,
+                                },
+                            );
 
-                // Save the new record
-                let saveData =
-                    await models.AdmissionTestFileSubmissionModel.create({
-                        branch_id: question?.branch_id,
-                        class: question?.class,
-                        student_id: body.student_id.value,
-                        question_id: question?.id,
-                        question_title: question?.question_title,
-                        question_type: question?.question_type,
-                        marks: question?.mark,
-                        user_answer_file: user_file,
-                    });
-                saveData.save();
-                uploadedFiles.push(user_file);
-            } else {
-                throw new custom_error(
-                    'Server error',
-                    500,
-                    'Question not found',
-                );
+                        // No need for saveData.save(), create() already saves the data
+                        uploadedFiles.push(user_file);
+                    } else {
+                        throw new custom_error(
+                            'Server error',
+                            500,
+                            `Question not found for fieldname ${file?.fieldname}`,
+                        );
+                    }
+                }
             }
         }
     }
