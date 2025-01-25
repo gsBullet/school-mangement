@@ -137,7 +137,6 @@ async function written(
     const bodyArray = Object.values(body);
     console.log('bodyArray', bodyArray);
 
-    let user_file = '';
     const uploadedFiles: string[] = [];
     for (const fileArray of bodyArray) {
         // Check if fileArray is an array
@@ -198,6 +197,61 @@ async function written(
                             `Question not found for fieldname ${file?.fieldname}`,
                         );
                     }
+                }
+            }
+        } else {
+            if (fileArray?.value?.ext) {
+                // Generate a unique file name
+                const user_file =
+                    'uploads/written/' +
+                    moment().format('YYYYMMDDHHmmss') +
+                    fileArray?.value?.name;
+
+                // Upload the file
+                await (fastify_instance as any).upload(
+                    fileArray?.value,
+                    user_file,
+                );
+
+                // Fetch question details
+                const question =
+                    await models.AdmissionTestQuestionsModel.findOne({
+                        where: {
+                            id: Number(fileArray?.fieldname),
+                        },
+                        attributes: [
+                            'id',
+                            'admission_test_id',
+                            'question_title',
+                            'question_type',
+                            'branch_id',
+                            'class',
+                            'mark',
+                        ],
+                    });
+
+                if (question) {
+                    // Save the new record
+                    const saveData =
+                        await models.AdmissionTestFileSubmissionModel.create({
+                            branch_id: question.branch_id,
+                            class: question.class,
+                            student_id: body.student_id.value,
+                            question_id: question.id,
+                            question_title: question.question_title,
+                            question_type: question.question_type,
+                            marks: question.mark,
+                            user_answer_file: user_file,
+                        });
+
+                    // No need for saveData.save(), create() already saves the data
+                    uploadedFiles.push(user_file);
+                } else {
+                    throw new custom_error(
+                        'Server error',
+                        500,
+                        `Question not found for fieldname ${fileArray?.fieldname}`,
+                    );
                 }
             }
         }
