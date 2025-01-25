@@ -10,10 +10,7 @@ import response from '../helpers/response';
 import { InferCreationAttributes } from 'sequelize';
 import custom_error from '../helpers/custom_error';
 import error_trace from '../helpers/error_trace';
-import moment from 'moment/moment';
-import fs from 'fs';
-import path from 'path';
-// import moment from 'moment';
+import moment from 'moment';
 
 async function validate(req: Request) {
     // await body('question_id')
@@ -29,8 +26,8 @@ async function validate(req: Request) {
     // await body('question_type')
     //     .notEmpty()
     //     .withMessage('The question_type field is required')
-    //     .isIn(['quiz', 'file_upload'])
-    //     .withMessage('The question_type must be either "quiz" or "file_upload"')
+    //     .isIn(['quiz', 'written'])
+    //     .withMessage('The question_type must be either "quiz" or "written"')
     //     .run(req);
 
     // await body('options1')
@@ -81,9 +78,9 @@ async function validate(req: Request) {
     //     .run(req);
 
     // await body('right_answer')
-    //     .if(body('question_type').equals('file_upload')) // Check only for "file_upload" type
-    //     .notEmpty() // Ensures the field is required for "file_upload"
-    //     .withMessage('The right_answer field is required for file_upload questions')
+    //     .if(body('question_type').equals('written')) // Check only for "written" type
+    //     .notEmpty() // Ensures the field is required for "written"
+    //     .withMessage('The right_answer field is required for written questions')
     //     .isString()
     //     .withMessage('The right_answer field must be a string')
     //     .run(req);
@@ -121,7 +118,7 @@ async function validate(req: Request) {
     return result;
 }
 
-async function file_upload(
+async function written_mark(
     fastify_instance: FastifyInstance,
     req: FastifyRequest,
 ): Promise<responseObject> {
@@ -133,30 +130,70 @@ async function file_upload(
 
     /** initializations */
     let models = await db();
-    let body = req.body as anyObject;
-    let data = new models.AdmissionTestFileSubmissionModel();
-    let file_upload = '';
-
-    console.log('body', body);
-    if (body['file_upload']?.value?.ext) {
-        file_upload =
-            'uploads/written/' +
-            moment().format('YYYYMMDDHHmmss') +
-            body['file_upload']?.value?.name;
-        await (fastify_instance as any).upload(
-            body['file_upload']?.value,
-            file_upload,
-        );
-    }
-
+    let body = req.body as any;
     try {
-        return response(200, 'Data created successfully', {
-            file: { file_upload },
+        let data = await models.AdmissionTestFileSubmissionModel.findAll({
+            where: {
+                branch_id: body.branch_id,
+                student_id: body.student_id,
+                class: body.class,
+                question_type: body.question_type,
+            },
+            attributes: [
+                'class',
+                'question_id',
+                'question_title',
+                'question_type',
+                'student_id',
+                'branch_id',
+                'user_answer_file',
+                'marks',
+                'is_pass',
+                'given_admission_date',
+                'comment',
+            ],
         });
+
+        if (data) {
+            const groupedData = data.reduce((acc: any, curr: any) => {
+                // Generate a unique key based on branch_id, class, question_id, and student_id
+                const key = `${curr.branch_id}_${curr.class}_${curr.question_id}_${curr.student_id}_${curr.question_title}_${curr.marks}_${curr.is_pass}`;
+
+                // Check if the key already exists in the accumulator
+                if (!acc[key]) {
+                    // If not, initialize the group with the current item's details and an empty files array
+                    acc[key] = {
+                        branch_id: curr.branch_id,
+                        class: curr.class,
+                        question_id: curr.question_id,
+                        student_id: curr.student_id,
+                        question_title: curr.question_title,
+                        question_type: curr.question_type,
+                        marks: curr.marks,
+                        is_pass: curr.is_pass,
+                        given_admission_date: curr.given_admission_date,
+                        user_answer_files: [], // Initialize an array to store files
+                    };
+                }
+
+                // Push the current file into the user_answer_files array
+                acc[key].user_answer_files.push(curr.user_answer_file);
+
+                return acc;
+            }, {});
+            return response(200, 'data found', Object.values(groupedData));
+        } else {
+            throw new custom_error('not found', 404, 'data not found');
+        }
     } catch (error: any) {
-        let uid = await error_trace(models, error, req.url, req.body);
-        throw new custom_error('Server error', 500, error.message, uid);
+        let uid = await error_trace(models, error, req.url, req.params);
+        if (error instanceof custom_error) {
+            error.uid = uid;
+        } else {
+            throw new custom_error('server error', 500, error.message, uid);
+        }
+        throw error;
     }
 }
 
-export default file_upload;
+export default written_mark;

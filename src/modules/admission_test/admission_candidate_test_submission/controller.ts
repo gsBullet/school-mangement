@@ -17,6 +17,7 @@ import { resourceLimits } from 'worker_threads';
 import result from './services/result';
 import written from './services/written';
 import file_upload from './services/file_upload';
+import written_mark from './services/written_mark';
 
 export default function (fastify: FastifyInstance) {
     return {
@@ -36,6 +37,10 @@ export default function (fastify: FastifyInstance) {
         },
         written: async function (req: FastifyRequest, res: FastifyReply) {
             let data: responseObject = await written(fastify, req);
+            res.code(data.status).send(data);
+        },
+        written_mark: async function (req: FastifyRequest, res: FastifyReply) {
+            let data: responseObject = await written_mark(fastify, req);
             res.code(data.status).send(data);
         },
         file_upload: async function (req: FastifyRequest, res: FastifyReply) {

@@ -131,3 +131,22 @@
 {"level":60,"time":1737474026326,"pid":532400,"hostname":"devops","file":"","time":"1/21/2025 9:40:26 PM","message":"WHERE parameter \"id\" has invalid \"undefined\" value"}
 {"level":60,"time":1737474181377,"pid":534693,"hostname":"devops","file":"","time":"1/21/2025 9:43:01 PM","message":"Unknown column 'user_answer_file' in 'field list'"}
 {"level":60,"time":1737509235537,"pid":14821,"hostname":"devops","file":"","time":"1/22/2025 7:27:15 AM","message":"Unknown column 'user_answer_file' in 'field list'"}
+{"level":60,"time":1737781439563,"pid":32755,"hostname":"devops","file":"services/quiz_by_branch_class.ts:36:19)","time":"1/25/2025 11:03:59 AM","message":"WHERE parameter \"question_type\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782623707,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:23:43 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782631929,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:23:51 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782635625,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:23:55 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782643368,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:24:03 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782648232,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:24:08 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737782650407,"pid":64229,"hostname":"devops","file":"services/written_mark.ts:154:19)","time":"1/25/2025 11:24:10 AM","message":"WHERE parameter \"student_id\" has invalid \"undefined\" value"}
+{"level":60,"time":1737785890920,"pid":104855,"hostname":"devops","file":"services/written_mark.ts:173:19)","time":"1/25/2025 12:18:10 PM","message":"acc.push is not a function"}
+{"level":60,"time":1737785893075,"pid":104855,"hostname":"devops","file":"services/written_mark.ts:173:19)","time":"1/25/2025 12:18:13 PM","message":"acc.push is not a function"}
+{"level":60,"time":1737785896920,"pid":104855,"hostname":"devops","file":"services/written_mark.ts:173:19)","time":"1/25/2025 12:18:16 PM","message":"acc.push is not a function"}
+{"level":60,"time":1737798798221,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:18 PM","message":"target not found."}
+{"level":60,"time":1737798798224,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:18 PM","message":"target not found."}
+{"level":60,"time":1737798798236,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:18 PM","message":"target not found."}
+{"level":60,"time":1737798801128,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:21 PM","message":"target not found."}
+{"level":60,"time":1737798801135,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:21 PM","message":"target not found."}
+{"level":60,"time":1737798801139,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 3:53:21 PM","message":"target not found."}
+{"level":60,"time":1737799795443,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 4:09:55 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}
+{"level":60,"time":1737799970717,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 4:12:50 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}
+{"level":60,"time":1737805331310,"pid":120415,"hostname":"devops","file":"","time":"1/25/2025 5:42:11 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}

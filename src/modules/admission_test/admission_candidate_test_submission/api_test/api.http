@@ -8,6 +8,23 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 # get
 ###
 GET {{hostname}}/1 HTTP/1.1
+
+
+
+# get student writting file 
+###
+POST {{hostname}}/written-mark HTTP/1.1
+content-type: application/json
+
+{
+    "student_id": 1,
+    "branch_id": 1,
+    "class": 3,
+    "question_type": "written"
+
+}
+
+
 # get
 ###
 POST {{hostname}}/result HTTP/1.1

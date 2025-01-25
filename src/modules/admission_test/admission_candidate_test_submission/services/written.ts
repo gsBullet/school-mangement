@@ -270,27 +270,3 @@ async function written(
 }
 
 export default written;
-
-// const uploadedFiles: string[] = []; // Array to store file paths
-
-//     for (const file of body.user_answer.files) {
-//         if (file?.url) {
-//             const fileExtension = file.fileExtension || ''; // Ensure file extension exists
-//             const uniqueFileName =
-//                 'uploads/written/' +
-//                 moment().format('YYYYMMDDHHmmss') +
-//                 Math.random().toString(36).substring(2, 7) + // Add a random string for uniqueness
-//                 fileExtension;
-
-//             console.log(uniqueFileName, 'file');
-
-//             // Upload the file using the Fastify instance
-//             await (fastify_instance as any).upload(file, uniqueFileName);
-
-//             // Add the uploaded file path to the array
-//             uploadedFiles.push(uniqueFileName);
-//         }
-//     }
-
-//     // Assign all uploaded file paths to inputs.user_answer
-//     inputs.user_answer = uploadedFiles;

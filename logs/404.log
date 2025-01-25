@@ -18,3 +18,13 @@
 {"level":60,"time":1737528128466,"pid":107635,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
 {"level":60,"time":1737528130111,"pid":107635,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
 {"level":60,"time":1737528135646,"pid":107635,"hostname":"devops","error":"404","url":"/api/v1/admission-test-questions/quiz-by-branch-class"}
+{"level":60,"time":1737782207704,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-file"}
+{"level":60,"time":1737782209794,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-file"}
+{"level":60,"time":1737782238213,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782239593,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782240266,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782240362,"pid":54396,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782351561,"pid":62191,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782353306,"pid":62191,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/writting-mark"}
+{"level":60,"time":1737782596120,"pid":64229,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/quiz-by-branch-class"}
+{"level":60,"time":1737782612729,"pid":64229,"hostname":"devops","error":"404","url":"/api/v1/admission-candidate-test-submission/quiz-by-branch-class"}
