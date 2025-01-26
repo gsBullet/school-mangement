@@ -28,7 +28,8 @@ class DataModel extends Model<
     declare question_type?: question_types;
 
     declare user_answer_file?: string;
-    declare marks?: number;
+    declare question_marks?: number;
+    declare answer_marks?: number;
     declare is_pass?: boolean;
     declare given_admission_date?: string;
     declare comment?: string;
@@ -76,7 +77,11 @@ function init(sequelize: Sequelize) {
                 type: new DataTypes.STRING(255), // Supports storing arrays of objects
                 allowNull: true,
             },
-            marks: {
+            question_marks: {
+                type: DataTypes.INTEGER,
+                allowNull: true,
+            },
+            answer_marks: {
                 type: DataTypes.INTEGER,
                 allowNull: true,
             },

@@ -135,7 +135,6 @@ async function written(
     // console.log('body', body);
 
     const bodyArray = Object.values(body);
-    console.log('bodyArray', bodyArray);
 
     const uploadedFiles: string[] = [];
     for (const fileArray of bodyArray) {
@@ -183,11 +182,15 @@ async function written(
                                     question_id: question.id,
                                     question_title: question.question_title,
                                     question_type: question.question_type,
-                                    marks: question.mark,
+                                    question_marks: question.mark,
+                                    answer_marks: 0,
+                                    given_admission_date:
+                                        new Date().toISOString(),
                                     user_answer_file: user_file,
                                 },
                             );
 
+                        saveData.save();
                         // No need for saveData.save(), create() already saves the data
                         uploadedFiles.push(user_file);
                     } else {
@@ -240,10 +243,12 @@ async function written(
                             question_id: question.id,
                             question_title: question.question_title,
                             question_type: question.question_type,
-                            marks: question.mark,
+                            question_marks: question.mark,
+                            answer_marks: 0,
+                            given_admission_date: new Date().toISOString(),
                             user_answer_file: user_file,
                         });
-
+                    saveData.save();
                     // No need for saveData.save(), create() already saves the data
                     uploadedFiles.push(user_file);
                 } else {

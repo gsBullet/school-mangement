@@ -11,7 +11,11 @@ module.exports = async function (fastify: FastifyInstance) {
         .get(`${prefix}/:id`, controllerInstance.find)
         .post(`${prefix}/store`, controllerInstance.store)
         .post(`${prefix}/written`, controllerInstance.written)
-        .post(`${prefix}/written-mark`, controllerInstance.written_mark)
+        .post(`${prefix}/get-written-data`, controllerInstance.get_written_data)
+        .post(
+            `${prefix}/store-written-mark`,
+            controllerInstance.store_written_mark,
+        )
 
         // .post(`${prefix}/update`, controllerInstance.update)
         .post(`${prefix}/result`, controllerInstance.result)

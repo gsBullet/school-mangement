@@ -37,14 +37,19 @@ async function result(
                 'branch_id',
                 'student_id',
                 'class',
-                'marks',
+                'written_mark',
+                'quiz_mark',
                 'is_pass',
+                'total_marks',
+                'question_type',
             ],
         });
-        console.log(data);
+        // console.log(data);
 
         if (data) {
             const groupedResult = data.reduce((acc: any, curr: any) => {
+                // console.log(curr);
+
                 // Create a unique key for each combination of branch_id, student_id, and class
                 const key = `${curr.branch_id}-${curr.student_id}-${curr.class}`;
 
@@ -54,6 +59,9 @@ async function result(
                         branch_id: curr.branch_id,
                         student_id: curr.student_id,
                         class: curr.class,
+                        question_type: curr.question_type,
+                        written_mark: 0,
+                        quiz_mark: 0,
                         total_marks: 0,
                         marks: 0,
                         student_name: curr.student.length
@@ -62,18 +70,26 @@ async function result(
                         question_answer: 0,
                         correct_answer: 0,
                         wrong_answer: 0,
+                        total_quiz_marks: 0,
+                        total_written_marks: 0,
                     };
                 }
 
                 // Add the current marks to the total for this group
-                acc[key].marks += curr.marks;
+                acc[key].quiz_mark += curr.quiz_mark;
+                acc[key].written_mark += curr.written_mark;
                 acc[key].total_marks += curr.question_mark[0].mark;
-
-                acc[key].question_answer += 1;
-                if (curr.is_pass) {
-                    acc[key].correct_answer += 1;
-                } else {
-                    acc[key].wrong_answer += 1;
+                if (curr.question_type === 'quiz') {
+                    acc[key].question_answer += 1;
+                    if (curr.is_pass) {
+                        acc[key].correct_answer += 1;
+                    } else {
+                        acc[key].wrong_answer += 1;
+                    }
+                    acc[key].total_quiz_marks += curr.question_mark[0].mark;
+                }
+                if (curr.question_type === 'written') {
+                    acc[key].total_written_marks += curr.question_mark[0].mark;
                 }
 
                 return acc;

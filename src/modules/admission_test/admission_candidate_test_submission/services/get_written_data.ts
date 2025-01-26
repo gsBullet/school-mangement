@@ -118,7 +118,7 @@ async function validate(req: Request) {
     return result;
 }
 
-async function written_mark(
+async function get_written_data(
     fastify_instance: FastifyInstance,
     req: FastifyRequest,
 ): Promise<responseObject> {
@@ -147,7 +147,8 @@ async function written_mark(
                 'student_id',
                 'branch_id',
                 'user_answer_file',
-                'marks',
+                'question_marks',
+                'answer_marks',
                 'is_pass',
                 'given_admission_date',
                 'comment',
@@ -169,9 +170,10 @@ async function written_mark(
                         student_id: curr.student_id,
                         question_title: curr.question_title,
                         question_type: curr.question_type,
-                        marks: curr.marks,
+                        question_marks: curr.question_marks,
+                        answer_marks: curr.answer_marks,
                         is_pass: curr.is_pass,
-                        given_admission_date: curr.given_admission_date,
+                        given_admission_date: new Date(),
                         user_answer_files: [], // Initialize an array to store files
                     };
                 }
@@ -196,4 +198,4 @@ async function written_mark(
     }
 }
 
-export default written_mark;
+export default get_written_data;

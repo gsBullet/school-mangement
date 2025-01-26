@@ -209,7 +209,7 @@ async function store(
                     }
 
                     // Assign marks and passing status
-                    inputs.marks = isCorrect ? question.mark : 0;
+                    inputs.quiz_mark = isCorrect ? question.mark : 0;
                     inputs.is_pass = isCorrect;
                     inputs.right_answer = question.right_answer;
                     inputs.given_admission_date = body.given_admission_date;

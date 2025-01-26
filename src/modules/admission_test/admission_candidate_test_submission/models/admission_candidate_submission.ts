@@ -38,7 +38,9 @@ class DataModel extends Model<
     declare right_answer?: string;
 
     declare user_answer?: string;
-    declare marks?: number;
+    declare quiz_mark?: number;
+    declare written_mark?: number;
+    declare total_marks?: number;
     declare is_pass?: boolean;
     declare given_admission_date?: string;
     declare comment?: string;
@@ -126,7 +128,15 @@ function init(sequelize: Sequelize) {
                 type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            marks: {
+            quiz_mark: {
+                type: DataTypes.INTEGER,
+                allowNull: true,
+            },
+            written_mark: {
+                type: DataTypes.INTEGER,
+                allowNull: true,
+            },
+            total_marks: {
                 type: DataTypes.INTEGER,
                 allowNull: true,
             },
