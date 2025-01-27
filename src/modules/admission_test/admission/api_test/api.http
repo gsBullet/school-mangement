@@ -15,14 +15,23 @@ POST  {{hostname}}/store HTTP/1.1
 content-type: application/json
 
 {
-    "id": 1,
-    "title": "admission test 2025",
-    "description": "This is admission test account",
-    "date": "25-01-2025",
-    "class": "seven",
-    "section": "B"
-
+      "title": "admission test 2025",
+      "description": "This is admission test account",
+      "date": "25-01-2025",
+      "class": "six",
+      "admission_exam_date": "25-01-2025",
+      "admission_result_date": "31-01-2025",
+      "pass_mark": 75
 }
+
+
+# title: body.title,
+#         description: body.description,
+#         class: body.class,
+#         admission_result_date: body.admission_result_date,
+#         admission_exam_date: body.admission_exam_date,
+#         pass_mark: body.pass_mark,
+
 
 
 # update
@@ -31,13 +40,13 @@ POST {{hostname}}/update HTTP/1.1
 content-type: application/json
 
 {
-    "id": 1,
-    "title": "admission test 2025",
-    "description": "This is admission test account",
-    "date": "25-01-2025",
-    "class": "six",
-    "section": "B"
-
+   "title": "admission test 2025",
+      "description": "This is admission test account",
+      "date": "25-01-2025",
+      "class": "six",
+      "admission_exam_date": "25-01-2025",
+      "admission_result_date": "25-01-2025",
+      "pass_mark": 75
 }
 
 # delete

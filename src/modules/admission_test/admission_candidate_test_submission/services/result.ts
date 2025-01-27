@@ -46,6 +46,7 @@ async function result(
         });
         // console.log(data);
 
+        let pass_mark = await models.AdmissionTestModel.findByPk(1);
         if (data) {
             const groupedResult = data.reduce((acc: any, curr: any) => {
                 // console.log(curr);
@@ -72,6 +73,7 @@ async function result(
                         wrong_answer: 0,
                         total_quiz_marks: 0,
                         total_written_marks: 0,
+                        passMark: pass_mark?.pass_mark,
                     };
                 }
 

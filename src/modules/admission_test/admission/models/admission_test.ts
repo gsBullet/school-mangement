@@ -34,12 +34,14 @@ type status = 'active' | 'deactive';
 class DataModel extends Model<Infer, InferCreation> {
     declare id?: CreationOptional<number>;
 
-    declare title: string;
-    declare description: string;
-    declare date: string;
+    // declare admission_test_exam_id?: number;
+    declare title?: string;
+    declare description?: string;
+    declare admission_result_date?: string;
+    declare admission_exam_date?: string;
+    declare pass_mark?: number;
 
-    declare class: string;
-    declare section: string;
+    declare class?: string;
     // declare feedback: feedback;
 
     declare status?: status;
@@ -57,24 +59,33 @@ function init(sequelize: Sequelize) {
                 autoIncrement: true,
                 primaryKey: true,
             },
+            // admission_test_exam_id: {
+            //     type: DataTypes.INTEGER.UNSIGNED,
+            //     autoIncrement: true,
+            //     allowNull: true,
+            // },
             title: {
-                type: new DataTypes.STRING(),
+                type: DataTypes.STRING(255),
                 allowNull: true,
             },
             description: {
-                type: new DataTypes.STRING(),
+                type: DataTypes.STRING(255),
                 allowNull: true,
             },
-            date: {
-                type: new DataTypes.STRING(),
+            admission_result_date: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+            admission_exam_date: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },
+            pass_mark: {
+                type: DataTypes.INTEGER,
                 allowNull: true,
             },
             class: {
-                type: new DataTypes.STRING(),
-                allowNull: true,
-            },
-            section: {
-                type: new DataTypes.STRING(),
+                type: DataTypes.STRING(255),
                 allowNull: true,
             },
             // feedback: {
@@ -83,11 +94,11 @@ function init(sequelize: Sequelize) {
             // },
 
             status: {
-                type: new DataTypes.ENUM('active', 'deactive'),
+                type: DataTypes.ENUM('active', 'deactive'),
                 defaultValue: 'active',
             },
             creator: {
-                type: new DataTypes.TINYINT(),
+                type: DataTypes.TINYINT(),
                 allowNull: true,
                 defaultValue: null,
             },

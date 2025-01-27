@@ -179,3 +179,4 @@
 {"level":60,"time":1737894460020,"pid":17293,"hostname":"devops","file":"","time":"1/26/2025 6:27:40 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}
 {"level":60,"time":1737894485930,"pid":17293,"hostname":"devops","file":"","time":"1/26/2025 6:28:05 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}
 {"level":60,"time":1737895312984,"pid":33407,"hostname":"devops","file":"","time":"1/26/2025 6:41:52 PM","message":"You have used the alias student in two separate associations. Aliased associations must have unique aliases."}
+{"level":60,"time":1737950630204,"pid":36328,"hostname":"devops","file":"","time":"1/27/2025 10:03:50 AM","message":"Invalid Instance definition. Only one autoincrement field allowed."}

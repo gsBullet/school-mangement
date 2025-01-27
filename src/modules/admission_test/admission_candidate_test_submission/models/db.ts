@@ -7,6 +7,7 @@ import * as admission_candidate_submission from './admission_candidate_submissio
 import * as admission_test_questions_model from './admission_test_question';
 import * as admission_test_registration_student_model from './admission_test_registration';
 import * as admission_test_file_submission from './admission_test_file_sumbission';
+import * as admission_test_model from './admission_test';
 require('dotenv').config();
 
 let host = process?.env.DB_HOST || '';
@@ -28,6 +29,7 @@ interface models {
     AdmissionTestQuestionsModel: typeof admission_test_questions_model.DataModel;
     AdmissionTestRegistrationStudentModel: typeof admission_test_registration_student_model.DataModel;
     AdmissionTestFileSubmissionModel: typeof admission_test_file_submission.DataModel;
+    AdmissionTestModel: typeof admission_test_model.DataModel;
     sequelize: Sequelize;
 }
 const db = async function (): Promise<models> {
@@ -41,6 +43,7 @@ const db = async function (): Promise<models> {
         admission_test_registration_student_model.init(sequelize);
     const AdmissionTestFileSubmissionModel =
         admission_test_file_submission.init(sequelize);
+    const AdmissionTestModel = admission_test_model.init(sequelize);
 
     await sequelize.sync();
 
@@ -113,6 +116,7 @@ const db = async function (): Promise<models> {
         AdmissionTestQuestionsModel,
         AdmissionTestRegistrationStudentModel,
         AdmissionTestFileSubmissionModel,
+        AdmissionTestModel,
         sequelize,
     };
     return models;

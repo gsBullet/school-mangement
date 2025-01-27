@@ -12,100 +12,100 @@
 // import error_trace from '../helpers/error_trace';
 
 // async function validate(req: Request) {
-//     await body('question_title')
-//         .not()
-//         .isEmpty()
-//         .withMessage('the question_title field is required')
-//         .run(req);
-//     await body('question_type')
-//         .notEmpty()
-//         .withMessage('The question_type field is required')
-//         .isIn(['quiz', 'written'])
-//         .withMessage('The question_type must be either "quiz" or "written"')
-//         .run(req);
+//     // await body('question_title')
+//     //     .not()
+//     //     .isEmpty()
+//     //     .withMessage('the question_title field is required')
+//     //     .run(req);
+//     // await body('question_type')
+//     //     .notEmpty()
+//     //     .withMessage('The question_type field is required')
+//     //     .isIn(['quiz', 'written'])
+//     //     .withMessage('The question_type must be either "quiz" or "written"')
+//     //     .run(req);
 
-//     await body('options1')
-//         .if(body('question_type').equals('quiz'))
-//         .notEmpty()
-//         .withMessage('The options1 field is required')
-//         .run(req);
+//     // await body('options1')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .notEmpty()
+//     //     .withMessage('The options1 field is required')
+//     //     .run(req);
 
-//     await body('options2')
-//         .if(body('question_type').equals('quiz'))
-//         .notEmpty()
-//         .withMessage('The options2 field is required')
-//         .run(req);
+//     // await body('options2')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .notEmpty()
+//     //     .withMessage('The options2 field is required')
+//     //     .run(req);
 
-//     await body('options3')
-//         .if(body('question_type').equals('quiz'))
-//         .notEmpty()
-//         .withMessage('The options3 field is required')
-//         .run(req);
+//     // await body('options3')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .notEmpty()
+//     //     .withMessage('The options3 field is required')
+//     //     .run(req);
 
-//     await body('options4')
-//         .if(body('question_type').equals('quiz'))
-//         .notEmpty()
-//         .withMessage('The options4 field is required')
-//         .run(req);
-//     await body('is_right_option_1')
-//         .if(body('question_type').equals('quiz'))
-//         .isBoolean()
-//         .withMessage('The is_right_option_1 field must be a boolean (0 or 1)')
-//         .run(req);
+//     // await body('options4')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .notEmpty()
+//     //     .withMessage('The options4 field is required')
+//     //     .run(req);
+//     // await body('is_right_option_1')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .isBoolean()
+//     //     .withMessage('The is_right_option_1 field must be a boolean (0 or 1)')
+//     //     .run(req);
 
-//     await body('is_right_option_2')
-//         .if(body('question_type').equals('quiz'))
-//         .isBoolean()
-//         .withMessage('The is_right_option_2 field must be a boolean (0 or 1)')
-//         .run(req);
+//     // await body('is_right_option_2')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .isBoolean()
+//     //     .withMessage('The is_right_option_2 field must be a boolean (0 or 1)')
+//     //     .run(req);
 
-//     await body('is_right_option_3')
-//         .if(body('question_type').equals('quiz'))
-//         .isBoolean()
-//         .withMessage('The is_right_option_3 field must be a boolean (0 or 1)')
-//         .run(req);
+//     // await body('is_right_option_3')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .isBoolean()
+//     //     .withMessage('The is_right_option_3 field must be a boolean (0 or 1)')
+//     //     .run(req);
 
-//     await body('is_right_option_4')
-//         .if(body('question_type').equals('quiz'))
-//         .isBoolean()
-//         .withMessage('The is_right_option_4 field must be a boolean (0 or 1)')
-//         .run(req);
+//     // await body('is_right_option_4')
+//     //     .if(body('question_type').equals('quiz'))
+//     //     .isBoolean()
+//     //     .withMessage('The is_right_option_4 field must be a boolean (0 or 1)')
+//     //     .run(req);
 
-//     await body('right_answer')
-//         .if(body('question_type').equals('written')) // Check only for "written" type
-//         .notEmpty() // Ensures the field is required for "written"
-//         .withMessage('The right_answer field is required for written questions')
-//         .isString()
-//         .withMessage('The right_answer field must be a string')
-//         .run(req);
+//     // await body('right_answer')
+//     //     .if(body('question_type').equals('written')) // Check only for "written" type
+//     //     .notEmpty() // Ensures the field is required for "written"
+//     //     .withMessage('The right_answer field is required for written questions')
+//     //     .isString()
+//     //     .withMessage('The right_answer field must be a string')
+//     //     .run(req);
 
-//     await body('user_answer')
-//         .not()
-//         .isEmpty()
-//         .withMessage('the user_answer field is required')
-//         .run(req);
+//     // await body('user_answer')
+//     //     .not()
+//     //     .isEmpty()
+//     //     .withMessage('the user_answer field is required')
+//     //     .run(req);
 
-//     await body('marks')
-//         .not()
-//         .isEmpty()
-//         .withMessage('the marks field is required')
-//         .run(req);
+//     // await body('marks')
+//     //     .not()
+//     //     .isEmpty()
+//     //     .withMessage('the marks field is required')
+//     //     .run(req);
 
-//     await body('is_pass')
-//         .not()
-//         .notEmpty()
-//         .withMessage('the is_pass field is required')
-//         .run(req);
-//     await body('given_admission_date')
-//         .not()
-//         .notEmpty()
-//         .withMessage('the given_admission_date field is required')
-//         .run(req);
-//     await body('comment')
-//         .not()
-//         .notEmpty()
-//         .withMessage('the comment field is required')
-//         .run(req);
+//     // await body('is_pass')
+//     //     .not()
+//     //     .notEmpty()
+//     //     .withMessage('the is_pass field is required')
+//     //     .run(req);
+//     // await body('given_admission_date')
+//     //     .not()
+//     //     .notEmpty()
+//     //     .withMessage('the given_admission_date field is required')
+//     //     .run(req);
+//     // await body('comment')
+//     //     .not()
+//     //     .notEmpty()
+//     //     .withMessage('the comment field is required')
+//     //     .run(req);
 //     let result = await validationResult(req);
 
 //     return result;
@@ -124,65 +124,117 @@
 //     /** initializations */
 //     let models = await db();
 //     let body = req.body as anyObject;
-//     let model = new models.AdmissionCandidateSubmissionModel();
+//     let data = new models.AdmissionCandidateSubmissionModel();
+//     let written_file = '';
+//     // console.log(body);
 
-//     let inputs: Partial<InferCreationAttributes<typeof model>> = {
-//         question_id: body.question_id,
-//         question_title: body.question_title,
-//         question_type: body.question_type,
-//     };
+//     let result = await Promise.all(
+//         body?.user_answer.map(async (element: any) => {
+//             try {
+//                 // Fetch the specific question
+//                 let question = await models.AdmissionTestQuestionsModel.findOne(
+//                     {
+//                         where: {
+//                             id: element?.question_id,
+//                             branch_id: body.branch_id,
+//                             class: body.class,
+//                         },
+//                     },
+//                 );
 
-//     // Conditionally add properties based on question_type
-//     if (body.question_type === 'written') {
-//         inputs.right_answer = body.right_answer;
-//         inputs.user_answer = body.user_answer;
-//         inputs.marks = body.marks;
-//         inputs.is_pass = body.is_pass;
-//         inputs.given_admission_date = body.given_admission_date;
-//         inputs.comment = body.comment;
-//     }
+//                 // If no matching question is found
+//                 if (!question) {
+//                     return {
+//                         question_id: element?.question_id,
+//                         message: 'Question not found',
+//                     };
+//                 }
 
-//     if (body.question_type === 'quiz') {
-//         inputs.options1 = body.options1;
-//         inputs.options2 = body.options2;
-//         inputs.options3 = body.options3;
-//         inputs.options4 = body.options4;
-//         inputs.is_right_option_1 = body.is_right_option_1;
-//         inputs.is_right_option_2 = body.is_right_option_2;
-//         inputs.is_right_option_3 = body.is_right_option_3;
-//         inputs.is_right_option_4 = body.is_right_option_4;
-//         inputs.right_answer = body.right_answer;
-//         inputs.user_answer = body.user_answer;
-//         inputs.marks = body.marks;
-//         inputs.is_pass = body.is_pass;
-//         inputs.given_admission_date = body.given_admission_date;
-//         inputs.comment = body.comment;
-//     }
+//                 // Prepare the input object
+//                 let inputs: Partial<InferCreationAttributes<typeof data>> = {
+//                     branch_id: body.branch_id,
+//                     student_id: body.student_id,
+//                     class: body.class,
+//                     question_id: question.id,
+//                     question_title: question.question_title,
+//                     question_type: question.question_type,
+//                 };
 
-//     /** print request data into console */
-//     // console.clear();
-//     // (fastify_instance as any).print(inputs);
+//                 if (question.question_type === 'quiz') {
+//                     // Add options and correctness flags
+//                     inputs.options1 = question.options1;
+//                     inputs.options2 = question.options2;
+//                     inputs.options3 = question.options3;
+//                     inputs.options4 = question.options4;
+//                     inputs.is_right_option_1 = question.is_right_option_1;
+//                     inputs.is_right_option_2 = question.is_right_option_2;
+//                     inputs.is_right_option_3 = question.is_right_option_3;
+//                     inputs.is_right_option_4 = question.is_right_option_4;
 
-//     /** store data into database */
+//                     // Convert user_answer to string (if it's an array) for database compatibility
+//                     inputs.user_answer = Array.isArray(element?.user_answer)
+//                         ? JSON.stringify(element?.user_answer)
+//                         : String(element?.user_answer);
+
+//                     // Construct correct answers array
+//                     let correctAnswers: number[] = [];
+//                     if (inputs.is_right_option_1) correctAnswers.push(1);
+//                     if (inputs.is_right_option_2) correctAnswers.push(2);
+//                     if (inputs.is_right_option_3) correctAnswers.push(3);
+//                     if (inputs.is_right_option_4) correctAnswers.push(4);
+
+//                     // Check if the user answer matches the correct answer(s)
+//                     let isCorrect = false;
+
+//                     if (Array.isArray(element?.user_answer)) {
+//                         // Handle multiple-option answers
+//                         isCorrect =
+//                             element.user_answer.length ===
+//                                 correctAnswers.length &&
+//                             element.user_answer.every((answer: any) =>
+//                                 correctAnswers.includes(Number(answer)),
+//                             );
+//                     } else {
+//                         // Handle single-option answers
+//                         isCorrect = correctAnswers.includes(
+//                             Number(element?.user_answer),
+//                         );
+//                     }
+
+//                     // Assign marks and passing status
+//                     inputs.quiz_mark = isCorrect ? question.mark : 0;
+//                     inputs.is_pass = isCorrect;
+//                     inputs.right_answer = question.right_answer;
+//                     inputs.given_admission_date = body.given_admission_date;
+//                     inputs.comment = body.comment;
+//                 }
+
+//                 // Use create to insert a new record
+//                 await data.update(inputs);
+
+//                 return response(200, 'success', inputs);
+//             } catch (error) {
+//                 // Log the error for debugging
+//                 console.error(
+//                     'Error processing question:',
+//                     element?.question_id,
+//                     error,
+//                 );
+
+//                 return {
+//                     question_id: element?.question_id,
+//                     message: 'Error processing question',
+//                     error: error,
+//                 };
+//             }
+//         }),
+//     );
+
 //     try {
-//         let data = await models.AdmissionCandidateSubmissionModel.findByPk(
-//             body.id,
-//         );
-//         if (data) {
-//             data.update(inputs);
-//             await data.save();
-//             return response(200, 'data updated', data);
-//         } else {
-//             throw new custom_error('Forbidden', 403, 'operation not possible');
-//         }
+//         return response(200, 'Data created successfully', result);
 //     } catch (error: any) {
 //         let uid = await error_trace(models, error, req.url, req.body);
-//         if (error instanceof custom_error) {
-//             error.uid = uid;
-//         } else {
-//             throw new custom_error('server error', 500, error.message, uid);
-//         }
-//         throw error;
+//         throw new custom_error('Server error', 500, error.message, uid);
 //     }
 // }
 

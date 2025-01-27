@@ -32,11 +32,11 @@ async function validate(req: Request) {
         .isEmpty()
         .withMessage('the class field is required')
         .run(req);
-    await body('section')
-        .not()
-        .isEmpty()
-        .withMessage('the section field is required')
-        .run(req);
+    // await body('section')
+    //     .not()
+    //     .isEmpty()
+    //     .withMessage('the section field is required')
+    //     .run(req);
     // await body('feedback')
     //     .not()
     //     .isEmpty()
@@ -66,9 +66,14 @@ async function store(
     let inputs: InferCreationAttributes<typeof data> = {
         title: body.title,
         description: body.description,
-        date: body.date,
         class: body.class,
-        section: body.section,
+        admission_result_date: body.admission_result_date,
+        admission_exam_date: body.admission_exam_date,
+        pass_mark: body.pass_mark,
+        // branch_id: body.branch_id,
+        // notice_category_id: body.notice_category_id,
+        // title: body.title,
+        // section: body.section,
         // feedback: body.feedback,
     };
 
