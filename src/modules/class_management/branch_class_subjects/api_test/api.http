@@ -8,6 +8,13 @@ GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10
 ###
 GET {{hostname}}/rooms HTTP/1.1
 
+
+
+
+# get branch teacher class subjects
+###
+GET {{hostname}}/get-teacher-class-subject HTTP/1.1
+
 # get
 ###
 GET {{hostname}}/class-wise-subject/1 HTTP/1.1
